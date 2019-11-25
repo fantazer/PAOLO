@@ -1,0 +1,126 @@
+// === Inputs ===
+.input,.textarea,.select
+	padding 18px 15px
+	border 1px solid $border-color
+	resize: none
+	outline: 0 !important
+	border-radius 4px
+	font-family $v-font
+	display block!important
+	placeholder(#888888)
+	background: #f6f6f6
+	tr(all)
+	&:focus
+		border 1px solid $mark
+		background: white
+
+.style-label
+	display flex
+	position relative
+	align-items center
+
+.style-label--disable
+	@extend .disabled
+
+.check-el
+	input
+		position absolute
+		top 0
+		left -9999px
+	.sytle-input-element
+		cp()
+		tr(all)
+		size 30px
+		position relative
+		display inline-block
+		margin-right 10px
+		background white
+		border 1px solid $border-color
+		&:hover
+			border 1px solid $mark
+	.icon-check
+		display none
+	.sytle-input
+		&:checked ~ .sytle-input-element
+			flex(mid)
+			border 1px solid $mark
+			.icon-check
+				display block
+				fill $mark
+				size 16px
+
+.style-label--radio
+	input
+		position absolute
+		top 0
+		left -9999px
+	.sytle-input-element
+		size 24px
+		position relative
+		display inline-block
+		margin-right 10px
+		background white
+		border 2px solid $border-color
+		round()
+		cp()
+		&:hover
+			border 2px solid $mark
+	.icon-check
+		display none
+	.sytle-input
+		&:checked ~ .sytle-input-element
+			border 2px solid $mark
+			flex(mid)
+			color black
+			background: white
+			.icon-radio
+				round()
+				size 14px
+				background $mark
+
+.sytle-input-text
+	color black
+	width: calc(100% - 80px)
+	line-height: 1.6
+	a
+		color $mark
+
+.input-row-half
+	+below(640px)
+		fw()
+		margin-bottom: 0
+	f()
+	justify-content: space-between
+	margin-bottom: 20px
+	.input-wrap
+		+below(640px)
+			width: 100%
+			margin-bottom: 20px
+		width: 48%
+
+.input-row__title
+	margin-bottom: 10px
+	opacity: .6
+
+.input-row
+	.input
+		width: 100%
+		margin-bottom: 20px
+	.nice-select
+		width: 100%
+
+.agree-row
+	f()
+	align-items: center
+	margin:10px 0 20px 0
+	a
+		text-decoration: underline
+		display: inline-block
+
+.agree-row__text
+	width: 100%
+	color black
+	font-size: 12px
+	a
+		color #9c9a9a
+		text-decoration: none

@@ -1,0 +1,16 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eius eos eum laborum, minima odit omnis quis voluptatem! Inventore, tempora.
+
+			+checkbox("Картой курьера")
+			br
+			+checkbox("Картой курьера")
+			br
+			+radio("Картой курьера")
+	+footer()
+include ./block_html/_script.pug
