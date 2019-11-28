@@ -18,6 +18,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "jquery-nice-select": "^1.1.0"
+    "jquery-nice-select": "^1.1.0",
+    "page-scroll-to-id": "^1.6.3"
   }
 }

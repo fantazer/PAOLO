@@ -1,3 +1,28 @@
 mixin footer()
 	//block footer
+	.footer-wrap
+		.main-cont
+			.footer
+				a(href="/").footer-logo
+					img(src="img/logo-sqrt.svg", alt="")
+				.footer-contact
+					a(href="tel:8 4212 45-77-77").footer-phone 8 4212 45-77-77
+					a(href="mailto:pizza_paolo@gmail.com").footer-mail pizza_paolo@gmail.com
+				.footer-link
+					a(href="#").footer-link__el Публичная оферта
+					a(href="#").footer-link__el Политика конфиденциальности
+				.footer-share
+					.footer-soc
+						.soc-row
+							a(href="#").soc-row__el
+								+icon("soc-vk","icon")
+							a(href="#").soc-row__el
+								+icon("soc-fb","icon")
+							a(href="#").soc-row__el
+								+icon("soc-inst","icon")
+							a(href="#").soc-row__el
+								+icon("soc-twtr","icon")
+							a(href="#").soc-row__el
+								+icon("soc-youtube","icon")
+						a(href="#").create Разработка сайта: JQ Digital
 	//block footer end

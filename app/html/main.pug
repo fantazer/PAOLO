@@ -4,13 +4,113 @@ include block_html/_include.pug
 .page
 	+header()
 	.content
-		.main-cont
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eius eos eum laborum, minima odit omnis quis voluptatem! Inventore, tempora.
+		//main-slider
+		.slider-wrap.slider-wrap--inarrow
+			.slider-control.slider-control--left
+				+icon("pizza-arrow-left","icon")
+			.slider-control.slider-control--right
+				+icon("pizza-arrow-right","icon")
+			.main-slider.slider-item
+				.main-slider__el-wrap
+					// use img --desc for desktop version ||  --mobile for < 768px
+					a(href="#" style="background-image:url('img/slide-1.png')").main-slider__el.main-slider__el--desc
+					a(href="#" style="background-image:url('img/slide-1--mobile.png')").main-slider__el.main-slider__el--mobile
+				.main-slider__el-wrap
+					a(href="#" style="background-image:url('img/slide-1.png')").main-slider__el.main-slider__el--desc
+					a(href="#" style="background-image:url('img/slide-1--mobile.png')").main-slider__el.main-slider__el--mobile
+				.main-slider__el-wrap
+					a(href="#" style="background-image:url('img/slide-1.png')").main-slider__el.main-slider__el--desc
+					a(href="#" style="background-image:url('img/slide-1--mobile.png')").main-slider__el.main-slider__el--mobile
 
-			+checkbox("Картой курьера")
-			br
-			+checkbox("Картой курьера")
-			br
-			+radio("Картой курьера")
+		//main-cont
+		.wrap-cont.wrap-cont--main
+			-
+				var items = [
+				{name:"Пицца: классика",img:"pizza-1",id:"clasic"},
+				{name:"Пицца: избранное",img:"pizza-1",id:"favorite"},
+				{name:"Роллы",img:"roll",id:"roll"},
+				{name:"Фокачча",img:"fockacha",id:"fokacha"},
+				{name:"Супы",img:"soup",id:"soup"},
+				{name:"Салаты",img:"salad",id:"salad"},
+				{name:"Паста",img:"pasta",id:"pasta"},
+				{name:"Напитки",img:"drink",id:"drinks"},
+				{name:"Игрушки из дерева: Paolo WOOD WORK",img:"toys",id:"toys"},
+				];
+			each item in items
+				// category
+				.section(id=item.id)
+					.section-title
+						.section-title__el #{item.name}
+					if(item.name!="Напитки")
+						.items
+							- for(var i=0;i<6;i++)
+								+item(item.img)
+					else
+						.items.items--sm
+							- for(var i=0;i<9;i++)
+								.item
+									a(href="#" style="background-image:url('img/" + item.img + ".jpg')").item__img
+									.item__content
+										.item__info(style="background-image:url('img/wood.jpg')")
+											a(href="#").item__title Пепперони
+										.item__footer
+											+incr("0")
+				// category === end
+
+			//sale
+			.section.section--mark
+				.spot(style="background-image:url('img/spot.png')")
+				.section-title
+					.section-title__el Акции
+				.sale-list
+					a(href="#" style="background-image:url('img/sale-1.jpg')").sale-list__el
+					a(href="#" style="background-image:url('img/sale-2.jpg')").sale-list__el
+					a(href="#" style="background-image:url('img/sale-3.jpg')").sale-list__el
+					a(href="#" style="background-image:url('img/sale-4.jpg')").sale-list__el
+			//sale === end
+
+			// advant
+			.advant
+				.advant__el
+					.advant__el-icon
+						+icon("chef--color","icon")
+					.advant__el-text Делаем пиццу за 5 минут
+				.advant__el
+					.advant__el-icon
+						+icon("pizza--color","icon")
+					.advant__el-text Лучшее тесто для пиццы
+				.advant__el
+					.advant__el-icon
+						+icon("carrot--color","icon")
+					.advant__el-text Всегда свежие продукты
+				.advant__el
+					.advant__el-icon
+						+icon("heart-color","icon")
+					.advant__el-text Делаем с любовью
+			// advant === end
+
+			.section
+				.section-title
+					.section-title__el Отзывы
+				.review-slider
+					- for (var i=0;i<6;i++)
+						.review-slider__el
+							.review-slider__title Екатерина
+							.review-slider__rating
+								.star.star--edit
+									.star-el.star-el--active
+										+icon("pizza-pice","icon")
+									.star-el.star-el--active
+										+icon("pizza-pice","icon")
+									.star-el.star-el--active
+										+icon("pizza-pice","icon")
+									.star-el.star-el--active
+										+icon("pizza-pice","icon")
+									.star-el
+										+icon("pizza-pice","icon")
+							.review-slider__date 14 марта 2019 21:49
+							.review-slider__text Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка
+
+		+seo()
 	+footer()
 include ./block_html/_script.pug

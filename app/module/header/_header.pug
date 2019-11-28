@@ -1,3 +1,161 @@
 mixin header()
 	//block header
+	.head
+		.head-top-wrap
+			.main-cont
+				.head-top
+					.head-location Санкт-Петербург
+					.head-contact
+						a(href="tel:8 4212 45-77-77").head-contact__phone 8 4212 45-77-77
+						.head-contact__time сегодня 10 - 24
+					.head-top-nav
+						.head-top-search-wrap
+							form(action="#").head-top-search
+								input(type="text" placeholder="Введите ваш запрос" class="input")
+						-
+							var items = [
+							'О нас',
+							'Отзывы',
+							'Акции',
+							'Франчайзинг'
+							];
+						each item in items
+							a(href="#").head-top-nav__el #{item}
+					.head-search
+						+icon("search","icon")
+					//toggle class .login--false .login--true
+					.login.login--true
+						.login-drop-toggle.login-enter
+							.login-enter-mobile
+								+icon("user-round","icon")
+							span.login-enter-mobile-text Вход в личный кабинет
+						a(href="#").login-auth
+							.login-auth__icon
+								+icon("user","icon")
+								.login-auth__bonus +140 Б
+							.login-auth__name Константин
+
+		.main-cont
+			.head-info
+				a(href="#").logo
+					img(src="img/logo.svg", alt="")
+				.header-slogan
+					.header-slogan__text Закажите еду зараннее и заберите её в удобном для вас заведении
+						a(href="#").header-slogan__icon
+							+icon("question-circle","icon")
+				.header-search-panel
+					form(action="").search-location.header-search-panel__el
+						.search-location-wrap
+							input(type="text" placeholder="Найти ближайшую пиццерию" class="input input-search")
+							.search-location-icon
+								+icon("location","icon")
+					form(action="").search-aim.header-search-panel__el
+						.search-aim-wrap
+							.search-aim-icon
+								+icon("aim","icon")
+							input(type="text" placeholder="Найти ближайшую пиццерию" class="input input-search")
+	.head-main-wrap
+		.main-cont
+			.head-main
+				.head-toggle
+					+icon("menu","icon icon-open")
+					+icon("close","icon icon-close")
+				.head-nav
+					-
+						var items = [
+						{name:"Пицца: классика",id:"#clasic"},
+						{name:"Пицца: избранное",id:"#favorite"},
+						{name:"Роллы",id:"#roll"},
+						{name:"Фокачча",id:"#fokacha"},
+						{name:"Супы",id:"#soup"},
+						{name:"Салаты",id:"#salad"},
+						{name:"Паста",id:"#pasta"},
+						{name:"Напитки",id:"#drinks"},
+						{name:"Игрушки из дерева: Paolo WOOD WORK",id:"#toys"},
+						];
+					each item in items
+						.head-nav__el-wrap
+						a(href=item.id rel='m_PageScroll2id' ).head-nav__el #{item.name}
+				a(href="#").cart.cart--full
+					.cart-icon
+						+icon("cart","icon")
+						.cart-icon__val 1250 р
+					.cart-info
+						.cart-condition 1250 р
+						.cart-size 2 товара
+
+	//мобильное меню
+	.slide-menu
+		.slide-menu-wrap
+			//Подменю главное
+			.slide-menu__list.slide-menu__list--active.slide-menu__list--up(data-menu="main")
+				.slide-el.slide-el--sub(data-menu="menu")
+					span Меню
+					+icon("arrow-right","icon")
+				.slide-el.slide-el--sub(data-menu="town")
+					span Ваш город
+					+icon("arrow-right","icon")
+				a(href="#").slide-el Доставка
+				a(href="#").slide-el Акции
+				a(href="#").slide-el Отзывы
+				a(href="#").slide-el Кафе
+				a(href="#").slide-el Вакансии
+				a(href="#").slide-el Контакты
+
+				//toggle class .login--false .login--true
+				.slide-menu-contact
+					.login.login--false
+						.login-enter
+							+icon("profile","icon")
+							span.login-enter-mobile-text Вход в кабинет
+						a(href="#").login-auth
+							.login-auth__icon
+								+icon("profile","icon")
+								.login-auth__icon-check
+									+icon("checked","icon")
+							.login-auth__name Константин
+							.login-auth__bonus +140 Б
+					form(action="").header-search
+						.header-search-wrap
+							.header-search-icon
+								+icon("serch","icon")
+								input(type="text" placeholder="Активный поиск" class="input input-search")
+					a(href="tel:8 (843) 233 44 33").slide-menu-phone 8 (843) 233 44 33
+					.soc-row
+						a(href="#").soc-row__el
+							+icon("soc-instagram","icon")
+						a(href="#").soc-row__el
+							+icon("soc-vk","icon")
+
+			//Подменю список блюд
+			.slide-menu__list.slide-menu__list--down(data-menu="menu")
+				.slide-el.slide-el--sub(data-menu="main")
+					span Меню
+					+icon("arrow-left","icon")
+				.slide-el.slide-el--sub.tag__el--sky(data-menu="roll")
+					.tag__el-icon
+						+icon("roll","icon")
+						.tag__el-text роллы
+					+icon("arrow-right","icon")
+
+
+			//Подменю список роллы
+			.slide-menu__list.slide-menu__list--down(data-menu="roll")
+				.slide-el.slide-el--sub(data-menu="menu")
+					span Виды роллов
+					+icon("arrow-left","icon")
+				a(href="#").slide-el жаренные роллы
+				a(href="#").slide-el основные роллы
+				a(href="#").slide-el острые роллы
+				a(href="#").slide-el классические роллы
+
+			//Подменю города
+			.slide-menu__list.slide-menu__list--down(data-menu="town")
+				.slide-el.slide-el--sub(data-menu="main")
+					span Выберите свой город
+					+icon("arrow-left","icon")
+				.slide-el Москва
+				.slide-el.slide-el--active Санкт-Петербург
+				.slide-el Казань
+				.slide-el Чебоксары
 	//block header end

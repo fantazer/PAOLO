@@ -28,52 +28,2416 @@
 <body>
     <div class="page">
         <!--block header-->
+        <div class="head">
+            <div class="head-top-wrap">
+                <div class="main-cont">
+                    <div class="head-top">
+                        <div class="head-location">Санкт-Петербург</div>
+                        <div class="head-contact">
+                            <a class="head-contact__phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+                            <div class="head-contact__time">сегодня 10 - 24</div>
+                        </div>
+                        <div class="head-top-nav">
+                            <div class="head-top-search-wrap">
+                                <form class="head-top-search" action="#">
+                                    <input class="input" type="text" placeholder="Введите ваш запрос" />
+                                </form>
+                            </div>
+                            <a class="head-top-nav__el" href="#">О нас</a>
+                            <a class="head-top-nav__el" href="#">Отзывы</a>
+                            <a class="head-top-nav__el" href="#">Акции</a>
+                            <a class="head-top-nav__el" href="#">Франчайзинг</a>
+                        </div>
+                        <div class="head-search">
+                            <svg class="icon">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </div>
+                        <!--toggle class .login--false .login--true-->
+                        <div class="login login--true">
+                            <div class="login-drop-toggle login-enter">
+                                <div class="login-enter-mobile">
+                                    <svg class="icon">
+                                        <use xlink:href="#user-round"></use>
+                                    </svg>
+                                </div>
+                                <span class="login-enter-mobile-text">Вход в личный кабинет</span>
+                            </div>
+                            <a class="login-auth" href="#">
+                                <div class="login-auth__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#user"></use>
+                                    </svg>
+                                    <div class="login-auth__bonus">+140 Б</div>
+                                </div>
+                                <div class="login-auth__name">Константин</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="head-info">
+                    <a class="logo" href="#">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
+                    <div class="header-slogan">
+                        <div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении
+                            <a class="header-slogan__icon" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#question-circle"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-search-panel">
+                        <form class="search-location header-search-panel__el" action="">
+                            <div class="search-location-wrap">
+                                <input class="input input-search" type="text" placeholder="Найти ближайшую пиццерию" />
+                                <div class="search-location-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </form>
+                        <form class="search-aim header-search-panel__el" action="">
+                            <div class="search-aim-wrap">
+                                <div class="search-aim-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#aim"></use>
+                                    </svg>
+                                </div>
+                                <input class="input input-search" type="text" placeholder="Найти ближайшую пиццерию" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="head-main-wrap">
+            <div class="main-cont">
+                <div class="head-main">
+                    <div class="head-toggle">
+                        <svg class="icon icon-open">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon icon-close">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <div class="head-nav">
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#roll" rel="m_PageScroll2id">Роллы</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#soup" rel="m_PageScroll2id">Супы</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#salad" rel="m_PageScroll2id">Салаты</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#pasta" rel="m_PageScroll2id">Паста</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+                    </div>
+                    <a class="cart cart--full" href="#">
+                        <div class="cart-icon">
+                            <svg class="icon">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <div class="cart-icon__val">1250 р</div>
+                        </div>
+                        <div class="cart-info">
+                            <div class="cart-condition">1250 р</div>
+                            <div class="cart-size">2 товара</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--мобильное меню-->
+        <div class="slide-menu">
+            <div class="slide-menu-wrap">
+                <!--Подменю главное-->
+                <div class="slide-menu__list slide-menu__list--active slide-menu__list--up" data-menu="main">
+                    <div class="slide-el slide-el--sub" data-menu="menu">
+                        <span>Меню</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                    <div class="slide-el slide-el--sub" data-menu="town">
+                        <span>Ваш город</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                    <a class="slide-el" href="#">Доставка</a>
+                    <a class="slide-el" href="#">Акции</a>
+                    <a class="slide-el" href="#">Отзывы</a>
+                    <a class="slide-el" href="#">Кафе</a>
+                    <a class="slide-el" href="#">Вакансии</a>
+                    <a class="slide-el" href="#">Контакты</a>
+                    <!--toggle class .login--false .login--true-->
+                    <div class="slide-menu-contact">
+                        <div class="login login--false">
+                            <div class="login-enter">
+                                <svg class="icon">
+                                    <use xlink:href="#profile"></use>
+                                </svg>
+                                <span class="login-enter-mobile-text">Вход в кабинет</span>
+                            </div>
+                            <a class="login-auth" href="#">
+                                <div class="login-auth__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#profile"></use>
+                                    </svg>
+                                    <div class="login-auth__icon-check">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="login-auth__name">Константин</div>
+                                <div class="login-auth__bonus">+140 Б</div>
+                            </a>
+                        </div>
+                        <form class="header-search" action="">
+                            <div class="header-search-wrap">
+                                <div class="header-search-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#serch"></use>
+                                    </svg>
+                                    <input class="input input-search" type="text" placeholder="Активный поиск" />
+                                </div>
+                            </div>
+                        </form>
+                        <a class="slide-menu-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
+                        <div class="soc-row">
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-instagram"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-vk"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Подменю список блюд-->
+                <div class="slide-menu__list slide-menu__list--down" data-menu="menu">
+                    <div class="slide-el slide-el--sub" data-menu="main">
+                        <span>Меню</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                    <div class="slide-el slide-el--sub tag__el--sky" data-menu="roll">
+                        <div class="tag__el-icon">
+                            <svg class="icon">
+                                <use xlink:href="#roll"></use>
+                            </svg>
+                            <div class="tag__el-text">роллы</div>
+                        </div>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
+                <!--Подменю список роллы-->
+                <div class="slide-menu__list slide-menu__list--down" data-menu="roll">
+                    <div class="slide-el slide-el--sub" data-menu="menu">
+                        <span>Виды роллов</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                    <a class="slide-el" href="#">жаренные роллы</a>
+                    <a class="slide-el" href="#">основные роллы</a>
+                    <a class="slide-el" href="#">острые роллы</a>
+                    <a class="slide-el" href="#">классические роллы</a>
+                </div>
+                <!--Подменю города-->
+                <div class="slide-menu__list slide-menu__list--down" data-menu="town">
+                    <div class="slide-el slide-el--sub" data-menu="main">
+                        <span>Выберите свой город</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                    <div class="slide-el">Москва</div>
+                    <div class="slide-el slide-el--active">Санкт-Петербург</div>
+                    <div class="slide-el">Казань</div>
+                    <div class="slide-el">Чебоксары</div>
+                </div>
+            </div>
+        </div>
         <!--block header end-->
         <div class="content">
+            <!--main-slider-->
+            <div class="slider-wrap slider-wrap--inarrow">
+                <div class="slider-control slider-control--left">
+                    <svg class="icon">
+                        <use xlink:href="#pizza-arrow-left"></use>
+                    </svg>
+                </div>
+                <div class="slider-control slider-control--right">
+                    <svg class="icon">
+                        <use xlink:href="#pizza-arrow-right"></use>
+                    </svg>
+                </div>
+                <div class="main-slider slider-item">
+                    <div class="main-slider__el-wrap">
+                        <!-- use img --desc for desktop version ||  --mobile for < 768px-->
+                        <a class="main-slider__el main-slider__el--desc" href="#" style="background-image:url('img/slide-1.png')"></a>
+                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/slide-1--mobile.png')"></a>
+                    </div>
+                    <div class="main-slider__el-wrap">
+                        <a class="main-slider__el main-slider__el--desc" href="#" style="background-image:url('img/slide-1.png')"></a>
+                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/slide-1--mobile.png')"></a>
+                    </div>
+                    <div class="main-slider__el-wrap">
+                        <a class="main-slider__el main-slider__el--desc" href="#" style="background-image:url('img/slide-1.png')"></a>
+                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/slide-1--mobile.png')"></a>
+                    </div>
+                </div>
+            </div>
+            <!--main-cont-->
+            <div class="wrap-cont wrap-cont--main">
+                <!-- category-->
+                <div class="section" id="clasic">
+                    <div class="section-title">
+                        <div class="section-title__el">Пицца: классика</div>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!-- category-->
+                <div class="section" id="favorite">
+                    <div class="section-title">
+                        <div class="section-title__el">Пицца: избранное</div>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!-- category-->
+                <div class="section" id="roll">
+                    <div class="section-title">
+                        <div class="section-title__el">Роллы</div>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/roll.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/roll.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/roll.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/roll.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/roll.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/roll.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!-- category-->
+                <div class="section" id="fokacha">
+                    <div class="section-title">
+                        <div class="section-title__el">Фокачча</div>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/fockacha.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/fockacha.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/fockacha.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/fockacha.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/fockacha.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/fockacha.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!-- category-->
+                <div class="section" id="soup">
+                    <div class="section-title">
+                        <div class="section-title__el">Супы</div>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/soup.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/soup.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/soup.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/soup.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/soup.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/soup.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!-- category-->
+                <div class="section" id="salad">
+                    <div class="section-title">
+                        <div class="section-title__el">Салаты</div>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/salad.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/salad.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/salad.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/salad.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/salad.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/salad.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!-- category-->
+                <div class="section" id="pasta">
+                    <div class="section-title">
+                        <div class="section-title__el">Паста</div>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pasta.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pasta.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pasta.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pasta.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pasta.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/pasta.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!-- category-->
+                <div class="section" id="drinks">
+                    <div class="section-title">
+                        <div class="section-title__el">Напитки</div>
+                    </div>
+                    <div class="items items--sm">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!-- category-->
+                <div class="section" id="toys">
+                    <div class="section-title">
+                        <div class="section-title__el">Игрушки из дерева: Paolo WOOD WORK</div>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/toys.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/toys.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/toys.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/toys.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/toys.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a class="item__img" href="#" style="background-image:url('img/toys.jpg')"></a>
+                            <div class="item__content">
+                                <div class="item__info" style="background-image:url('img/wood.jpg')">
+                                    <a class="item__title" href="#">Пепперони</a>
+                                    <div class="item__text">Мраморная говядина, лапша собственного приготовления, лук, болгарский перец, морковь, чеснок</div>
+                                </div>
+                                <div class="item__footer">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span class="incr__size">0</span>
+                                                <div class="incr__divider">x</div>
+                                                <div class="incr__cost">246 ₽</div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- category === end-->
+                <!--sale-->
+                <div class="section section--mark">
+                    <div class="spot" style="background-image:url('img/spot.png')"></div>
+                    <div class="section-title">
+                        <div class="section-title__el">Акции</div>
+                    </div>
+                    <div class="sale-list">
+                        <a class="sale-list__el" href="#" style="background-image:url('img/sale-1.jpg')"></a>
+                        <a class="sale-list__el" href="#" style="background-image:url('img/sale-2.jpg')"></a>
+                        <a class="sale-list__el" href="#" style="background-image:url('img/sale-3.jpg')"></a>
+                        <a class="sale-list__el" href="#" style="background-image:url('img/sale-4.jpg')"></a>
+                    </div>
+                </div>
+                <!--sale === end-->
+                <!-- advant-->
+                <div class="advant">
+                    <div class="advant__el">
+                        <div class="advant__el-icon">
+                            <svg class="icon">
+                                <use xlink:href="#chef--color"></use>
+                            </svg>
+                        </div>
+                        <div class="advant__el-text">Делаем пиццу за 5 минут</div>
+                    </div>
+                    <div class="advant__el">
+                        <div class="advant__el-icon">
+                            <svg class="icon">
+                                <use xlink:href="#pizza--color"></use>
+                            </svg>
+                        </div>
+                        <div class="advant__el-text">Лучшее тесто для пиццы</div>
+                    </div>
+                    <div class="advant__el">
+                        <div class="advant__el-icon">
+                            <svg class="icon">
+                                <use xlink:href="#carrot--color"></use>
+                            </svg>
+                        </div>
+                        <div class="advant__el-text">Всегда свежие продукты</div>
+                    </div>
+                    <div class="advant__el">
+                        <div class="advant__el-icon">
+                            <svg class="icon">
+                                <use xlink:href="#heart-color"></use>
+                            </svg>
+                        </div>
+                        <div class="advant__el-text">Делаем с любовью</div>
+                    </div>
+                </div>
+                <!-- advant === end-->
+                <div class="section">
+                    <div class="section-title">
+                        <div class="section-title__el">Отзывы</div>
+                    </div>
+                    <div class="review-slider">
+                        <div class="review-slider__el">
+                            <div class="review-slider__title">Екатерина</div>
+                            <div class="review-slider__rating">
+                                <div class="star star--edit">
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-slider__date">14 марта 2019 21:49</div>
+                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                        </div>
+                        <div class="review-slider__el">
+                            <div class="review-slider__title">Екатерина</div>
+                            <div class="review-slider__rating">
+                                <div class="star star--edit">
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-slider__date">14 марта 2019 21:49</div>
+                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                        </div>
+                        <div class="review-slider__el">
+                            <div class="review-slider__title">Екатерина</div>
+                            <div class="review-slider__rating">
+                                <div class="star star--edit">
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-slider__date">14 марта 2019 21:49</div>
+                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                        </div>
+                        <div class="review-slider__el">
+                            <div class="review-slider__title">Екатерина</div>
+                            <div class="review-slider__rating">
+                                <div class="star star--edit">
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-slider__date">14 марта 2019 21:49</div>
+                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                        </div>
+                        <div class="review-slider__el">
+                            <div class="review-slider__title">Екатерина</div>
+                            <div class="review-slider__rating">
+                                <div class="star star--edit">
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-slider__date">14 марта 2019 21:49</div>
+                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                        </div>
+                        <div class="review-slider__el">
+                            <div class="review-slider__title">Екатерина</div>
+                            <div class="review-slider__rating">
+                                <div class="star star--edit">
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el star-el--active">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="star-el">
+                                        <svg class="icon">
+                                            <use xlink:href="#pizza-pice"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-slider__date">14 марта 2019 21:49</div>
+                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="main-cont">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eius eos eum laborum, minima odit omnis quis voluptatem! Inventore, tempora.</p>
-                <div class="check-el">
-                    <label class="style-label style-label--checkbox">
-                        <input class="sytle-input" type="checkbox" />
-                        <div class="sytle-input-element">
-                            <svg class="icon-check">
-                                <use xlink:href="#checked"></use>
-                            </svg>
-                        </div>
-                        <div class="sytle-input-text">Картой курьера</div>
-                    </label>
-                </div>
-                <br/>
-                <div class="check-el">
-                    <label class="style-label style-label--checkbox">
-                        <input class="sytle-input" type="checkbox" />
-                        <div class="sytle-input-element">
-                            <svg class="icon-check">
-                                <use xlink:href="#checked"></use>
-                            </svg>
-                        </div>
-                        <div class="sytle-input-text">Картой курьера</div>
-                    </label>
-                </div>
-                <br/>
-                <div class="check-el">
-                    <label class="style-label style-label--radio">
-                        <input class="sytle-input" type="radio" name="group" />
-                        <div class="sytle-input-element">
-                            <div class="icon-radio"></div>
-                        </div>
-                        <div class="sytle-input-text">Картой курьера</div>
-                    </label>
+                <div class="description__cont text">
+                    <div class="description__text">
+                        <p>SEO-текст. Это как старый друг, проверенный годами, ведь на рынке они очень давно. Кроме того, они были одними из первых, у кого появилась служба доставки в столице еще в 2001 году. Теперь это одна из самых больших сетей пиццерий
+                            в Киеве и Чернигове — у них целых 13 ресторанов. Кроме того, у заведения очень демократичные цены и много начинки.</p>
+                        <p>Пиццу здесь готовят из отборный продуктов, что явно не может не радовать. И, несмотря на то, что тесто готовят по традиционному неаполитанскому рецепту, у них есть интересная фишка. Это, так званое, сочетание классики и авангарда
+                            — к примеру, есть пиццы с морепродуктами, с корнишонами, каперсами и с экзотическими продуктами. В День рождение в ресторанах Mamamia вам вернут 100% от счета на бонусный счет.</p>
+                    </div>
+                    <div class="description__text--hidden description__text--hidden">
+                        <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу.. горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
+                        <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле
+                            понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
+                    </div>
+                    <div class="description__more">
+                        <span class="description__more--true">Показать еще</span>
+                        <span class="description__more--false">Скрыть</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
         <!--block footer-->
+        <div class="footer-wrap">
+            <div class="main-cont">
+                <div class="footer">
+                    <a class="footer-logo" href="/">
+                        <img src="img/logo-sqrt.svg" alt="" />
+                    </a>
+                    <div class="footer-contact">
+                        <a class="footer-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+                        <a class="footer-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a>
+                    </div>
+                    <div class="footer-link">
+                        <a class="footer-link__el" href="#">Публичная оферта</a>
+                        <a class="footer-link__el" href="#">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer-share">
+                        <div class="footer-soc">
+                            <div class="soc-row">
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-vk"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-fb"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-inst"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-twtr"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-youtube"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <a class="create" href="#">Разработка сайта: JQ Digital</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--block footer end-->
     </div>
     <!--build:js js/combined.js-->
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/slick-carousel/slick/slick.js"></script>
     <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+    <script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
     <!-- endbuild-->
     <script src="js/add-on.js"></script>
     <script src="js/script.js"></script>

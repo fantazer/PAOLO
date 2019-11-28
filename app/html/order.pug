@@ -1,0 +1,88 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.wrap-cont
+			.order
+				.order-cont
+					.title.title--mid Корзина
+					.order-location
+						.order-location__el
+							.order-location__head Выберите заведение, с которого вы заберёте заказ
+							select.select-beauty
+								- for (var i=0;i<7;i++)
+									option ул. Московская, д. 45
+									option ул. Московская, д. 14
+									option ул. Московская, д. 15
+						.order-location__el
+							.order-location__btn
+								+icon("aim","icon")
+								span Выбрать заведение на карте
+
+					// remove class to show empty basket .order-empty--hide
+					.order-empty.order-empty--hide
+						.order-empty-icon
+							img(src="img/basket-color.svg", alt="")
+						.order-empty-title Ваша корзина пуста =(
+						.order-empty-text Добавьте что-нибудь из меню
+					.order-item
+						- for (var i=0;i<5;i++)
+							.basket__el
+								.basket__el-info
+									.basket__name
+										a(href="#").basket__name-text Гавайская с курицей
+										.basket__name-decr Традиционное, 25 см
+								.basket__el-change
+									if(i!=2)
+										.basket__inc
+											.elements-icr-block.elements-icr-block--active
+												.incr
+													.incr__minus.incr__nav
+														+icon("minus","icon")
+													.incr__val
+														span.incr__size 1
+														.incr__divider x
+														.incr__cost 246 ₽
+													.incr__plus.incr__nav
+														+icon("plus","icon")
+									else
+										.basket-epsent товара нет в продаже на выбранной точке
+									.basket__delete
+										+icon("garbage","icon")
+					.items.items--sm
+						- for(var i=0;i<9;i++)
+							.item.item--sm
+								a(href="#" style="background-image:url('img/drink.jpg')").item__img
+								.item__content
+									.item__info(style="background-image:url('img/wood.jpg')")
+										a(href="#").item__title Морс смород 0,5л
+									.item__footer
+										+incr("0")
+				.panel
+					.panel-wrap
+						.panel-head Ваш заказ
+						.panel-list
+							- for (var i=0;i<4;i++)
+								a(href="#" style="background-image:url('img/pasta.jpg')").panel-list__el
+									.panel-list__el-val x2
+							.panel-list__el.panel-list__el--last(style="background-image:url('img/item-1.jpg')")
+								.panel-list__el-val +2
+						.panel-total
+							.panel-text Сумма:
+							.panel-val 1 220 Р
+						.panel-footer
+							a(href="#").panel-get Заказать
+							a(href="#").panel-back Вернуться в меню
+						//if logout
+						.panel-info <a href="#" class="link--mark">Войдите</a> или <a href="#" class="link--mark">зарегистрируйтесь</a>, чтобы получать кешбек от заказов
+						//if login
+						.panel-info Вы можете потратить на заказ:
+						.bonus
+							.bonus__val 250
+							.bonus__text бонусных баллов
+
+		+seo()
+	+footer()
+include ./block_html/_script.pug

@@ -1,0 +1,102 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.wrap-cont
+			.order
+				.order-cont
+					// remove class to show empty basket .order-empty--hide
+					.order-empty.order-empty--hide
+						.order-empty-icon
+							+icon("basket--color","icon")
+						.order-empty-title Ваша корзина пуста =(
+						.order-empty-text Добавьте что-нибудь из меню
+					form(action="#")
+						.input-cont.input-cont--two
+							.input-row.input-row--error
+								input(type="text" placeholder="Ваше имя" class="input")
+								.error-msg Введённые данные не должны содержать цифры
+							.input-row
+								input(type="text" placeholder="Ваш Телефон" class="input")
+						.order-tab
+							.order-tab__el.order-tab__el--active(data-tab="deliver") Доставка
+							.order-tab__el(data-tab="self") Самовывоз
+						.order-container
+							.order-cont__el(data-tab="deliver")
+								.input-row
+									input(type="text" placeholder="Улица" class="input")
+								.input-row.input-row--adress
+									input(type="text" placeholder="Дом" class="input")
+									input(type="text" placeholder="Квартира" class="input")
+									input(type="text" placeholder="Подъезд" class="input")
+									input(type="text" placeholder="Этаж" class="input")
+								.order-time
+									.order-time__title Время доставки
+									.order-time__select
+										select.select-beauty
+											option Как можно скорее
+											option Завтра
+											option Сегодня
+							.order-cont__el.hidden(data-tab="self")
+								.radio-list
+									+radio("ул. А.Петрова 196а","adress","check")
+									+radio("Проспект Красноармейский, 94а.","adress")
+									+radio("Павловский тракт, 223а","adress")
+
+						.payment
+							.order-title Оплата
+							.payment__type-tab
+								.payment__type__el(data-tab="cash")
+									+radio("Наличными","payment","check")
+								.payment__type__el(data-tab="card")
+									+radio("Картой онлайн","payment")
+
+							.payment__type-cont.hidden
+								.payment__type-cont-el(data-tab="card")
+									.payment-card
+										- for (var i=0;i<3;i++)
+										.payment-card__el(class=i === 0 ? 'payment-card__el--active' : '')
+											.payment-card__el-icon
+												+icon("visa","icon")
+											.payment-card__el-val 7878 988* **** 3445
+										a(href="#").payment-card__other другой картой
+
+						.order-title У вас 128 баллов
+						.range-wrap
+							input(type="range" class="range" data-min="0" data-max="100")
+						.order-title Комментарий к заказу
+						.input-row
+							textarea(class="input" placeholder="Комментарий" name="textarea", cols="30", rows="10")
+
+				.panel
+					.panel-wrap
+						.panel-head Ваш заказ
+						.panel-list
+							- for (var i=0;i<4;i++)
+								.panel-list__el(style="background-image:url('img/salad.jpg')")
+									.panel-list__el-val x2
+							.panel-list__el.panel-list__el--last(style="background-image:url('img/item-4.jpg')")
+								.panel-list__el-val +2
+
+						.panel-total
+							.panel-text Сумма:
+							.panel-val 1 220 Р
+
+
+
+						.panel-footer
+							.check-el.check-el--agree
+								label.style-label.style-label--checkbox
+									input(type="checkbox" name="agree").sytle-input
+									.sytle-input-element
+										+icon("checked","icon icon-check")
+									.sytle-input-text Согласен с условиями <br> обработки персональных данных
+							// сделать кнопку неактивной добавь класс .btn--disable
+							a(href="#").panel-get Заказать
+							a(href="#").panel-back Вернуться в меню
+
+		+seo()
+	+footer()
+include ./block_html/_script.pug
