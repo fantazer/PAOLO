@@ -19,6 +19,11 @@ body
 
 .main-cont
 	center(1270px,10px)
+.main-cont--sm
+	center(800px,10px)
+
+.main-cont--xs
+	center(640px,10px)
 
 .wrap-cont
 	center(1250px,10px)
@@ -39,6 +44,7 @@ body
 	flex-grow 1
 	position relative
 	background-color: #f6f6f6
+	padding-bottom: 70px
 	&:after
 		content ''
 		width: calc((100% - 1250px)/2)
@@ -49,6 +55,7 @@ body
 		background-color: #f6f6f6
 		background-image: url(/img/pattern-right.png)
 		position absolute
+		opacity: .2
 	&:before
 		content ''
 		width: calc((100% - 1200px)/2)
@@ -60,6 +67,7 @@ body
 		background-image: url(/img/pattern-right.png)
 		position absolute
 		background-position: 0 200px
+		opacity: .2
 //modal
 .modal-layer
 	width: 100%
@@ -93,18 +101,28 @@ body
 	min-height 100vh
 
 .modal
-	+below(768px)
+	+below(640px)
 		width: 100%
-		box-shadow 0 0 0
-	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
 	transform translateY(-350%)
 	position: absolute
-	opacity .1
-	transition transform .8s, opacity 1s
-	max-width 470px
+	opacity 0
+	transition opacity .8s
+	width: 360px
 	.order__row
 		margin-bottom: 20px
 		border-bottom 0
+
+.modal--lg
+	+below(768px)
+		width: 100%
+	width: 720px
+	max-width initial
+.modal--xl
+	+below(1500px)
+		width: 100%
+	width: 1500px
+
+
 .modal-content
 	+below(640px)
 		height: 100%
@@ -115,7 +133,9 @@ body
 	background: white
 	position: relative
 	padding: 40px
-	br(10px)
+
+.modal-content--clear
+	padding: 0
 
 .modal__show
 	max-height 100%
@@ -127,14 +147,17 @@ body
 	+below(768px)
 		top 12px
 		right 12px
-	position: absolute
-	top: 20px
-	right: 20px
+	flex(mid)
 	cp()
+	z-index 100
+	position: absolute
+	top: 0
+	right: 0
+	size 50px
+	background: $red
 	.icon
-		size 12px
-		fill black
-		opacity:.3
+		size 20px
+		fill white
 
 .modal-open
 	overflow: hidden
@@ -158,7 +181,10 @@ body
 	margin-bottom: 20px
 	text-align: center
 	color black
-
+	font-family "Lifehack Sans"
+	@extend .type--xl
+	font-weight 700
+	letter-spacing 0.9px
 .modal-text
 	+below(768px)
 		width: 100%
@@ -209,15 +235,17 @@ body
 .modal-content--true
 	flex(mid)
 	fl()
-	br(10px)
-	.icon
-		fill green
-		size 120px
-		margin-bottom: 20px
+
+.modal-content--false
+	img
+		max-width 140px
+		margin-left auto
+		margin-right auto
 
 .modal-text-true
 	text-align: center
 	font-weight: bold
+	margin: 20px 0
 
 //modal===end
 
@@ -230,6 +258,7 @@ body
 	font-weight 700
 	height: 52px
 	line-height: 52px
+	float none
 	.list
 		width: calc(100% )
 		left 0px
@@ -320,11 +349,11 @@ select.select-beauty
 	size 50px
 	flex(mid)
 	cp()
-	+above(1025px)
+	+above(769px)
 		display: none
 	.icon
 		size 25px
-		fill white
+		fill black
 	.icon-close
 		display: none
 
@@ -399,6 +428,8 @@ select.select-beauty
 	//padding: 15px 0
 //.main-cont
 .head-top
+	+below(768px)
+		display none
 	height: 50px
 	f()
 	align-items center
@@ -423,6 +454,8 @@ select.select-beauty
 .head-contact__time
 	opacity: .5
 .head-top-nav
+	+below(1024px)
+		width: 30%
 	margin-left auto
 	flex(between)
 	width: 25%
@@ -499,6 +532,8 @@ select.select-beauty
 	padding: 1px 3px
 	br(5px)
 .head-info
+	+below(768px)
+		display none
 	padding: 30px 0
 	f()
 	align-items center
@@ -510,7 +545,7 @@ select.select-beauty
 	width: 100%
 .search-location-icon
 	background: $mark
-	size 55px
+	size 57px
 	flex(mid)
 	cp()
 	.icon
@@ -532,6 +567,8 @@ select.select-beauty
 		fill white
 
 .header-search-panel
+	+below(1024px)
+		width: 65%
 	f()
 	width: 50%
 	margin-left auto
@@ -588,7 +625,8 @@ select.select-beauty
 	+below(960px)
 		width calc(100% - 40px)
 	+below(768px)
-		display: none
+		width: 100%
+		overflow auto
 	flex(between)
 	width: 85%
 .head-nav__el
@@ -596,6 +634,10 @@ select.select-beauty
 		font-size: 14px
 	+below(1024px)
 		font-size: 12px
+	+below(768px)
+		white-space nowrap
+		margin-right: 5px
+		padding: 10px 0
 	@extend .type--lg
 	padding: 25px 0
 	font-weight 500
@@ -612,6 +654,8 @@ select.select-beauty
 .head-nav__el--active
 	position: relative
 	&:before
+		+below(768px)
+			height: 5px
 		content ''
 		left 0
 		bottom 2px
@@ -620,6 +664,8 @@ select.select-beauty
 		background: $mark
 		position absolute
 	&:after
+		+below(768px)
+			height: 5px
 		content ''
 		right 0
 		bottom 2px
@@ -631,13 +677,14 @@ select.select-beauty
 .cart
 	+below(1200px)
 		padding: 10px
+		margin-right: -10px
 	+below(768px)
 		margin-left:initial
 		f()
-		fl()
-		margin-right: -10px
 		border-left 1px solid $border-color
 		border-radius 0
+		margin-right: 0
+		display none
 	flex(mid)
 	tr(all)
 	background: $yellow
@@ -645,6 +692,7 @@ select.select-beauty
 	text-decoration: none
 	padding: 5px 20px
 	height: 100%
+	min-width 60px
 	&:hover
 		background: $red
 		color white
@@ -667,6 +715,7 @@ select.select-beauty
 		flex(mid)
 		font-weight: 500
 		font-size: 10px
+		display none
 	font-weight:700
 	margin-top: 5px
 	white-space nowrap
@@ -674,28 +723,15 @@ select.select-beauty
 .cart-info
 	+below(1200px)
 		display: none
+	+below(768px)
+		display block
 	font-size: 16px
 	margin-left: 10px
 .cart-condition
 	font-weight: 700
 //.cart-size
 
-.head-toggle
-	flex(mid)
-	cp()
-	margin-right: 20px
-	+above(769px)
-		display: none
-	.icon
-		size 25px
-	.icon-close
-		display: none
 
-.head-toggle--open
-	.icon-close
-		display: block
-	.icon-open
-		display: none
 		
 
 // main slider
@@ -708,6 +744,9 @@ select.select-beauty
 	padding: 16% 10%
 	//height: 500px
 	width: 100%
+.main-slider__el--desc
+	+below(480px)
+		display none
 .main-slider__el--mobile
 	display none
 	+below(480px)
@@ -717,6 +756,10 @@ select.select-beauty
 .slider-wrap
 	position relative
 	z-index 10
+.slider-wrap--main
+	.slider-control
+		+below(768px)
+			display none!important
 .slider-wrap--simple
 	.slider-control
 		round()
@@ -794,18 +837,23 @@ select.select-beauty
 .items
 	+below(1200px)
 		grid-template-columns repeat(3,1fr)
-	+below(960px)
-		grid-template-columns repeat(2,1fr)
-		grid-gap 30px
-		margin-bottom: 0px
+	+below(768px)
+		grid-template-columns repeat(3,1fr)
+	+below(680px)
+		grid-template-columns 1fr 1fr
 	+below(640px)
 		grid-template-columns 1fr
-		margin-bottom: 40px
+		margin-bottom: 60px
 	display: grid
 	grid-gap 30px
 	grid-template-columns repeat(auto-fill, minmax(14rem,1fr))
 	margin-bottom: 100px
+.items--clear
+	margin-bottom: 0
 .items--sm
+	+below(1024px)
+		.incr__val
+			font-size: 14px
 	grid-template-columns repeat(auto-fill, minmax(10rem,1fr))
 
 .item
@@ -837,13 +885,11 @@ select.select-beauty
 		height: auto!important
 		padding: 15% 10%
 		width: 35%
-		border-radius 0 30px 30px 0
-		min-height 150px
+		min-height 100px
 	+below(480px)
-		padding: 35% 10%
+		padding: 50% 10%
 		width: 100%
 		border-radius 0
-		margin-bottom: 20px
 	bg-full()
 	padding: 53% 10%
 	transition all .2s
@@ -852,7 +898,6 @@ select.select-beauty
 	+below(640px)
 		width: 65%
 		border 0
-		padding: 0 10px
 		box-shadow 0 0 0
 		background: none
 	+below(480px)
@@ -862,6 +907,8 @@ select.select-beauty
 	tr(all)
 	flex-grow 1
 .item__title
+	+below(768px)
+		font-size: 36px
 	margin-bottom: 5px
 	line-height: 1.2
 	color white
@@ -931,6 +978,7 @@ select.select-beauty
 	font-weight 700
 	letter-spacing 0.9px
 	position relative
+	text-align center
 	&:before
 		content ''
 		position absolute
@@ -958,6 +1006,43 @@ select.select-beauty
 .incr
 	f()
 	position relative
+.incr--fix
+	+below(640px)
+		width: 100%
+	max-width 285px
+.incr--bsh
+	box-shadow 0 3px 6px rgba(0, 0, 0, 0.09)
+.incr--sm
+	.elements-icr-block--active
+		.incr__minus
+			background: $border-color
+			.icon
+				fill black
+		.incr__plus
+			background: $mark
+			.icon
+				fill white
+	.incr__nav
+		size 30px
+		.icon
+			size 14px
+	.incr__minus
+		border 1px solid $border-color
+		background: none
+		&:hover
+			background: none
+			border 1px solid $border-color
+		.icon
+			fill $border-color
+	.incr__plus
+		background: $border-color
+		.icon
+			fill black
+		&:hover
+			background: $mark
+			.icon
+				fill white
+
 .incr__nav
 	flex(mid)
 	tr(background )
@@ -1021,6 +1106,9 @@ select.select-beauty
 
 // sale
 .sale-list
+	+below(640px)
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap 15px
 	display: grid
 	grid-gap 30px
 	grid-template-columns: repeat(4, 1fr)
@@ -1036,6 +1124,11 @@ select.select-beauty
 
 // advant
 .advant
+	+below(768px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(480px)
+		grid-template-columns: 1fr
+		grid-gap 10px
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(4, 1fr)
@@ -1094,27 +1187,45 @@ select.select-beauty
 // rating === end
 
 // review
-.review-slider__el
+.review-slider
+	+below(480px)
+		margin-left: -20px
+		width calc(100% + 40px)
+.review__el
+	+below(768px)
+		padding: 0 20px
 	padding: 0 40px
 	border-right 1px solid $border-color
-.review-slider__title
+.review__el--border
+	padding: 20px
+	border 1px solid $border-color
+
+.review__title
 	@extend .type--lg
 	font-weight 700
 	margin-bottom: 10px
-.review-slider__rating
+.review__rating
 	margin-bottom: 10px
-.review-slider__date
+.review__date
 	color #808080
 	margin-bottom: 20px
-.review-slider__text
+.review__text
 	line-height: 1.4
 	color #808080
+
+.review-wrap
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(2, 1fr)
 // review === end
 
 // seo text
 .description__cont
+	+below(768px)
+		margin-top: 20px
 	color #8b8b8b
 	padding: 30px
+	margin-top: 70px
 .description__more
 	f()
 	cp()
@@ -1176,12 +1287,24 @@ select.select-beauty
 			color $red
 //.main-cont
 .footer
+	+below(768px)
+		fw()
 	color white
 	f()
 	justify-content space-between
 
-//.footer-logo
-//.footer-contact
+.footer-logo
+	+below(768px)
+		width: 48%
+		margin-bottom: 20px
+	+below(480px)
+		width: 100%
+.footer-contact
+	+below(768px)
+		width: 48%
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 .footer-phone
 	color white
 	@extend .type--lg
@@ -1191,7 +1314,12 @@ select.select-beauty
 .footer-mail
 	color white
 	display block
-//.footer-link
+.footer-link
+	+below(768px)
+		width: 48%
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 .footer-link__el
 	color white
 	opacity: .5
@@ -1199,6 +1327,11 @@ select.select-beauty
 	&:first-child
 		margin-bottom: 10px
 .footer-share
+	+below(768px)
+		+below(768px)
+			width: 48%
+		+below(640px)
+			width: 100%
 	.soc-row
 		margin-bottom: 20px
 //.footer-soc
@@ -1225,6 +1358,10 @@ select.select-beauty
 	width: 65%
 	order 1
 
+.order-cont__el.hidden
+	z-index -1
+	display none
+	position static
 
 .order-info-wrap
 	+below(968px)
@@ -1363,6 +1500,7 @@ select.select-beauty
 	margin-bottom: 20px
 	@extend .type--xl
 	font-weight 600
+
 
 .basket__el
 	+below(768px)
@@ -1555,9 +1693,25 @@ basket__el-info
 	letter-spacing 0.9px
 	text-transform uppercase
 	margin-bottom: 30px
+.title.title--sm
+	@extend .type--lg
+	text-transform: none
+
 .title--mid
 	text-align center
 
+.title-row
+	+below(1440px)
+		fw()
+	+below(768px)
+		margin-top: 20px
+		margin-bottom: 20px
+	f()
+	align-items: center
+	margin-bottom: 40px
+	.title
+		margin-bottom: 0
+		margin-right: 40px
 
 .order-location
 	f()
@@ -1576,6 +1730,7 @@ basket__el-info
 .order-location__head
 	font-weight: 700
 	margin-bottom: 10px
+	font-size: 12px
 .order-location__btn
 	padding: 15px
 	background: $mark
@@ -1623,7 +1778,6 @@ basket__el-info
 .order-tab__el--active
 	background: $mark
 	color white
-
 
 // ==== SALE ====
 .card-list
@@ -1691,3 +1845,960 @@ basket__el-info
 		width: 100%
 	width: 45%
 // ==== SALE ==== === end
+
+.loader
+	flex(mid)
+	margin: 30px 0
+
+
+// ==== GOODS ====
+.goods
+	+below(1024px)
+		width calc(100% + 20px)
+	+below(768px)
+		fw()
+		width: 100%
+		margin: 0
+	position: relative
+	f()
+	justify-content: space-between
+	margin-bottom: 50px
+.goods-back
+	position: absolute
+	left 0
+	top 30px
+	cp()
+	.icon
+		size 40px
+		fill $red
+		tr(all)
+		&:hover
+			fill darken($red,10)
+.goods-img
+	+below(768px)
+		width: 100%
+	+below(760px)
+		max-width 480px
+		margin: 20px auto 0 auto
+	width: 50%
+.goods-img__el
+	bg-full()
+	padding: 50% 10%
+ 	background-size: cover
+
+
+.goods-info
+	width: 70%
+.goods-title-row
+	margin-bottom: 20px
+.goods-title
+	+below(960px)
+		font-size: 24px
+	color $dark
+	@extend .type--xl
+	font-weight 700
+	display inline-block
+	line-height: 1
+.goods-weight
+	display inline
+	font-weight: 400
+	color #808080
+	font-size 16px
+	font-style italic
+.goods-kind
+	+below(768px)
+		fw()
+	f()
+.goods-kind__el
+	+below(768px)
+		margin-bottom: 20px
+	f()
+	align-items: center
+	margin-right: 20px
+	.icon
+		size 24px
+		margin-right: 10px
+	span
+		color $gray
+		@extend .type--sm
+		font-weight 400
+.goods-descr
+	line-height: 1.8
+	margin-bottom: 20px
+
+.goods-wrap
+	+below(768px)
+		width: calc(100% + 20px)
+		margin-left: -10px
+		margin-right: -10px
+		padding: 20px 10px
+	width: 45%
+.goods-incr
+	flex(mid)
+	width: 130px
+.goods-add
+	f()
+	align-items: center
+	margin-bottom: 20px
+.goods-add-title
+	font-family "Lifehack Sans"
+	@extend .type--lg
+	font-weight 700
+	up()
+	margin-bottom: 20px
+	span
+		color #808080
+		font-weight 400
+		font-size: 14px
+		font-family "Myriad Pro"
+		text-transform: none
+		margin-left: 10px
+.goods-add__switch
+	+below(768px)
+		.incr
+			margin-bottom: 0
+	margin-right: 20px
+.goods-add__info
+	fw()
+	f()
+	align-items: center
+	font-size: 16px
+.goods-add__name
+	+below(640px)
+		font-size: 12px
+	noSelect()
+	margin-right: 10px
+	line-height: 1.6
+.goods-add__weight
+	color $gray
+	margin-right: 10px
+	font-style: italic
+.goods-add__cost
+	color $dark
+	@extend .type--md
+	font-weight 600
+.goods-more
+	+below(640px)
+		margin-bottom: 20px
+	f()
+	cp()
+	align-items: center
+	margin-bottom: 40px
+	.icon
+		&:hover
+			transform scale(1.1)
+		fill $mark
+		tr()
+		size 34px
+		margin-right: 20px
+.goods-energy
+	+below(480px)
+		fl()
+		margin-bottom: 0
+	display inline-block
+	align-items: center
+	margin: 30px 0
+	border-bottom 1px dashed $border-color
+	color #808080
+	font-size: 16px
+	cp()
+	tr()
+	&:hover
+		color black
+
+.food
+	padding: 20px
+	box-shadow 0 4px 12px rgba(0, 0, 0, 0.07)
+	background-color #ffffff
+	margin-bottom: 30px
+	display: none
+	max-width 400px
+.food__el
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+.food__el-title
+	line-height: 1.6
+	color $red
+	font-weight 500
+	margin-bottom: 10px
+.food__type-wrap
+	fw()
+	f()
+	justify-content: space-between
+.food__type
+	+below(1024px)
+		width: 50%
+		margin-bottom: 10px
+.food__type-name
+	color #707070
+	@extend .type--sm
+	margin-bottom: 5px
+.food__type-val
+	font-weight: 500
+
+.incr-btn
+	.elements-icr-block
+		display: none
+.incr-btn--active
+	.incr-btn__el
+		display: none
+	.elements-icr-block
+		display: block
+.incr__cost
+	white-space nowrap
+// ==== GOODS ==== === end
+
+// LK
+.lk
+	+below(768px)
+		fw()
+	f()
+	justify-content space-between
+	margin-top: 30px
+.lk-toolbar
+	+below(768px)
+		width: 100%
+		margin-bottom: 30px
+	width: 25%
+.lk-toolbar__el
+	+below(768px)
+		width: 100%
+	tr()
+	flex(mid)
+	padding: 20px 25px
+	margin-bottom: 10px
+	font-weight: 700
+	border 1px solid $border-color
+	&:hover
+		background: $mark
+		color white
+		.bonus-val
+			color white
+.lk-toolbar__el--active
+	background: $mark
+	color white
+	border 0
+	.bonus-val
+		color white
+.lk-toolbar__el-text
+	margin-right: 10px
+.bonus-val
+	color $red
+	@extend .type--xs
+	font-weight 700
+	transform translateY(-10px)
+.lk-content
+	+below(768px)
+		width: 100%
+	width: 70%
+.lk-title
+	@extend .type--lg
+	font-weight 500
+	letter-spacing 0.8px
+	margin-bottom: 40px
+	up()
+	margin-top: 0
+.lk-profile
+	+below(768px)
+		width: 100%
+	+below(640px)
+		fw()
+	f()
+	justify-content space-between
+	align-items:flex-start
+
+.lk-profile-info
+	width: 100%
+.lk-profile-list
+	max-width 400px
+.lk-profile-info__el
+	margin-bottom: 20px
+	f()
+	justify-content space-between
+.lk-profile-info__el-title
+	margin-bottom: 10px
+	width: 48%
+	color #808080
+.lk-profile-info__el-val
+	width: 48%
+	font-weight: 700
+	text-align: left
+.lk-profile-nav
+	+below(768px)
+		width: 100%
+		margin-top: 20px
+	+below(640px)
+		padding: 0
+		border-left 0
+	width: 40%
+	padding: 20px 0 20px 25px
+	border-left 1px solid $border-color
+.lk-profile-nav__el
+	f()
+	tr()
+	cp()
+	align-items center
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+	&:hover
+		color $mark
+.lk-profile-nav__el-icon
+	margin-right: 20px
+	.icon
+		size 20px
+		fill $mark
+//.icon
+
+.lk-out
+	+below(1024px)
+		margin-top: 20px
+	+below(768px)
+		width: 100%
+		justify-content: flex-start
+	flex(mid)
+	cp()
+	margin-top: 5px
+.lk-out__icon
+	margin-right: 10px
+	flex(mid)
+	.icon
+		fill $red
+		size 24px
+.lk-out__text
+	color $dark
+	@extend .type--md
+	font-weight 500
+
+.lk-adress__el
+	padding: 25px
+	margin-bottom: 30px
+	background-color #ffffff
+	border 1px solid $border-color
+.lk-adress__type
+	color $mark
+	@extend .type--md
+	font-weight 700
+	margin-bottom: 10px
+	up()
+.lk-adress__val
+	line-height: 1.8
+	margin-bottom: 20px
+.lk-adress-wrap
+	max-width 550px
+.lk-adress-footer
+	flex(between)
+.lk-adress-footer__el
+	flex(mid)
+	cp()
+	&:hover
+		span
+			color black
+	.icon
+		margin-right: 10px
+		size 16px
+	span
+		tr(all)
+		display: inline-block
+		color $gray
+.lk-adress-edit
+	.icon
+		fill $mark
+.lk-adress-remove
+	.icon
+		fill $red
+
+.lk-adress__add
+	flex(mid)
+	tr(all)
+	cp()
+	height: 50px
+	box-shadow 0 3px 9px rgba(0, 0, 0, 0.1)
+	border-radius 10px
+	background-color #ffffff
+	&:hover
+		box-shadow 0 3px 9px rgba(0, 0, 0, 0.2)
+		span
+			color black
+	.icon
+		size 16px
+		fill $mark
+		margin-right: 10px
+	span
+		color $gray
+		tr(all)
+//.lk-profile-nav__el-text
+
+// LK history
+// history
+.history
+	width: 100%
+	overflow: hidden
+	padding-bottom 30px
+	+below(640px)
+		max-width 340px
+		margin-left: auto
+		margin-right: auto
+.history-card
+	+below(1024px)
+		.top
+			display: none
+	perspective 600px
+	padding: 5px
+	border 1px solid $snow
+	margin-bottom: 20px
+.history-card--active
+	border 1px solid $mark
+
+.history-card__wrap
+	+below(640px)
+		fw()
+	cp()
+	f()
+	cp()
+	background: white
+	padding: 20px
+	align-items: center
+	transform-style: preserve-3d;
+	//transition all .6s
+
+.history-card__wrap--active
+	transform rotateX(90deg)
+	backface-visibility hidden
+.history-card__info
+	+below(640px)
+		width: 100%
+	margin-right: 5%
+.history-card__date
+	margin-bottom: 5px
+	+below(640px)
+		margin-bottom: 10px
+.history-card__numb
+	color $mark
+.history-card__price
+	+below(640px)
+		margin-left:initial
+		width: 100%
+		flex(between)
+	margin-left: auto
+	@extend .type--lg
+.history-card__price_val
+	@extend .type--lg
+	font-weight 700
+.history-card__list
+	+below(640px)
+		width: 100%
+		margin: 20px 0
+	+below(480px)
+		grid-template-columns repeat(auto-fit, minmax(35px, 35px));
+	display: grid
+	grid-gap 15px
+	grid-template-columns repeat(4,1fr);
+.history-card__list-el
+	+below(480px)
+		size 35px
+	size 40px
+	bg-full()
+	position: relative
+.history-card__list-el-val
+	position: absolute
+	right: -8px
+	top -2px
+	size 24px
+	background: $mark
+	color white
+	round()
+	flex(mid)
+	@extend .type--sm
+	font-size: 10px
+
+
+.history-card__list-el--last
+	.history-card__list-el-val
+		width: 100%
+		height: 100%
+		left 0
+		top 0
+		opacity .8
+		font-size: 14px
+		br(0)
+		background: none
+		border 1px solid $border-color
+		color black
+//.history-card--open
+
+.history-info
+	//box-shadow 0 10px 15px rgba(0, 0, 0, 0.1)
+	background-color #ffffff
+	padding: 20px
+	display: none
+	br(10px)
+.history-info--active
+	display: block
+//.history-card
+
+.history-info__head
+	+below(640px)
+		margin-left: auto
+		margin-right: auto
+		max-width 320px
+		font-size: 10px
+		justify-content: center
+	f()
+	margin-bottom: 20px
+.history-info__head-date
+	margin-right: 15px
+.history-info__head-state
+	color $mark
+.history-info__head-numb
+	+below(640px)
+		margin-left: 10px
+	margin-left: auto
+	color $gray
+	font-weight: 700
+.history-info__list
+	+below(640px)
+		margin-bottom: 20px
+	margin-bottom: 25px
+.history-info__el
+	+below(640px)
+		fw()
+		max-width 320px
+		margin-left: auto
+		margin-right: auto
+		padding-bottom: 10px
+		position: relative
+	f()
+	align-items: center
+	margin-bottom: 10px
+	padding-bottom: 20px
+	border-bottom 1px solid $border-color
+.history-info__el-img
+	+below(480px)
+		size 55px
+	size 40px
+	bg-full()
+	border 1px solid #cbbaac
+	position: relative
+	margin-right: 20px
+.history-info__el-about
+	+below(640px)
+		width: 70%
+	width: 50%
+.history-info__el-title
+	font-family "Lifehack Sans"
+	@extend .type--lg
+	font-weight 700
+	letter-spacing 0.6px
+.history-info__el-text
+	opacity .6
+.history-info__el-count
+	+below(640px)
+		margin-left:initial
+		margin-top: 10px
+		position: absolute
+		size 20px
+		background: white
+		top -10px
+		font-weight:700
+		font-size: 10px
+	size 40px
+	border 1px solid $snow
+	flex(mid)
+	margin-left: auto
+	margin-right: 10%
+	font-weight: 700
+	color $mark
+.history-info__el-price
+	+below(640px)
+		margin-top: 10px
+	flex(mid)
+	@extend .type--lg
+	font-weight:700
+
+.history-info-footer
+	+below(640px)
+		fw()
+		justify-content: space-between
+		padding-top: 0
+	f()
+	padding-top: 20px
+	align-items: center
+.history-info-total
+	+below(640px)
+		width: 100%
+		justify-content: space-between
+	f()
+	align-items: center
+.history-info-total__text
+	margin-right: 10px
+	@extend .type--md
+	font-weight 700
+.history-info-total__val
+	color $mark
+	@extend .type--xl
+	font-weight: 700
+	font-size: 24px
+.history-info-get
+	+below(640px)
+		width: 100%
+		margin: 20px 0
+	margin-right: auto
+	padding: 10px 20px
+	flex(mid)
+	cp()
+	&:hover
+		.icon
+			transform rotate(-360deg)
+	.icon
+		transition all .8s
+		size 22px
+		margin-left: 10px
+		fill $green
+// history === end
+// LK history === end
+
+.order-empty-text
+	margin-bottom: 20px
+
+// lk-bonus
+.bonus-head
+	+below(1024px)
+		fw()
+	f()
+	justify-content space-between
+	align-items:flex-start
+	margin-bottom: 30px
+.bonus-banner
+	+below(1024px)
+		margin-bottom: 20px
+	+below(640px)
+		width: 100%
+.bonus-banner-wrap
+	+below(640px)
+		width: 100%
+	width: 280px
+	padding: 25px
+	background: $yellow
+	text-align center
+.bonus-banner__val
+	@extend .type--xl
+	font-weight 700
+	margin: 10px 0
+	color $red
+.bonus-info
+	+below(1024px)
+		width: 100%
+	width calc(100% - 350px)
+	p
+		max-width 400px
+// lk-bonus === end
+
+.slogan
+	text-align center
+	max-width 600px
+	margin: 40px auto 0 auto
+	line-height: 1.4
+	@extend .type--lg
+	font-weight 700
+
+.img-about
+	margin: 30px 0
+
+// modals
+.get-rating
+	f()
+	align-items: center
+	.icon
+		cp()
+	margin-bottom: 20px
+.get-rating-text
+	+below(640px)
+		font-size: 13px
+	@extend .type--md
+	margin-right: 20px
+	up()
+	font-weight: 700
+// modals === end
+
+.ty-wrap
+	max-width 340px
+	margin-left auto
+	margin-right auto
+	flex(mid)
+	fl()
+
+.modal-link
+	cp()
+	tr()
+	display block
+	margin-bottom: 15px
+	color $dark-light
+	span
+		border-bottom 1px dashed $border-color
+	&:last-child
+		margin-bottom: 0
+	&:hover
+		color $red
+
+.modal-link--extend
+	margin-bottom: 40px
+
+.modal-link--center
+	text-align center
+
+.unworked-text
+	text-align center
+	margin: 10px 0
+
+// modal city
+.search
+	+below(1024px)
+		display none
+	flex(mid)
+	margin-right: 3%
+	cp()
+	.icon--true
+		animateHide()
+.search__icon
+	cp()
+	size 57px
+	flex(mid)
+	background: #11111138
+	tr()
+	&:hover
+		background: #272727
+		.icon
+			fill white
+	.icon
+		size 28px
+.city-search
+	f()
+	margin-bottom: 20px
+	.input
+		width calc(100% - 50px)
+.city-popular
+	f()
+	fw()
+	margin-bottom: 20px
+.city-popular__el
+	cp()
+	tr()
+	@extend .type--lg
+	margin-right: 20px
+	font-weight 500
+	&:hover
+		color $mark
+
+// list
+.city-list
+	+below(1024px)
+		column-count 3
+	+below(768px)
+		column-count 2
+	column-count 3
+.position-list
+	max-height 300px
+
+.position-list__el
+	display block
+	margin-bottom: 20px
+	font-weight: 700
+.position-list__el--active
+	color $red
+.position-list__el--lg
+	@extend .type--lg
+// list === end
+// modal city === end
+
+
+// modal area
+
+.area
+	f()
+	.order-cont__el
+		min-height 400px
+		background: white
+		position relative
+	.order-cont__el--up
+		z-index 100
+.area-tool
+	width: 400px
+.area-map
+	width calc(100% - 400px)
+	position relative
+	flex(mid)
+.area-tool-list
+	max-height: 400px
+	overflow hidden
+	position relative
+.area-map__el
+	position absolute
+	width: 100%
+	height: 100%
+	top 0
+	left 0
+	background: $gray
+.area-tool__title
+	font-family "Lifehack Sans"
+	@extend .type--xl
+	font-weight 700
+	margin-bottom: 20px
+.area-tool-info
+	padding: 30px
+
+.area-el
+	padding: 10px 0
+	f()
+	tr()
+	cp()
+	&:hover
+		background: #f8f8f8
+.area-el--active
+	background: $red
+	color white
+	.area-el__numb
+		background: white
+		color $red
+	.area-el-row
+		span
+			color white
+			opacity: .6
+
+.area-el__numb
+	size 40px
+	flex(mid)
+	background: $border-color
+	margin-right: 20px
+.area-el-cont
+	width calc(100% - 40px)
+.area-el-title
+	font-family "Lifehack Sans"
+	@extend .type--lg
+	font-weight 700
+	letter-spacing 0.6px
+	margin-bottom: 5px
+.area-el-row
+	font-size: 14px
+	margin-bottom: 5px
+	span
+		color $gray
+		display inline-block
+		margin-right: 5px
+	&:last-child
+		margin-bottom: 0
+
+.area-search
+	padding: 0 20px 20px 20px
+
+
+.nice-scroll
+	z-index 1
+
+.area-msg-layer
+	position absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	flex(mid)
+.area-msg__text
+	line-height: 1.6
+	margin-bottom: 20px
+	span
+		display inline-block
+		font-weight: 700
+.area-msg
+	background: white
+	padding: 20px
+	width 500px
+.area-msg-nav
+	flex(between)
+	.btn--sm
+		width: 48%
+// modal area === end
+
+// tooltip
+.tooltip
+	+below(1200px)
+		display: none
+	display:inline-block
+	position:relative
+	text-align:left
+	cp()
+	margin: 0 5px
+	.icon
+		size 16px
+	&:hover
+		.top
+			visibility:visible
+			opacity:1
+	.top
+		min-width:240px
+		top:-10px
+		left:50%
+		transform:translate(-50%, -100%)
+		padding:10px 10px
+		background-color:white
+		position:absolute
+		z-index:99999999
+		box-sizing:border-box
+		visibility:hidden
+		opacity:0
+		transition:opacity 0.8s
+		@extend .type--main
+		font-weight 400
+		line-height: 1.6
+		font-size: 12px
+		bsh()
+		br(3px)
+		i
+			position:absolute
+			top:100%
+			left:50%
+			margin-left:-12px
+			width:24px
+			height:12px
+			overflow:hidden
+			&:after
+				content:''
+				position:absolute
+				width:12px
+				height:12px
+				left:50%
+				transform:translate(-50%,-50%) rotate(45deg)
+				background-color:white
+				box-shadow:0 10px 15px rgba(0, 0, 0, 0.09)
+// tooltip === end
+
+// panel
+.panel
+	+above(769px)
+		display none
+	f()
+	justify-content space-between
+	align-items:stretch
+	z-index 10
+	position: fixed
+	bottom 0
+	right 0
+	width: 100%
+	.panel-btn
+		text-align center
+		background: white
+		font-weight:700
+		flex(mid)
+		cp()
+		up()
+		font-size: 18px
+		+above(641px)
+			display none
+		+below(640px)
+			width: 50%
+	.cart
+		+below(640px)
+			width: 50%
+		f()
+		margin-left auto
+// panel === end

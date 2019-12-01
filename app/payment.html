@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="bower/air-datepicker/dist/css/datepicker.css" />
     <!--endbuild-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style-edit.css" />
@@ -83,10 +84,12 @@
                     </a>
                     <div class="header-slogan">
                         <div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении
-                            <a class="header-slogan__icon" href="#">
+                            <a class="header-slogan__icon tooltip" href="#">
                                 <svg class="icon">
                                     <use xlink:href="#question-circle"></use>
                                 </svg>
+                                <div class="top">
+                                    <i></i>Закажите еду зараннее и заберите её в удобном для вас заведении</div>
                             </a>
                         </div>
                     </div>
@@ -118,14 +121,6 @@
         <div class="head-main-wrap">
             <div class="main-cont">
                 <div class="head-main">
-                    <div class="head-toggle">
-                        <svg class="icon icon-open">
-                            <use xlink:href="#menu"></use>
-                        </svg>
-                        <svg class="icon icon-close">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </div>
                     <div class="head-nav">
                         <div class="head-nav__el-wrap"></div>
                         <a class="head-nav__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
@@ -145,6 +140,14 @@
                         <a class="head-nav__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
                         <div class="head-nav__el-wrap"></div>
                         <a class="head-nav__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+                    </div>
+                    <div class="head-toggle">
+                        <svg class="icon icon-open">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon icon-close">
+                            <use xlink:href="#close"></use>
+                        </svg>
                     </div>
                     <a class="cart cart--full" href="#">
                         <div class="cart-icon">
@@ -485,6 +488,21 @@
             </div>
         </div>
         <!--block footer-->
+        <div class="panel">
+            <div class="panel-btn">Меню</div>
+            <div class="cart">
+                <div class="cart-icon">
+                    <svg class="icon">
+                        <use xlink:href="#cart"></use>
+                    </svg>
+                    <div class="cart-icon__val">1250 р</div>
+                </div>
+                <div class="cart-info">
+                    <div class="cart-condition">1250 р</div>
+                    <div class="cart-size">2 товара</div>
+                </div>
+            </div>
+        </div>
         <div class="footer-wrap">
             <div class="main-cont">
                 <div class="footer">
@@ -542,6 +560,8 @@
     <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
     <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
     <script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
+    <script src="bower/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+    <script src="bower/air-datepicker/dist/js/datepicker.js"></script>
     <!-- endbuild-->
     <script src="js/add-on.js"></script>
     <script src="js/script.js"></script>

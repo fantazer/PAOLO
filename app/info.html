@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <!--build:css css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+    <link rel="stylesheet" href="bower/air-datepicker/dist/css/datepicker.css" />
+    <!--endbuild-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="head">
+            <div class="head-top-wrap">
+                <div class="main-cont">
+                    <div class="head-top">
+                        <div class="head-location">Санкт-Петербург</div>
+                        <div class="head-contact">
+                            <a class="head-contact__phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+                            <div class="head-contact__time">сегодня 10 - 24</div>
+                        </div>
+                        <div class="head-top-nav">
+                            <div class="head-top-search-wrap">
+                                <form class="head-top-search" action="#">
+                                    <input class="input" type="text" placeholder="Введите ваш запрос" />
+                                </form>
+                            </div>
+                            <a class="head-top-nav__el" href="#">О нас</a>
+                            <a class="head-top-nav__el" href="#">Отзывы</a>
+                            <a class="head-top-nav__el" href="#">Акции</a>
+                            <a class="head-top-nav__el" href="#">Франчайзинг</a>
+                        </div>
+                        <div class="head-search">
+                            <svg class="icon">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </div>
+                        <!--toggle class .login--false .login--true-->
+                        <div class="login login--true">
+                            <div class="login-drop-toggle login-enter">
+                                <div class="login-enter-mobile">
+                                    <svg class="icon">
+                                        <use xlink:href="#user-round"></use>
+                                    </svg>
+                                </div>
+                                <span class="login-enter-mobile-text">Вход в личный кабинет</span>
+                            </div>
+                            <a class="login-auth" href="#">
+                                <div class="login-auth__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#user"></use>
+                                    </svg>
+                                    <div class="login-auth__bonus">+140 Б</div>
+                                </div>
+                                <div class="login-auth__name">Константин</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="head-info">
+                    <a class="logo" href="#">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
+                    <div class="header-slogan">
+                        <div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении
+                            <a class="header-slogan__icon tooltip" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#question-circle"></use>
+                                </svg>
+                                <div class="top">
+                                    <i></i>Закажите еду зараннее и заберите её в удобном для вас заведении</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-search-panel">
+                        <form class="search-location header-search-panel__el" action="">
+                            <div class="search-location-wrap">
+                                <input class="input input-search" type="text" placeholder="Найти ближайшую пиццерию" />
+                                <div class="search-location-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </form>
+                        <form class="search-aim header-search-panel__el" action="">
+                            <div class="search-aim-wrap">
+                                <div class="search-aim-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#aim"></use>
+                                    </svg>
+                                </div>
+                                <input class="input input-search" type="text" placeholder="Найти ближайшую пиццерию" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="head-main-wrap">
+            <div class="main-cont">
+                <div class="head-main">
+                    <div class="head-nav">
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#roll" rel="m_PageScroll2id">Роллы</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#soup" rel="m_PageScroll2id">Супы</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#salad" rel="m_PageScroll2id">Салаты</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#pasta" rel="m_PageScroll2id">Паста</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
+                        <div class="head-nav__el-wrap"></div>
+                        <a class="head-nav__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+                    </div>
+                    <div class="head-toggle">
+                        <svg class="icon icon-open">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon icon-close">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <a class="cart cart--full" href="#">
+                        <div class="cart-icon">
+                            <svg class="icon">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                            <div class="cart-icon__val">1250 р</div>
+                        </div>
+                        <div class="cart-info">
+                            <div class="cart-condition">1250 р</div>
+                            <div class="cart-size">2 товара</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--мобильное меню-->
+        <div class="slide-menu">
+            <div class="slide-menu-wrap">
+                <!--Подменю главное-->
+                <div class="slide-menu__list slide-menu__list--active slide-menu__list--up" data-menu="main">
+                    <div class="slide-el slide-el--sub" data-menu="menu">
+                        <span>Меню</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                    <div class="slide-el slide-el--sub" data-menu="town">
+                        <span>Ваш город</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                    <a class="slide-el" href="#">Доставка</a>
+                    <a class="slide-el" href="#">Акции</a>
+                    <a class="slide-el" href="#">Отзывы</a>
+                    <a class="slide-el" href="#">Кафе</a>
+                    <a class="slide-el" href="#">Вакансии</a>
+                    <a class="slide-el" href="#">Контакты</a>
+                    <!--toggle class .login--false .login--true-->
+                    <div class="slide-menu-contact">
+                        <div class="login login--false">
+                            <div class="login-enter">
+                                <svg class="icon">
+                                    <use xlink:href="#profile"></use>
+                                </svg>
+                                <span class="login-enter-mobile-text">Вход в кабинет</span>
+                            </div>
+                            <a class="login-auth" href="#">
+                                <div class="login-auth__icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#profile"></use>
+                                    </svg>
+                                    <div class="login-auth__icon-check">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="login-auth__name">Константин</div>
+                                <div class="login-auth__bonus">+140 Б</div>
+                            </a>
+                        </div>
+                        <form class="header-search" action="">
+                            <div class="header-search-wrap">
+                                <div class="header-search-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#serch"></use>
+                                    </svg>
+                                    <input class="input input-search" type="text" placeholder="Активный поиск" />
+                                </div>
+                            </div>
+                        </form>
+                        <a class="slide-menu-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
+                        <div class="soc-row">
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-instagram"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-vk"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Подменю список блюд-->
+                <div class="slide-menu__list slide-menu__list--down" data-menu="menu">
+                    <div class="slide-el slide-el--sub" data-menu="main">
+                        <span>Меню</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                    <div class="slide-el slide-el--sub tag__el--sky" data-menu="roll">
+                        <div class="tag__el-icon">
+                            <svg class="icon">
+                                <use xlink:href="#roll"></use>
+                            </svg>
+                            <div class="tag__el-text">роллы</div>
+                        </div>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
+                <!--Подменю список роллы-->
+                <div class="slide-menu__list slide-menu__list--down" data-menu="roll">
+                    <div class="slide-el slide-el--sub" data-menu="menu">
+                        <span>Виды роллов</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                    <a class="slide-el" href="#">жаренные роллы</a>
+                    <a class="slide-el" href="#">основные роллы</a>
+                    <a class="slide-el" href="#">острые роллы</a>
+                    <a class="slide-el" href="#">классические роллы</a>
+                </div>
+                <!--Подменю города-->
+                <div class="slide-menu__list slide-menu__list--down" data-menu="town">
+                    <div class="slide-el slide-el--sub" data-menu="main">
+                        <span>Выберите свой город</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                    <div class="slide-el">Москва</div>
+                    <div class="slide-el slide-el--active">Санкт-Петербург</div>
+                    <div class="slide-el">Казань</div>
+                    <div class="slide-el">Чебоксары</div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="wrap-cont">
+                <div class="main-cont--sm">
+                    <div class="title title--mid">политика обработки персональных данных</div>
+                    <div class="text">
+                        <h2>1. Общие положения</h2>
+                        <p>1.1 ИП Сергеев С.В. (далее по тексту – Оператор) ставит соблюдение прав и свобод граждан одним из важнейших условий осуществления своей деятельности.</p>
+                        <p>1.2 Политика Оператора в отношении обработки персональных данных (далее по тексту — Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта. Персональные данные обрабатывается в соответствии
+                            с ФЗ «О персональных данных» № 152-ФЗ.</p>
+                        <h2>2. Основные понятия, используемые в Политике:</h2>
+                        <p>2.1 Веб-сайт - совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу;</p>
+                        <p>2.2 Пользователь – любой посетитель веб-сайта;</p>
+                        <p>2.3 Персональные данные – любая информация, относящаяся к Пользователю веб-сайта;</p>
+                        <p>2.4 Обработка персональных данных - любое действие с персональными данными, совершаемые с использованием ЭВМ, равно как и без их использования;</p>
+                        <p>2.5 Обезличивание персональных данных – действия, результатом которых является невозможность без использования дополнительной информации определить принадлежность персональных данных конкретному Пользователю или лицу;</p>
+                        <p>2.6 Распространение персональных данных – любые действия, результатом которых является раскрытие персональных данных неопределенному кругу лиц;</p>
+                        <p>2.7 Предоставление персональных данных – любые действия, результатом которых является раскрытие персональных данных определенному кругу лиц;</p>
+                        <p>2.8 Уничтожение персональных данных – любые действия, результатом которых является безвозвратное уничтожение персональных на ЭВМ или любых других носителях.</p>
+                        <h2>3. Оператор может обрабатывать следующие персональные данные Пользователя:</h2>
+                        <p>3.1 Список персональных данных, которые обрабатывает оператор: фамилия, имя, отчество, номер телефона, адрес электронной почты, Адрес проживания.</p>
+                        <p>3.2. Кроме того, на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика, Гугл Аналитика и других).</p>
+                        <h2>4. Цели обработки персональных данных</h2>
+                        <p>4.1 Персональные данные пользователя - фамилия, имя, отчество, номер телефона, адрес электронной почты, Адрес проживания - обрабатываются со следующей целью: Уточнение деталей и отправка заказа клиенту, уточнение деталей заказа.
+                            Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, специальных предложениях и различных событиях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору
+                            письмо на адрес@yandex.ru</p>
+                        <p>4.2 Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.</p>
+                        <h2>5. Правовые основания обработки персональных данных</h2>
+                        <p>5.1 Оператор обрабатывает персональные данные Пользователя только в случае их отправки Пользователем через формы, расположенные на веб-сайте. Отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной
+                            Политикой.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="description__cont text">
+                    <div class="description__text">
+                        <p>SEO-текст. Это как старый друг, проверенный годами, ведь на рынке они очень давно. Кроме того, они были одними из первых, у кого появилась служба доставки в столице еще в 2001 году. Теперь это одна из самых больших сетей пиццерий
+                            в Киеве и Чернигове — у них целых 13 ресторанов. Кроме того, у заведения очень демократичные цены и много начинки.</p>
+                        <p>Пиццу здесь готовят из отборный продуктов, что явно не может не радовать. И, несмотря на то, что тесто готовят по традиционному неаполитанскому рецепту, у них есть интересная фишка. Это, так званое, сочетание классики и авангарда
+                            — к примеру, есть пиццы с морепродуктами, с корнишонами, каперсами и с экзотическими продуктами. В День рождение в ресторанах Mamamia вам вернут 100% от счета на бонусный счет.</p>
+                    </div>
+                    <div class="description__text--hidden description__text--hidden">
+                        <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу.. горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
+                        <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле
+                            понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
+                    </div>
+                    <div class="description__more">
+                        <span class="description__more--true">Показать еще</span>
+                        <span class="description__more--false">Скрыть</span>
+                        <svg class="icon">
+                            <use xlink:href="#arrow-down"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="panel">
+            <div class="panel-btn">Меню</div>
+            <div class="cart">
+                <div class="cart-icon">
+                    <svg class="icon">
+                        <use xlink:href="#cart"></use>
+                    </svg>
+                    <div class="cart-icon__val">1250 р</div>
+                </div>
+                <div class="cart-info">
+                    <div class="cart-condition">1250 р</div>
+                    <div class="cart-size">2 товара</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrap">
+            <div class="main-cont">
+                <div class="footer">
+                    <a class="footer-logo" href="/">
+                        <img src="img/logo-sqrt.svg" alt="" />
+                    </a>
+                    <div class="footer-contact">
+                        <a class="footer-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+                        <a class="footer-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a>
+                    </div>
+                    <div class="footer-link">
+                        <a class="footer-link__el" href="#">Публичная оферта</a>
+                        <a class="footer-link__el" href="#">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer-share">
+                        <div class="footer-soc">
+                            <div class="soc-row">
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-vk"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-fb"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-inst"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-twtr"></use>
+                                    </svg>
+                                </a>
+                                <a class="soc-row__el" href="#">
+                                    <svg class="icon">
+                                        <use xlink:href="#soc-youtube"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <a class="create" href="#">Разработка сайта: JQ Digital</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer end-->
+    </div>
+    <!--build:js js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/slick-carousel/slick/slick.js"></script>
+    <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+    <script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
+    <script src="bower/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+    <script src="bower/air-datepicker/dist/js/datepicker.js"></script>
+    <!-- endbuild-->
+    <script src="js/add-on.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script-edit.js"></script>
+</body>
+
+</html>

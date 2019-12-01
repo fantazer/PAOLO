@@ -1,0 +1,67 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.wrap-cont
+			.title-row
+				.title Личный кабинет
+				.lk-out
+					.lk-out__icon
+						+icon("exit","icon")
+					.lk-out__text Выйти
+			.lk
+				.lk-toolbar
+					a(href="#").lk-toolbar__el Профиль и адреса
+					a(href="#").lk-toolbar__el.lk-toolbar__el--active История заказов
+					a(href="#").lk-toolbar__el
+						.lk-toolbar__el-text Бонусы
+						.bonus-val 240Б
+				.lk-content
+					h1.title.title--sm История заказов
+					.history
+						- for (var j=0;j<5;j++)
+							.history-card
+								.history-card__wrap
+									.history-card__info
+										.history-card__date 28 Сентября, 2017
+										.history-card__numb № 43576
+									.history-card__list
+										- for (var i=0;i<3;i++)
+											a(href="#" style="background-image:url('img/pizza-1.jpg')").history-card__list-el
+												.history-card__list-el-val x2
+										.history-card__list-el.history-card__list-el--last(style="background-image:url('img/card.jpg')")
+											.history-card__list-el-val +2
+									.history-card__price
+										.history-card__price_val 5430 ₽
+								.history-info
+									.history-info__head
+										.history-info__head-date 28 Апреля 2017
+										.history-info__head-state Доставлен
+										.history-info__head-numb № 43576
+									- for (var k=0;k<4;k++)
+										.history-info__list
+											.history-info__el
+												a(href="#" style="background-image:url('img/pizza-1.jpg')").history-info__el-img
+												.history-info__el-about
+													.history-info__el-title Гавайская с курицей
+													.history-info__el-text Традиционное, 35 см
+												.history-info__el-count x2
+												.history-info__el-price 680 ₽
+									.history-info-footer
+										.history-info-get
+											span Повторить заказ
+											+icon("repeat","icon")
+										.history-info-total
+											.history-info-total__text Сумма:
+										.history-info-total__val 1 184 ₽
+						.order-empty.order-empty--hide
+							.order-empty-icon
+								img(src="img/basket-color.svg", alt="")
+							.order-empty-title Ваша история пуста =(
+							.order-empty-text Сделайте заказ
+							.btn--sm.btn--mark Посмотреть меню
+		+seo()
+	+footer()
+include ./block_html/_script.pug

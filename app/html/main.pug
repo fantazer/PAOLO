@@ -5,7 +5,7 @@ include block_html/_include.pug
 	+header()
 	.content
 		//main-slider
-		.slider-wrap.slider-wrap--inarrow
+		.slider-wrap.slider-wrap--main.slider-wrap--inarrow
 			.slider-control.slider-control--left
 				+icon("pizza-arrow-left","icon")
 			.slider-control.slider-control--right
@@ -14,13 +14,13 @@ include block_html/_include.pug
 				.main-slider__el-wrap
 					// use img --desc for desktop version ||  --mobile for < 768px
 					a(href="#" style="background-image:url('img/slide-1.png')").main-slider__el.main-slider__el--desc
-					a(href="#" style="background-image:url('img/slide-1--mobile.png')").main-slider__el.main-slider__el--mobile
+					a(href="#" style="background-image:url('img/main-slider-el-1--mobile.jpg')").main-slider__el.main-slider__el--mobile
 				.main-slider__el-wrap
 					a(href="#" style="background-image:url('img/slide-1.png')").main-slider__el.main-slider__el--desc
-					a(href="#" style="background-image:url('img/slide-1--mobile.png')").main-slider__el.main-slider__el--mobile
+					a(href="#" style="background-image:url('img/main-slider-el-1--mobile.jpg')").main-slider__el.main-slider__el--mobile
 				.main-slider__el-wrap
 					a(href="#" style="background-image:url('img/slide-1.png')").main-slider__el.main-slider__el--desc
-					a(href="#" style="background-image:url('img/slide-1--mobile.png')").main-slider__el.main-slider__el--mobile
+					a(href="#" style="background-image:url('img/main-slider-el-1--mobile.jpg')").main-slider__el.main-slider__el--mobile
 
 		//main-cont
 		.wrap-cont.wrap-cont--main
@@ -85,7 +85,7 @@ include block_html/_include.pug
 					.advant__el-text Всегда свежие продукты
 				.advant__el
 					.advant__el-icon
-						+icon("heart-color","icon")
+						+icon("heart--color","icon")
 					.advant__el-text Делаем с любовью
 			// advant === end
 
@@ -94,10 +94,10 @@ include block_html/_include.pug
 					.section-title__el Отзывы
 				.review-slider
 					- for (var i=0;i<6;i++)
-						.review-slider__el
-							.review-slider__title Екатерина
-							.review-slider__rating
-								.star.star--edit
+						.review__el
+							.review__title Екатерина
+							.review__rating
+								.star
 									.star-el.star-el--active
 										+icon("pizza-pice","icon")
 									.star-el.star-el--active
@@ -108,8 +108,8 @@ include block_html/_include.pug
 										+icon("pizza-pice","icon")
 									.star-el
 										+icon("pizza-pice","icon")
-							.review-slider__date 14 марта 2019 21:49
-							.review-slider__text Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка
+							.review__date 14 марта 2019 21:49
+							.review__text Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка
 
 		+seo()
 	+footer()

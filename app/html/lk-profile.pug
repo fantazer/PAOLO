@@ -1,0 +1,66 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.wrap-cont
+			.title-row
+				.title Личный кабинет
+				.lk-out
+					.lk-out__icon
+						+icon("exit","icon")
+					.lk-out__text Выйти
+			.lk
+				.lk-toolbar
+					a(href="#").lk-toolbar__el.lk-toolbar__el--active Профиль и адреса
+					a(href="#").lk-toolbar__el История заказов
+					a(href="#").lk-toolbar__el
+						.lk-toolbar__el-text Бонусы
+						.bonus-val 240Б
+				.lk-content
+					h1.title.title--sm Профиль
+					.lk-profile
+						.lk-profile-info
+							.lk-profile-list
+								.lk-profile-info__el
+									.lk-profile-info__el-title Фамилия
+									.lk-profile-info__el-val Константинопольский
+								.lk-profile-info__el
+									.lk-profile-info__el-title Имя
+									.lk-profile-info__el-val Владислав
+								.lk-profile-info__el
+									.lk-profile-info__el-title Телефон
+									.lk-profile-info__el-val 8 318 313 43 54
+								.lk-profile-info__el
+									.lk-profile-info__el-title E-mail
+									.lk-profile-info__el-val prosto@gmail.com
+								.lk-profile-info__el
+									.lk-profile-info__el-title Адрес доставки
+									.lk-profile-info__el-val Константинопольский
+								.lk-profile-info__el
+									.lk-profile-info__el-title
+									.lk-profile-info__el-val
+										.btn--sm.btn--light Редактировать
+
+							.title.title--sm Адреса
+							.lk-adress-wrap
+								.lk-adress__el
+									.lk-adress__type Дом
+									.lk-adress__val Москва, ул. Петропавловская, д. 101, корп. 1, кв. 25, подъезд 8
+									.lk-adress-footer
+										.lk-adress-footer__el.lk-adress-edit
+											+icon("edit","icon")
+											span Редактировать
+										.lk-adress-footer__el.lk-adress-remove
+											+icon("trash","icon")
+											span Удалить
+								.btn--md.btn--light
+									.btn--icon
+										+icon("plus","nav-icon nav-icon--right")
+										span Добавить адрес
+
+
+		+seo()
+	+footer()
+include ./block_html/_script.pug

@@ -14,6 +14,13 @@ $(document).ready(function () {
 	$('.select-beauty').niceSelect();
 	// nice select === end
 
+	//custom scroll
+	$(".nice-scroll").niceScroll({
+		autohidemode:"false",
+		touchbehavior:"true"
+	});
+	//custom scroll === end
+
 	//closeModal() - закрыть окна
 	//initModal('data-name-attr') - Открыть нужное окно
 
@@ -71,7 +78,7 @@ $(document).ready(function () {
 		initModal(currentModal);
 	});
 
-	$('.modal-layer , .modal-close').click(function () {
+	$('.modal-layer , .modal-close, .hide-modal').click(function () {
 		closeModal();
 	});
 	//modals===end
@@ -168,6 +175,26 @@ $(document).ready(function () {
 			//autoplay: true,
 			//fade: true
 			//autoplaySpeed: 8000, time between
+			responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							arrows: false,
+							centerMode: true,
+							centerPadding: '40px',
+							slidesToShow: 2
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							arrows: false,
+							centerMode: true,
+							centerPadding: '40px',
+							slidesToShow: 1
+						}
+					}
+				],
 			customPaging : function(slider, i) {
 				return '<span class="dot"></span>';
 			}
@@ -213,7 +240,7 @@ $(document).ready(function () {
 	//increment field === end
 
 	// rating
-	$('.star--edit.star-el').hover(function () {
+	$('.star--edit .star-el').hover(function () {
 		if (!$(this).parent().hasClass('star--fix')) {
 			$('.star .star-el').removeClass('star-el--active');
 			$(this).addClass('star-el--active');
@@ -254,4 +281,49 @@ $(document).ready(function () {
 	});
 	isMobile();
 	// STICK === end
+
+	// toggle energy info
+	$('.goods-energy').click(function(){
+		$('.food').slideToggle();
+	});
+	// toggle energy info === end
+
+	//history accord
+	$('.history-card__wrap').click(function () {
+		var current = $(this).closest('.history-card');
+		current.find('.history-card__wrap').hide(0);
+		current.closest('.history-card').addClass('history-card--active');
+		current.find('.history-info').slideToggle(600);
+	});
+	//history accord===end
+
+		//order-tabs
+	$('.order-tab__el').click(function(){
+		if(!$(this).hasClass('order-tab__el--active')){
+			$('.order-tab__el').removeClass('order-tab__el--active');
+			$(this).addClass('order-tab__el--active');
+		}
+		var current = $(this).data('tab');
+		$('.order-cont__el').each(function(){
+			if($(this).data('tab')===current){
+				$(this).removeClass('hidden');
+			}else{
+				$(this).addClass('hidden');
+			}
+		})
+	});
+
+	$('.payment-card__el').click(function(){
+		$('.payment-card__el').removeClass('payment-card__el--active')
+		$(this).addClass('payment-card__el--active')
+	});
+
+	$('.payment__type__el ').click(function(){
+		if($(this).data('tab')==='card'){
+				$('.payment__type-cont').removeClass('hidden');
+			}else{
+				$('.payment__type-cont').addClass('hidden');
+		}
+	});
+	//order-tabs===end
 });

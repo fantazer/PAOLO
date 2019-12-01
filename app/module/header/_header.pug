@@ -41,8 +41,11 @@ mixin header()
 					img(src="img/logo.svg", alt="")
 				.header-slogan
 					.header-slogan__text Закажите еду зараннее и заберите её в удобном для вас заведении
-						a(href="#").header-slogan__icon
+						a(href="#").header-slogan__icon.tooltip
 							+icon("question-circle","icon")
+							.top
+								i
+								| Закажите еду зараннее и заберите её в удобном для вас заведении
 				.header-search-panel
 					form(action="").search-location.header-search-panel__el
 						.search-location-wrap
@@ -57,9 +60,6 @@ mixin header()
 	.head-main-wrap
 		.main-cont
 			.head-main
-				.head-toggle
-					+icon("menu","icon icon-open")
-					+icon("close","icon icon-close")
 				.head-nav
 					-
 						var items = [
@@ -76,6 +76,9 @@ mixin header()
 					each item in items
 						.head-nav__el-wrap
 						a(href=item.id rel='m_PageScroll2id' ).head-nav__el #{item.name}
+				.head-toggle
+					+icon("menu","icon icon-open")
+					+icon("close","icon icon-close")
 				a(href="#").cart.cart--full
 					.cart-icon
 						+icon("cart","icon")
@@ -83,6 +86,7 @@ mixin header()
 					.cart-info
 						.cart-condition 1250 р
 						.cart-size 2 товара
+
 
 	//мобильное меню
 	.slide-menu

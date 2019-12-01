@@ -1,0 +1,85 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.wrap-cont
+			.goods
+				.goods-img
+					.goods-img__el(style="background-image:url('img/pasta.jpg')")
+				.goods-wrap
+					.goods-info
+						.goods-title-row
+							.goods-title Охотничья
+								span.goods-weight 500 г
+						.goods-descr Куриное филе, оригинальные колбаски Пепперони, ветчина, охотничьи колбаски, бекон, сыр моцарелла, лук, чесночный соус, орегано.
+						.goods-add-title Добавьте топинги
+							span максимум 4 добавки
+						- for (var i=0;i<3;i++)
+							.goods-add
+								.goods-add__switch
+									.incr--sm
+										.elements-icr-block.elements-icr-block--sm
+											.incr
+												.incr__minus.incr__nav
+													+icon("minus","icon")
+												.incr__val
+													span 0
+													.incr__val-coner
+												.incr__plus.incr__nav
+													+icon("plus","icon")
+								.goods-add__info
+									.goods-add__name Семга
+									.goods-add__weight 20г
+									.goods-add__cost +15 ₽
+						.goods-more
+							//Возможно будет ненужный элемент
+							+icon("plus-round","icon")
+							span Добавить ингредиенты
+						.incr--fix.incr--bsh
+							+incr("0")
+
+						.goods-energy Энергетическая ценность
+						.food
+							.food__el
+								.food__el-title Энергетическая ценность блюда (500 г)
+								.food__type-wrap
+									.food__type
+										.food__type-name Белки
+										.food__type-val 45 г
+									.food__type
+										.food__type-name Жиры
+										.food__type-val 55 г
+									.food__type
+										.food__type-name Углеводы
+										.food__type-val 115 г
+									.food__type
+										.food__type-name Энерг. ценность
+										.food__type-val 1025 кКал
+							.food__el
+								.food__el-title Энергетическая ценность блюда (500 г)
+								.food__type-wrap
+									.food__type
+										.food__type-name Белки
+										.food__type-val 45 г
+									.food__type
+										.food__type-name Жиры
+										.food__type-val 55 г
+									.food__type
+										.food__type-name Углеводы
+										.food__type-val 115 г
+									.food__type
+										.food__type-name Энерг. ценность
+										.food__type-val 1025 кКал
+
+
+
+
+			.title Заказывайте также
+			.items.items--clear
+				- for(var i=0;i<6;i++)
+					+item("soup")
+		+seo()
+	+footer()
+include ./block_html/_script.pug

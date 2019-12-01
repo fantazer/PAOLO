@@ -13,8 +13,8 @@
 
 .btn--sm
 	@extend .btn
-	font-size 10px
-	padding 5px 10px
+	padding 15px 30px
+	@extend .type--mdx
 
 .btn--md
 	@extend .btn
@@ -43,6 +43,22 @@
 		color white!important
 	&:active
 		background-color darken($mark,20)
+	input[type="submit"]
+		border 0
+	.nav-icon
+		fill white
+
+.btn--red
+	@extend .btn
+	color white
+	background $red
+	.nav-icon
+		fill white
+	&:hover
+		background-color darken($red,10)
+		color white!important
+	&:active
+		background-color darken($red,20)
 	input[type="submit"]
 		border 0
 	.nav-icon
@@ -91,13 +107,22 @@
 .btn--icon
 	flex(mid)
 
+.btn--full
+	width: 100%
+
 .nav-icon
-	size 20px
+	size 16px
 	display inline-block
 
 .nav-icon--left
 	margin-left 10px
 
 .nav-icon--right
-	margin-rihgt 10px
+	margin-right  10px
 
+
+.btn-row-mid
+	flex(mid)
+	margin: 30px 0
+.btn-row-mid--clear
+	margin-bottom 0

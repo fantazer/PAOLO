@@ -1,0 +1,55 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.wrap-cont
+			.main-cont--sm
+				.title.title--mid Франчайзинг
+				.text
+					p Благодарим Вас за интерес, проявленный к нашей компании.
+
+					p Пицца Паоло — крупнейшая сеть пиццерий формата take-away в Москве. На сегодняшний день разработанный нами формат является стандартом де-факто в сегменте take-away pizza (пицца с собой). Патентованный дизайн пиццерий Пицца Паоло не просто оригинален и хорошо запоминается, он также призван лаконично доносить информацию до потребителя об ассортименте и ценах.
+
+					p Однако основное наше конкурентное преимущество — это не дизайн и компоновка объектов.
+					p Основы нашего успеха — налаженные процессы, использование передовых IT-решений в сфере управления бизнесом, а также большое желание работать и не останавливаться на достигнутом.
+
+					p Заключив с нами договор франчайзинга, в рамках концепции Паоло вы можете открыть пиццерию в следующих форматах:
+					ul
+						li take-away;
+						li кафе.
+
+					p Если вас интересует информация по франчайзингу, заполните короткую форму по ссылке ниже и мы пришлем вам всю необходимую информацию.
+
+					.title.title--sm.title--mid Запрос информации по франчайзингу
+
+			.main-cont--xs
+				form(action="#" )
+					.input-cont.input-cont--two
+						.input-row.input-row--error
+							input(type="text" placeholder="Ваша Фамилия" class="input")
+						.error-msg Введённые данные не должны содержать цифры
+						.input-row
+							input(type="text" placeholder="Ваше имя" class="input")
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" placeholder="E-mail" class="input")
+						.input-row
+							input(type="text" placeholder="Телефон" class="input")
+
+					//checkbox remember
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").sytle-input
+								.sytle-input-element
+									+icon("checked","icon-check")
+								.sytle-input-text Согласен на #[a(href="#") обработку персональных данных]
+					.btn-row-mid
+						input(type="submit" value="Отправить" class="btn--md btn--red")
+
+				.slogan Ваша деловая хватка и позитивная энергия плюс наш опыт  —  рецепт успеха!
+		+seo()
+	+footer()
+include ./block_html/_script.pug

@@ -77,10 +77,12 @@
                     </a>
                     <div class="header-slogan">
                         <div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении
-                            <a class="header-slogan__icon" href="#">
+                            <a class="header-slogan__icon tooltip" href="#">
                                 <svg class="icon">
                                     <use xlink:href="#question-circle"></use>
                                 </svg>
+                                <div class="top">
+                                    <i></i>Закажите еду зараннее и заберите её в удобном для вас заведении</div>
                             </a>
                         </div>
                     </div>
@@ -112,14 +114,6 @@
         <div class="head-main-wrap">
             <div class="main-cont">
                 <div class="head-main">
-                    <div class="head-toggle">
-                        <svg class="icon icon-open">
-                            <use xlink:href="#menu"></use>
-                        </svg>
-                        <svg class="icon icon-close">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </div>
                     <div class="head-nav">
                         <div class="head-nav__el-wrap"></div>
                         <a class="head-nav__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
@@ -139,6 +133,14 @@
                         <a class="head-nav__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
                         <div class="head-nav__el-wrap"></div>
                         <a class="head-nav__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+                    </div>
+                    <div class="head-toggle">
+                        <svg class="icon icon-open">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon icon-close">
+                            <use xlink:href="#close"></use>
+                        </svg>
                     </div>
                     <a class="cart cart--full" href="#">
                         <div class="cart-icon">
@@ -278,7 +280,7 @@
         <!--block header end-->
         <div class="content">
             <!--main-slider-->
-            <div class="slider-wrap slider-wrap--inarrow">
+            <div class="slider-wrap slider-wrap--main slider-wrap--inarrow">
                 <div class="slider-control slider-control--left">
                     <svg class="icon">
                         <use xlink:href="#pizza-arrow-left"></use>
@@ -293,15 +295,15 @@
                     <div class="main-slider__el-wrap">
                         <!-- use img --desc for desktop version ||  --mobile for < 768px-->
                         <a class="main-slider__el main-slider__el--desc" href="#" style="background-image:url('img/slide-1.png')"></a>
-                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/slide-1--mobile.png')"></a>
+                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/main-slider-el-1--mobile.jpg')"></a>
                     </div>
                     <div class="main-slider__el-wrap">
                         <a class="main-slider__el main-slider__el--desc" href="#" style="background-image:url('img/slide-1.png')"></a>
-                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/slide-1--mobile.png')"></a>
+                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/main-slider-el-1--mobile.jpg')"></a>
                     </div>
                     <div class="main-slider__el-wrap">
                         <a class="main-slider__el main-slider__el--desc" href="#" style="background-image:url('img/slide-1.png')"></a>
-                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/slide-1--mobile.png')"></a>
+                        <a class="main-slider__el main-slider__el--mobile" href="#" style="background-image:url('img/main-slider-el-1--mobile.jpg')"></a>
                     </div>
                 </div>
             </div>
@@ -2132,7 +2134,7 @@
                     <div class="advant__el">
                         <div class="advant__el-icon">
                             <svg class="icon">
-                                <use xlink:href="#heart-color"></use>
+                                <use xlink:href="#heart--color"></use>
                             </svg>
                         </div>
                         <div class="advant__el-text">Делаем с любовью</div>
@@ -2144,10 +2146,10 @@
                         <div class="section-title__el">Отзывы</div>
                     </div>
                     <div class="review-slider">
-                        <div class="review-slider__el">
-                            <div class="review-slider__title">Екатерина</div>
-                            <div class="review-slider__rating">
-                                <div class="star star--edit">
+                        <div class="review__el">
+                            <div class="review__title">Екатерина</div>
+                            <div class="review__rating">
+                                <div class="star">
                                     <div class="star-el star-el--active">
                                         <svg class="icon">
                                             <use xlink:href="#pizza-pice"></use>
@@ -2175,13 +2177,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="review-slider__date">14 марта 2019 21:49</div>
-                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                            <div class="review__date">14 марта 2019 21:49</div>
+                            <div class="review__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
                         </div>
-                        <div class="review-slider__el">
-                            <div class="review-slider__title">Екатерина</div>
-                            <div class="review-slider__rating">
-                                <div class="star star--edit">
+                        <div class="review__el">
+                            <div class="review__title">Екатерина</div>
+                            <div class="review__rating">
+                                <div class="star">
                                     <div class="star-el star-el--active">
                                         <svg class="icon">
                                             <use xlink:href="#pizza-pice"></use>
@@ -2209,13 +2211,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="review-slider__date">14 марта 2019 21:49</div>
-                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                            <div class="review__date">14 марта 2019 21:49</div>
+                            <div class="review__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
                         </div>
-                        <div class="review-slider__el">
-                            <div class="review-slider__title">Екатерина</div>
-                            <div class="review-slider__rating">
-                                <div class="star star--edit">
+                        <div class="review__el">
+                            <div class="review__title">Екатерина</div>
+                            <div class="review__rating">
+                                <div class="star">
                                     <div class="star-el star-el--active">
                                         <svg class="icon">
                                             <use xlink:href="#pizza-pice"></use>
@@ -2243,13 +2245,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="review-slider__date">14 марта 2019 21:49</div>
-                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                            <div class="review__date">14 марта 2019 21:49</div>
+                            <div class="review__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
                         </div>
-                        <div class="review-slider__el">
-                            <div class="review-slider__title">Екатерина</div>
-                            <div class="review-slider__rating">
-                                <div class="star star--edit">
+                        <div class="review__el">
+                            <div class="review__title">Екатерина</div>
+                            <div class="review__rating">
+                                <div class="star">
                                     <div class="star-el star-el--active">
                                         <svg class="icon">
                                             <use xlink:href="#pizza-pice"></use>
@@ -2277,13 +2279,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="review-slider__date">14 марта 2019 21:49</div>
-                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                            <div class="review__date">14 марта 2019 21:49</div>
+                            <div class="review__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
                         </div>
-                        <div class="review-slider__el">
-                            <div class="review-slider__title">Екатерина</div>
-                            <div class="review-slider__rating">
-                                <div class="star star--edit">
+                        <div class="review__el">
+                            <div class="review__title">Екатерина</div>
+                            <div class="review__rating">
+                                <div class="star">
                                     <div class="star-el star-el--active">
                                         <svg class="icon">
                                             <use xlink:href="#pizza-pice"></use>
@@ -2311,13 +2313,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="review-slider__date">14 марта 2019 21:49</div>
-                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                            <div class="review__date">14 марта 2019 21:49</div>
+                            <div class="review__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
                         </div>
-                        <div class="review-slider__el">
-                            <div class="review-slider__title">Екатерина</div>
-                            <div class="review-slider__rating">
-                                <div class="star star--edit">
+                        <div class="review__el">
+                            <div class="review__title">Екатерина</div>
+                            <div class="review__rating">
+                                <div class="star">
                                     <div class="star-el star-el--active">
                                         <svg class="icon">
                                             <use xlink:href="#pizza-pice"></use>
@@ -2345,8 +2347,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="review-slider__date">14 марта 2019 21:49</div>
-                            <div class="review-slider__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
+                            <div class="review__date">14 марта 2019 21:49</div>
+                            <div class="review__text">Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка</div>
                         </div>
                     </div>
                 </div>
@@ -2375,6 +2377,21 @@
             </div>
         </div>
         <!--block footer-->
+        <div class="panel">
+            <div class="panel-btn">Меню</div>
+            <div class="cart">
+                <div class="cart-icon">
+                    <svg class="icon">
+                        <use xlink:href="#cart"></use>
+                    </svg>
+                    <div class="cart-icon__val">1250 р</div>
+                </div>
+                <div class="cart-info">
+                    <div class="cart-condition">1250 р</div>
+                    <div class="cart-size">2 товара</div>
+                </div>
+            </div>
+        </div>
         <div class="footer-wrap">
             <div class="main-cont">
                 <div class="footer">

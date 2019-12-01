@@ -1,0 +1,33 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.wrap-cont
+			.title-row
+				.title Отзывы
+				.btn--sm.btn--light Добавить отзыв
+			.review-wrap
+				- for (var i=0;i<6;i++)
+					.review__el.review__el--border
+						.review__title Екатерина
+						.review__rating
+							.star.star--edit
+								.star-el.star-el--active
+									+icon("pizza-pice","icon")
+								.star-el.star-el--active
+									+icon("pizza-pice","icon")
+								.star-el.star-el--active
+									+icon("pizza-pice","icon")
+								.star-el.star-el--active
+									+icon("pizza-pice","icon")
+								.star-el
+									+icon("pizza-pice","icon")
+						.review__date 14 марта 2019 21:49
+						.review__text Огромное спасибо! Заказываю у Вас 1-й раз. Порадовало всё, начиная с рриятного молодого человека, который приехал на 10 мин. раньше заявленного срока. Аккуратная и удобная фирменная упаковка
+			.loader
+				img(src="img/loader.svg", alt="")
+		+seo()
+	+footer()
+include ./block_html/_script.pug

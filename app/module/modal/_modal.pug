@@ -2,18 +2,39 @@ mixin modal()
 	.modal-layer
 		.modal-filter
 		.modal-wrap
-			.modal(data-modal="order")
+			.modal.modal--lg(data-modal="review")
 				.modal-content
 					.modal-close
 						+icon("close","icon")
-					.modal-title Оставьте заявку
-					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
-					form.validate-form( action="javascript:void(null);")
+					.modal-head
+						.modal-title Оставить отзыв
+						//a(href="#").modal-head__link
+							.modal-head__link-text Оценить качество
+							.modal-head__link-icon
+								+icon("arrow-round-right","icon")
+					.get-rating
+						.get-rating-text Ваша оценка
+						.star.star--edit
+							.star-el
+								+icon("pizza-pice","icon")
+							.star-el
+								+icon("pizza-pice","icon")
+							.star-el
+								+icon("pizza-pice","icon")
+							.star-el
+								+icon("pizza-pice","icon")
+							.star-el
+								+icon("pizza-pice","icon")
+					form(action="#")
+						.input-cont.input-cont--two
+							.input-row
+								.input-row__title Ваше имя
+								input(type="text" placeholder="Ваше имя" class="input")
+							.input-row
+								.input-row__title Телефон или e-mail
+								input(type="text" placeholder="Ваш телефон или e-mail" class="input")
 						.input-row
-							input(type="text" name="name" placeholder="Ваше имя").input
-						.input-row
-							input(type="text" name="phone" placeholder="Ваш телефон").input
-						.input-row
+							.input-row__title Поделитесь своими впечатлениями!
 							textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
 						.agree-row
 							.check-el
@@ -21,15 +42,284 @@ mixin modal()
 									input(type="checkbox" name="agree").sytle-input
 									.sytle-input-element
 										+icon("checked","icon-check")
-									.sytle-input-text=text
 							.agree-row__text Согласен с
 								a(href="#") условиями обработки персональных данных
-						input(type="submit" value="Отправить заявку").modal-send
+						.btn-row-mid.btn-row-mid--clear
+							input(type="submit" value="Отправить" class="btn--md btn--red")
+
+
+			//enter
+			.modal(data-modal="login")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Вход на сайт
+					form(action="#").login-form
+						.input-row.input-row--error
+							.input-row__title Телефон
+							input(type="text" placeholder="Ваш телефон" class="input")
+							.error-msg Введённые данные не должны содержать цифры
+						.input-row
+							.input-row__title Пароль
+							input(type="password" placeholder="от 6 знаков" class="input")
+						.input-row
+							input(type="submit" value="Войти" class="btn--md btn--red btn--full")
+						div(data-modal="forgot").modal-get.modal-link
+							span Забыли пароль?
+						div(data-modal="registration").modal-get.modal-link
+
+							span Зарегистрироваться
+
+			//code
+			.modal(data-modal="forgot")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Вход на сайт
+					form(action="#").login-form
+						.input-row
+							.input-row__title Введите номер телефона или e-mail и мы вышлем вам код для смены пароля
+							input(type="text" placeholder="Код из сообщения" class="input")
+						.input-row
+							input(type="submit" value="Отправить" class="btn--md btn--red btn--full")
+
+			//code
+			.modal(data-modal="code")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Вход на сайт
+					form(action="#").login-form
+						.input-row
+							.input-row__title Введите код, который мы выслали на ваш номер
+							input(type="text" placeholder="Код из сообщения" class="input")
+						.input-row
+							input(type="submit" value="Войти" class="btn--md btn--red btn--full")
+						.modal-link.modal-link--extend Выслать код еще раз
+
+
+			//reg
+			.modal(data-modal="registration")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Регистрация
+					form(action="#").login-form
+						.input-row
+							.input-row__title Ваше имя
+							input(type="text" placeholder="Ваше имя" class="input")
+						.input-row
+							.input-row__title Телефон
+							input(type="text" placeholder="Ваш телефон или e-mail" class="input")
+						.input-row
+							.input-row__title E-mail
+							input(type="text" placeholder="Ваше e-mail" class="input")
+						.input-row
+							.input-row__title Пароль
+							input(type="password" placeholder="от 6 знаков" class="input")
+
+						.submit-mark.submit-mark--full
+							input(type="submit" value="Зарегистрироваться" class="btn--md btn--red btn--full")
+						.agree-row
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox" name="agree").sytle-input
+									.sytle-input-element
+										+icon("checked","icon-check")
+							.agree-row__text Согласен с
+								a(href="#") условиями обработки персональных данных
+						div(data-modal="login").modal-get.modal-link.modal-link--center Уже есть аккаунт? Войти
+			//cart === end
+
+
 			//success message
 			.modal(data-modal="truemessage")
 				.modal-content.modal-content--true
-					+icon("interface","icon")
+					+icon("success--color","icon")
 					.modal-text-true Ваша заявка принята
+					.btn--md.btn--red.btn--full.hide-modal Закрыть
+			//success message
+			.modal(data-modal="falsemessage")
+				.modal-content
+					.modal-content--false
+						img(src="img/anxiety.svg", alt="")
+					.modal-text-true Что-то пошло не так
+					.btn--md.btn--red.btn--full.hide-modal Закрыть
 
-	a(href="#" data-modal="order").modal-get Открыть модальное окно
+
+
+			//edit profile
+			.modal(data-modal="editprofile")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Профиль
+					form(action="#").login-form
+						.input-row
+							.input-row__title Ваше имя
+							input(type="text" placeholder="Ваше имя" class="input" value="Владислав")
+						.input-row
+							.input-row__title Телефон
+							input(type="text" placeholder="Ваш телефон или e-mail" class="input" value="8(495)432-23-21")
+						.input-row
+							.input-row__title E-mail
+							input(type="text" placeholder="Ваше e-mail" class="input" value="mail@mail.ru")
+						.input-row
+							.input-row__title Адрес
+							input(type="password" placeholder="от 6 знаков" class="input" value="Улица Ленина 10")
+						.input-row
+							.submit-mark.submit-mark--full
+								input(type="submit" value="Отправить" class="btn--md btn--red btn--full")
+						.agree-row
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox" name="agree").sytle-input
+									.sytle-input-element
+										+icon("checked","icon-check")
+							.agree-row__text Согласен с
+								a(href="#") условиями обработки персональных данных
+
+			//cart === end
+
+			//TY message
+			.modal.modal--lg(data-modal="TY")
+				.modal-content.modal-content--true
+					.modal-close
+						+icon("close","icon")
+
+					.modal-title Спасибо! <br> Ваш заказ принят
+					.ty-wrap
+						img(src="img/pizza-full.svg", alt="" class="modal-content--true-img")
+						.modal-text Наши менеджеры свяжутся с вами в ближайшее время для подтверждения заказа
+						a(href="/").btn--md.btn--red.btn--full На главную
+			//TY message === end
+
+			//deliver message
+			.modal(data-modal="deliver")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Выберите тип доставки
+					.input-row
+						.btn--md.btn--red.btn--full.hide-modal Доставка
+					.btn--md.btn--light.btn--full.hide-modal Самовывоз
+			//deliver message === end
+
+			//address message
+			.modal(data-modal="address")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Ваш адрес доставки
+					form(action="#").login-form
+						.input-row
+							.input-row__title Улица
+							input(type="text" placeholder="Ваша улица" class="input")
+						.input-row
+							.input-row__title Дом
+							input(type="text" placeholder="Ваша улица" class="input")
+						//toggle class hidden for msg
+						p.type--sm Выбранный вами адрес не входит в зону доставки. Выберите другой адрес или самовывоз
+					.btn--md.btn--red.btn--full.hide-modal Подтвердить
+					p.type--center или
+					.btn--md.btn--red.btn--full.hide-modal Выбрать самовывоз
+			//address message === end
+
+			//unworked message
+			.modal(data-modal="unworked")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Ресторан не работает
+					.modal-content--false
+						img(src="img/anxiety.svg", alt="")
+					.unworked-text Рестораны доставки в г. Москва работают с 10 до 22:30
+					.btn--md.btn--red.btn--full.hide-modal Выбрать самовывоз
+			//unworked message === end
+
+			//city list
+			.modal(data-modal="city")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Выберите ваш город
+					.city
+						.input-row
+							.input-row__title Поиск по названию
+							.city-search
+								input(type="text" placeholder="Название города" class="input")
+								.search__icon
+									+icon("search","icon")
+					.position-list.nice-scroll
+						a(href="#").position-list__el.position-list__el--active.position-list__el--lg Москва
+							a(href="#").position-list__el.position-list__el--lg Волгоград
+						- for (var i=0;i<4;i++)
+							a(href="#").position-list__el Уфа
+							a(href="#").position-list__el Казань
+							a(href="#").position-list__el Владивосток
+			//city list === end
+
+			//city area
+			.modal.modal--xl(data-modal="area")
+				.modal-content.modal-content--clear
+					.modal-close
+						+icon("close","icon")
+					.area
+						.area-tool
+							.area-tool-info
+								.area-tool__title Где будете забирать?
+								.text
+									p Выберите пиццерию, из которой будете забирать заказ.
+									p Также вы можете проверить возможность доставки по вашему адресу во вкладке "Адрес доставки"
+							.order-tab
+								.order-tab__el.order-tab__el--active(data-tab="self") Самовывоз
+								.order-tab__el(data-tab="deliver") Доставка
+							.order-container
+								.order-cont__el(data-tab="self")
+									.area-tool-list.nice-scroll
+										- for (var i=0;i<10;i++)
+											.area-el(class=i===0?'area-el--active':'')
+												.area-el__numb #{i+1}
+												.area-el-cont
+													.area-el-title Солнцево
+													.area-el-row <span>Адрес:</span> 119620 ,г.Москва, ул.Авиаторов, д.14
+													.area-el-row <span>Телефон:</span> +7 459 138 13 83
+								.order-cont__el.order-cont__el--up.hidden(data-tab="deliver")
+									.area-search
+										.input-row
+											.input-row__title Введите улицу и номер дома
+											input(type="text" placeholder="Ваш адрес" class="input")
+										.input-row
+											input(type="submit" value="Проверить" class="btn--md btn--mark btn--full")
+						.area-map
+							.area-map__el
+								//put map code her
+							.area-msg-layer.hidden
+								//remove class hidden for area-msg-layer + item msg
+								.area-msg.hidden
+									.area-msg__text Вы подтверждаете самовывоз с пиццерии
+										span Речной вокзал
+									.area-msg-nav
+										.btn--sm.btn--mark Да, всё верно
+										.btn--sm.btn--light Отмена
+								.area-msg.hidden
+									.area-msg__text.text
+										p Адрес: ул. Московская, дом 24
+										p К сожалению, ваш адрес не входит ни в одну зону доставки, воспользуйтесь самовывозом
+									.area-msg-nav
+										.btn--sm.btn--mark Да, всё верно
+										.btn--sm.btn--light Отмена
+								.area-msg
+									.area-msg__text
+										p Адрес: <strong>ул. Живописная, дом 49 </strong>
+										p Адрес: <strong>ул. Живописная, дом 49 </strong>
+										p Время приёма заказов: <strong>10 - 23 </strong>
+										p Время доставки: <strong>35 мин </strong>
+										p Минимальная сумма заказа: <strong>500 руб </strong>
+									.area-msg-nav
+										.btn--sm.btn--mark Подтверждаю
+										.btn--sm.btn--light Продолжить выбор
+								//put map her
+				//city area === end
+	//a(href="#" data-modal="order").modal-get Открыть модальное окно
 

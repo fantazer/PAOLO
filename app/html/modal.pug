@@ -4,7 +4,6 @@ include block_html/_include.pug
 style(type='text/css').
 	.btn--md {
 		display: inline-block;
-		margin-bottom: 20px;
 	}
 
 	.btn-wrap {
@@ -13,15 +12,42 @@ style(type='text/css').
 		flex-flow: column;
 		align-items: baseline;
 	}
+.page
+	+header()
+	.content
+		.main-cont
+			p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
+			p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
+			.btn-wrap
+				.btn--md.btn--mark.modal-get(data-modal="review") Отзыв | data-modal="review"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="login") Логин | data-modal="login"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="forgot") Код на номер телефона | data-modal="forgot"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="code") Отправить код | data-modal="code"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="registration") регистрация | data-modal="registration"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="truemessage") Успешное действие | data-modal="truemessage"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="falsemessage") Не успешное действие | data-modal="falsemessage"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="editprofile") Изменить профиль | data-modal="editprofile"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="TY") Заказ принят | data-modal="TY"
 
-
-.main-cont
-	p Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"
-	p Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send
-	.btn-wrap
-		.btn--md.btn--mark.modal-get(data-modal="order") Заявка | data-modal="code "
-
-+footer()
-+modal()
+				br
+				.btn--md.btn--mark.modal-get(data-modal="deliver") Выбор типа доставки | data-modal="deliver"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="address") Выбор адреса | data-modal="address"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="unworked") Ресторан не работает | data-modal="unworked"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="city") Выбор города | data-modal="city"
+				br
+				.btn--md.btn--mark.modal-get(data-modal="area") Выбор способа доставки | data-modal="area"
+	+footer()
+	+modal()
 
 include ./block_html/_script.pug

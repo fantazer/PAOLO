@@ -82,7 +82,10 @@
 	width: calc(100% - 80px)
 	line-height: 1.6
 	a
-		color $mark
+		color black!important
+		border-bottom 1px dashed black
+
+
 
 //form
 .input-row
@@ -91,6 +94,7 @@
 		width: 100%
 .input-row__title
 	margin-bottom: 10px
+	line-height: 1.4
 
 .input-row--error
 	.input
@@ -114,6 +118,9 @@
 	grid-template-columns: 1fr 1fr 1fr
 	+below(640px)
 		grid-template-columns: 1fr
+
+.input-row__title
+	font-weight: 700
 
 //checkbox remember
 .login-remember
