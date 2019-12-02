@@ -8,7 +8,7 @@ include block_html/_include.pug
 			.order
 				.order-cont
 					.title.title--mid Корзина
-					.order-location
+					//.order-location
 						.order-location__el
 							.order-location__head Выберите заведение, с которого вы заберёте заказ
 							select.select-beauty
@@ -52,7 +52,7 @@ include block_html/_include.pug
 									.basket__delete
 										+icon("garbage","icon")
 					.title.title--sm Что будете пить?
-					.items.items--sm
+					.items
 						- for(var i=0;i<9;i++)
 							.item.item--sm
 								a(href="#" style="background-image:url('img/drink.jpg')").item__img

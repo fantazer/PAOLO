@@ -121,6 +121,12 @@
         <div class="head-main-wrap">
             <div class="main-cont">
                 <div class="head-main">
+                    <a class="logo-tablet" href="#">
+                        <img src="img/logo-face.svg" alt="" />
+                    </a>
+                    <a class="logo-mobile" href="#">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
                     <div class="head-nav">
                         <div class="head-nav__el-wrap"></div>
                         <a class="head-nav__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
@@ -165,6 +171,19 @@
             </div>
         </div>
         <!--мобильное меню-->
+        <div class="slide-cat">
+            <div class="mobile-cat">
+                <a class="mobile-cat__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
+                <a class="mobile-cat__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a>
+                <a class="mobile-cat__el" href="#roll" rel="m_PageScroll2id">Роллы</a>
+                <a class="mobile-cat__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a>
+                <a class="mobile-cat__el--sm mobile-cat__el" href="#soup" rel="m_PageScroll2id">Супы</a>
+                <a class="mobile-cat__el--sm mobile-cat__el" href="#salad" rel="m_PageScroll2id">Салаты</a>
+                <a class="mobile-cat__el--sm mobile-cat__el" href="#pasta" rel="m_PageScroll2id">Паста</a>
+                <a class="mobile-cat__el--sm mobile-cat__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
+                <a class="mobile-cat__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+            </div>
+        </div>
         <div class="slide-menu">
             <div class="slide-menu-wrap">
                 <!--Подменю главное-->
@@ -290,42 +309,20 @@
                 <div class="order">
                     <div class="order-cont">
                         <div class="title title--mid">Корзина</div>
-                        <div class="order-location">
-                            <div class="order-location__el">
-                                <div class="order-location__head">Выберите заведение, с которого вы заберёте заказ</div>
-                                <select class="select-beauty">
-                                    <option>ул. Московская, д. 45</option>
-                                    <option>ул. Московская, д. 14</option>
-                                    <option>ул. Московская, д. 15</option>
-                                    <option>ул. Московская, д. 45</option>
-                                    <option>ул. Московская, д. 14</option>
-                                    <option>ул. Московская, д. 15</option>
-                                    <option>ул. Московская, д. 45</option>
-                                    <option>ул. Московская, д. 14</option>
-                                    <option>ул. Московская, д. 15</option>
-                                    <option>ул. Московская, д. 45</option>
-                                    <option>ул. Московская, д. 14</option>
-                                    <option>ул. Московская, д. 15</option>
-                                    <option>ул. Московская, д. 45</option>
-                                    <option>ул. Московская, д. 14</option>
-                                    <option>ул. Московская, д. 15</option>
-                                    <option>ул. Московская, д. 45</option>
-                                    <option>ул. Московская, д. 14</option>
-                                    <option>ул. Московская, д. 15</option>
-                                    <option>ул. Московская, д. 45</option>
-                                    <option>ул. Московская, д. 14</option>
-                                    <option>ул. Московская, д. 15</option>
-                                </select>
-                            </div>
-                            <div class="order-location__el">
-                                <div class="order-location__btn">
-                                    <svg class="icon">
-                                        <use xlink:href="#aim"></use>
-                                    </svg>
-                                    <span>Выбрать заведение на карте</span>
-                                </div>
-                            </div>
-                        </div>
+                        <!--.order-location
+					.order-location__el
+						.order-location__head Выберите заведение, с которого вы заберёте заказ
+						select.select-beauty
+							- for (var i=0;i<7;i++)
+								option ул. Московская, д. 45
+								option ул. Московская, д. 14
+								option ул. Московская, д. 15
+					.order-location__el
+						.order-location__btn
+							+icon("aim","icon")
+							span Выбрать заведение на карте
+					
+					-->
                         <!-- remove class to show empty basket .order-empty--hide-->
                         <div class="order-empty order-empty--hide">
                             <div class="order-empty-icon">
@@ -497,7 +494,7 @@
                             </div>
                         </div>
                         <div class="title title--sm">Что будете пить?</div>
-                        <div class="items items--sm">
+                        <div class="items">
                             <div class="item item--sm">
                                 <a class="item__img" href="#" style="background-image:url('img/drink.jpg')"></a>
                                 <div class="item__content">
@@ -827,8 +824,16 @@
             </div>
         </div>
         <!--block footer-->
-        <div class="panel">
-            <div class="panel-btn">Меню</div>
+        <div class="footer-panel">
+            <div class="footer-panel-btn">
+                <svg class="icon">
+                    <use xlink:href="#close"></use>
+                </svg>
+                <span>Меню</span>
+                <svg class="icon">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </div>
             <div class="cart">
                 <div class="cart-icon">
                     <svg class="icon">

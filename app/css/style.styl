@@ -26,12 +26,16 @@ body
 	center(640px,10px)
 
 .wrap-cont
+	+below(640px)
+		margin-top: 0
 	center(1250px,10px)
 	background: white
 	padding: 40px 20px
 	margin-top: 30px
 
 .wrap-cont--main
+	+below(640px)
+		padding-top: 100px
 	margin-top: -60px
 	padding-top: 140px
 
@@ -126,9 +130,10 @@ body
 .modal-content
 	+below(640px)
 		height: 100%
-		padding: 20px 10px
+		padding: 20px
 		overflow-y scroll
-		width: 100%!important
+		width: 95%!important
+		margin: 20px auto
 		br(0)
 	background: white
 	position: relative
@@ -145,8 +150,9 @@ body
 
 .modal-close
 	+below(768px)
-		top 12px
-		right 12px
+		size 35px
+		.icon
+			size 12px
 	flex(mid)
 	cp()
 	z-index 100
@@ -177,7 +183,7 @@ body
 
 .modal-title
 	+below(768px)
-		font-size: 20px
+		font-size: 28px
 	margin-bottom: 20px
 	text-align: center
 	color black
@@ -346,11 +352,13 @@ select.select-beauty
 
 // slide menu
 .head-toggle
+	+above(769px)
+		display: none
+	+below(640px)
+		margin-left auto
 	size 50px
 	flex(mid)
 	cp()
-	+above(769px)
-		display: none
 	.icon
 		size 25px
 		fill black
@@ -452,10 +460,14 @@ select.select-beauty
 	&:hover
 		color $mark
 .head-contact__time
+	+below(1024px)
+		display none
 	opacity: .5
 .head-top-nav
 	+below(1024px)
 		width: 30%
+	+below(860px)
+		display none
 	margin-left auto
 	flex(between)
 	width: 25%
@@ -472,6 +484,8 @@ select.select-beauty
 		color white
 
 .head-search
+	+below(860px)
+		margin-left auto
 	background: #262626
 	size 50px
 	flex(mid)
@@ -612,7 +626,7 @@ select.select-beauty
 .head-main-wrap
 	background: white
 	//border-top 1px solid #f6f4f4
-	//border-bottom 1px solid #f6f4f4
+	border-bottom 1px solid #f6f4f4
 .head-main
 	+below(768px)
 		height: 50px
@@ -627,6 +641,8 @@ select.select-beauty
 	+below(768px)
 		width: 100%
 		overflow auto
+	+below(640px)
+		display none
 	flex(between)
 	width: 85%
 .head-nav__el
@@ -656,6 +672,9 @@ select.select-beauty
 	&:before
 		+below(768px)
 			height: 5px
+		+below(640px)
+			bottom initial
+			top: -2px
 		content ''
 		left 0
 		bottom 2px
@@ -666,6 +685,9 @@ select.select-beauty
 	&:after
 		+below(768px)
 			height: 5px
+		+below(640px)
+			bottom initial
+			top: -2px
 		content ''
 		right 0
 		bottom 2px
@@ -681,7 +703,7 @@ select.select-beauty
 	+below(768px)
 		margin-left:initial
 		f()
-		border-left 1px solid $border-color
+		//border-left 1px solid $border-color
 		border-radius 0
 		margin-right: 0
 		display none
@@ -758,7 +780,7 @@ select.select-beauty
 	z-index 10
 .slider-wrap--main
 	.slider-control
-		+below(768px)
+		+below(1024px)
 			display none!important
 .slider-wrap--simple
 	.slider-control
@@ -839,6 +861,7 @@ select.select-beauty
 		grid-template-columns repeat(3,1fr)
 	+below(768px)
 		grid-template-columns repeat(3,1fr)
+		grid-gap 10px
 	+below(680px)
 		grid-template-columns 1fr 1fr
 	+below(640px)
@@ -854,17 +877,22 @@ select.select-beauty
 	+below(1024px)
 		.incr__val
 			font-size: 14px
+	+below(480px)
+		grid-template-columns 1fr
+		grid-gap 10px
 	grid-template-columns repeat(auto-fill, minmax(10rem,1fr))
-
+	.item__title
+		margin-bottom: 0
+	.item__info
+		padding: 20px
 .item
 	+below(640px)
 		flex-flow row
 		align-items: flex-start
-		margin-left: -10px
 		box-shadow 0 0 0
 	+below(480px)
 		flex-flow column
-		width calc(100% + 20px)
+
 	f()
 	fl()
 	position: relative
@@ -891,7 +919,7 @@ select.select-beauty
 		width: 100%
 		border-radius 0
 	bg-full()
-	padding: 53% 10%
+	padding: 50% 10%
 	transition all .2s
 	position: relative
 .item__content
@@ -1001,7 +1029,7 @@ select.select-beauty
 .item__info
 	bg-full()
 	padding: 20px 20px 40px 20px
-
+	flex-grow 1
 // incr
 .incr
 	f()
@@ -1044,6 +1072,8 @@ select.select-beauty
 				fill white
 
 .incr__nav
+	+below(640px)
+		size 50px
 	flex(mid)
 	tr(background )
 	size 40px
@@ -1214,6 +1244,8 @@ select.select-beauty
 	color #808080
 
 .review-wrap
+	+below(480px)
+		grid-template-columns: 1fr
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(2, 1fr)
@@ -1223,6 +1255,8 @@ select.select-beauty
 .description__cont
 	+below(768px)
 		margin-top: 20px
+	+below(640px)
+		padding: 15px
 	color #8b8b8b
 	padding: 30px
 	margin-top: 70px
@@ -1280,6 +1314,8 @@ select.select-beauty
 
 // footer
 .footer-wrap
+	+below(640px)
+		padding-bottom: 75px
 	background: black
 	padding: 30px 0
 	a
@@ -1529,9 +1565,10 @@ basket__el-info
 
 .basket__name-text
 	+below(768px)
-		font-size: 20px
 		margin-bottom: 20px
 		text-align: center
+		width: 100%
+		font-size: 32px
 	@extend .type--lg
 	font-weight 700
 	display: inline-block
@@ -1628,6 +1665,7 @@ basket__el-info
 	@extend .btn--md
 	@extend .btn--light
 	width: 100%
+	padding: 20px
 
 .panel-list
 	+below(480px)
@@ -1710,6 +1748,8 @@ basket__el-info
 	align-items: center
 	margin-bottom: 40px
 	.title
+		+below(640px)
+			margin-bottom: 20px
 		margin-bottom: 0
 		margin-right: 40px
 
@@ -1879,7 +1919,7 @@ basket__el-info
 		width: 100%
 	+below(760px)
 		max-width 480px
-		margin: 20px auto 0 auto
+		margin: 0 auto
 	width: 50%
 .goods-img__el
 	bg-full()
@@ -2060,6 +2100,8 @@ basket__el-info
 	+below(768px)
 		width: 100%
 		margin-bottom: 30px
+	+below(640px)
+		margin-bottom: 0
 	width: 25%
 .lk-toolbar__el
 	+below(768px)
@@ -2113,10 +2155,14 @@ basket__el-info
 .lk-profile-list
 	max-width 400px
 .lk-profile-info__el
+	+below(480px)
+		fw()
 	margin-bottom: 20px
 	f()
 	justify-content space-between
 .lk-profile-info__el-title
+	+below(480px)
+		width: 100%
 	margin-bottom: 10px
 	width: 48%
 	color #808080
@@ -2343,7 +2389,7 @@ basket__el-info
 		margin-left: auto
 		margin-right: auto
 		max-width 320px
-		font-size: 10px
+		font-size: 12px
 		justify-content: center
 	f()
 	margin-bottom: 20px
@@ -2429,13 +2475,23 @@ basket__el-info
 	+below(640px)
 		width: 100%
 		justify-content: space-between
+		text-align center
+		padding-top: 20px
+		border-top 1px solid $border-color
 	f()
 	align-items: center
 .history-info-total__text
+	+below(640px)
+		text-align center
+		width: 100%
 	margin-right: 10px
 	@extend .type--md
 	font-weight 700
 .history-info-total__val
+	+below(640px)
+		width: 100%
+		text-align center
+		font-size: 38px
 	color $mark
 	@extend .type--xl
 	font-weight: 700
@@ -2443,7 +2499,7 @@ basket__el-info
 .history-info-get
 	+below(640px)
 		width: 100%
-		margin: 20px 0
+		margin:0 0 20px 0
 	margin-right: auto
 	padding: 10px 20px
 	flex(mid)
@@ -2504,6 +2560,11 @@ basket__el-info
 	font-weight 700
 
 .img-about
+	+below(640px)
+		width calc(100% + 40px)
+		display block
+		max-width initial
+		margin: 30px -20px
 	margin: 30px 0
 
 // modals
@@ -2616,16 +2677,26 @@ basket__el-info
 // modal area
 
 .area
+	+below(640px)
+		fw()
 	f()
 	.order-cont__el
+		+below(640px)
+
+			min-height initial
 		min-height 400px
 		background: white
 		position relative
 	.order-cont__el--up
 		z-index 100
 .area-tool
-	width: 400px
+	+below(640px)
+		width: 100%
+	width: 500px
 .area-map
+	+below(640px)
+		width: 100%
+		height: 400px
 	width calc(100% - 400px)
 	position relative
 	flex(mid)
@@ -2773,18 +2844,27 @@ basket__el-info
 // tooltip === end
 
 // panel
-.panel
+.footer-panel
 	+above(769px)
 		display none
+	+below(480px)
+		border-top 1px solid #f7f7f7
+	height: 55px
 	f()
 	justify-content space-between
 	align-items:stretch
-	z-index 10
+	z-index 30
 	position: fixed
 	bottom 0
 	right 0
 	width: 100%
-	.panel-btn
+
+	.cart
+		+below(640px)
+			width: 50%
+		f()
+		margin-left auto
+.footer-panel-btn
 		text-align center
 		background: white
 		font-weight:700
@@ -2792,13 +2872,83 @@ basket__el-info
 		cp()
 		up()
 		font-size: 18px
+		flex(around)
+		.icon
+			size 14px
+			display none
 		+above(641px)
 			display none
 		+below(640px)
 			width: 50%
-	.cart
-		+below(640px)
-			width: 50%
-		f()
-		margin-left auto
+.footer-panel-btn--active
+	.icon
+		display block
 // panel === end
+
+.logo-tablet
+	+above(769px)
+		display none
+	+below(640px)
+		display none
+	margin-right: 10px
+
+.logo-mobile
+	max-width 150px
+	+above(641px)
+		display none
+
+// slide cat
+.slide-cat
+	+above(641px)
+		display none
+	position fixed
+	bottom 0
+	background: white
+	width: 100vw
+	z-index 20
+	transform translateY(100%)
+	tr()
+	height: calc(var(--vh, 1vh) * 100);
+	padding: 10px 10px 55px 10px
+	.mobile-cat
+		//max-height calc(100vh - 55px)
+		//overflow scroll
+.slide-cat--active
+	transform translateY(0%)
+.mobile-cat
+	f()
+	fw()
+	justify-content space-between
+.mobile-cat__el
+	width: 100%
+	display block
+	box-shadow 0 3px 6px rgba(0, 0, 0, 0.16)
+	background-color #ffffff
+	padding: 20px
+	margin-bottom: 10px
+	text-align center
+	font-family "Lifehack Sans"
+	@extend .type--lg
+	font-weight 700
+	letter-spacing 0.6px
+	text-transform uppercase
+.mobile-cat__el.head-nav__el--active
+	&:before
+		content ''
+		left 0
+		top 0
+		width: 8px
+		height: 100%
+	&:after
+		content ''
+		right 0
+		width: 8px
+		height: 100%
+.mobile-cat__el--sm
+	width: 48%
+// slide cat === end
+
+.mobile-cat-wrap
+	margin-bottom: 40px
+	+above(641px)
+		display none

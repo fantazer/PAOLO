@@ -24,6 +24,24 @@ include block_html/_include.pug
 
 		//main-cont
 		.wrap-cont.wrap-cont--main
+
+			.mobile-cat-wrap
+				.mobile-cat
+					-
+						var items = [
+						{name:"Пицца: классика",id:"#clasic"},
+						{name:"Пицца: избранное",id:"#favorite"},
+						{name:"Роллы",id:"#roll"},
+						{name:"Фокачча",id:"#fokacha"},
+						{name:"Супы",id:"#soup"},
+						{name:"Салаты",id:"#salad"},
+						{name:"Паста",id:"#pasta"},
+						{name:"Напитки",id:"#drinks"},
+						{name:"Игрушки из дерева: Paolo WOOD WORK",id:"#toys"},
+						];
+					each item,i in items
+						a(href=item.id rel='m_PageScroll2id' class=i >= 4 && i <= 7 ? 'mobile-cat__el--sm' : '').mobile-cat__el #{item.name}
+
 			-
 				var items = [
 				{name:"Пицца: классика",img:"pizza-1",id:"clasic"},

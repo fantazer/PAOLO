@@ -60,6 +60,10 @@ mixin header()
 	.head-main-wrap
 		.main-cont
 			.head-main
+				a(href="#").logo-tablet
+					img(src="img/logo-face.svg", alt="")
+				a(href="#").logo-mobile
+					img(src="img/logo.svg", alt="")
 				.head-nav
 					-
 						var items = [
@@ -89,6 +93,23 @@ mixin header()
 
 
 	//мобильное меню
+	.slide-cat
+		.mobile-cat
+			-
+				var items = [
+				{name:"Пицца: классика",id:"#clasic"},
+				{name:"Пицца: избранное",id:"#favorite"},
+				{name:"Роллы",id:"#roll"},
+				{name:"Фокачча",id:"#fokacha"},
+				{name:"Супы",id:"#soup"},
+				{name:"Салаты",id:"#salad"},
+				{name:"Паста",id:"#pasta"},
+				{name:"Напитки",id:"#drinks"},
+				{name:"Игрушки из дерева: Paolo WOOD WORK",id:"#toys"},
+				];
+			each item,i in items
+				a(href=item.id rel='m_PageScroll2id' class=i>=4 && i<=7?'mobile-cat__el--sm':'').mobile-cat__el #{item.name}
+
 	.slide-menu
 		.slide-menu-wrap
 			//Подменю главное
@@ -162,4 +183,5 @@ mixin header()
 				.slide-el.slide-el--active Санкт-Петербург
 				.slide-el Казань
 				.slide-el Чебоксары
+
 	//block header end
