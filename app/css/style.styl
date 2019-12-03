@@ -374,21 +374,32 @@ select.select-beauty
 .slide-menu
 	+above(1025px)
 		display: none !important
-	+below(640px)
-		top: 51px //Высота хедера
+		top: 0
 	+below(480px)
 		width: 100%
 	background: black
 	color white
 	position: fixed
-	height: calc(100% - 50px) //Отступ хедер
+	height: 100% //Отступ хедер
 	z-index 1250
-	top 54px
 	right 0
-	padding: 25px
+	top 0
+	padding: 20px
 	width: 320px
 	transform translateX(100%)
 	tr(all)
+	.header-search-panel
+		width: 100%
+		margin-left: 0
+	.header-slogan
+		f()
+		margin: 0 0 10px 0
+		.tooltip
+			display inline-block
+	.search-location-val
+		color black
+		margin-left: 10px
+		text-align: left
 .slide-menu--open
 	transform translateX(0%)
 	overflow-y: auto
@@ -407,6 +418,85 @@ select.select-beauty
 	position: fixed!important
 	overflow-Y: scroll!important
 	width:100%!important
+
+
+.slide-location
+	font-size: 16px
+	display inline-block
+	cp()
+	border-bottom 1px dashed white
+
+.slide-contact
+	margin-left: -20px
+	margin-right: -20px
+	background: rgba(255, 255, 255, 0.15)
+	padding: 20px
+	margin-bottom: 15px
+.slide-phone
+	font-size: 24px
+	color white
+	font-weight: 700
+.slide-time
+	opacity: .5
+	margin-bottom: 10px
+.slide-mail
+	color white
+.slide-nav__el
+	tr()
+	font-weight: 700
+	color white
+	opacity: .7
+	font-size: 16px
+	margin-bottom: 15px
+	display block
+	&:hover
+		opacity: 1
+.slide-search
+	position relative
+	margin: 20px 0
+	.icon
+		fill white
+		size 18px
+	.input
+		border 0
+		background: #262626
+		width: 100%
+		padding-left: 40px
+		padding-right: 40px
+.slide-search__action
+	position absolute
+	top 17px
+	left 15px
+.slide-search__clear
+	.icon
+		size 14px
+	position absolute
+	top 18px
+	right 15px
+	opacity: .7
+.slide-info
+	background: white
+	padding: 20px
+	margin: 15px -20px
+.slide-link
+	margin-bottom: 20px
+.slide-link__el
+	tr()
+	display block
+	color white
+	opacity: .7
+	margin-bottom: 10px
+	&:hover
+		opacity: 1
+
+.slide-menu-head
+	flex(between)
+	margin-bottom: 20px
+.slide-menu-close
+	margin-left: 10px
+	.icon
+		size 18px
+		fill white
 // slide menu === end
 
 // animate top menu
@@ -552,19 +642,24 @@ select.select-beauty
 	f()
 	align-items center
 //.logo
-.search-location
-	margin-right: 20px
+
 .search-location-wrap
 	f()
 	width: 100%
 .search-location-icon
 	background: $mark
-	size 57px
+	size 60px
 	flex(mid)
 	cp()
 	.icon
-		size 20px
+		size 24px
 		fill white
+.search-location-val
+	font-weight: 700
+	max-width 450px
+	margin-right: 20px
+	text-align: right
+	width: calc(100% - 60px)
 //.input
 .input-search
 	width: calc(100% - 50px)
@@ -581,13 +676,15 @@ select.select-beauty
 		fill white
 
 .header-search-panel
+	+below(1200px)
+		margin-right: -10px
 	+below(1024px)
 		width: 65%
 	f()
-	width: 50%
+	align-items center
 	margin-left auto
-.header-search-panel__el
-	width: 48%
+	cp()
+	justify-content flex-end
 
 .head-top-search
 	flex(mid)
@@ -2952,3 +3049,81 @@ basket__el-info
 	margin-bottom: 40px
 	+above(641px)
 		display none
+
+.user-loc
+	margin-bottom: 30px
+.user-loc__title
+	font-size 16px
+	font-weight 700
+	letter-spacing 0.4px
+	margin-bottom: 20px
+.user-loc__val
+	font-family "Truth CYR"
+	@extend .type--lg
+	font-weight 700
+	letter-spacing 0.6px
+	text-transform uppercase
+	margin-bottom: 20px
+.user-loc__msg
+	font-size 16px
+	font-weight 700
+	color $mark
+
+.radio-list
+	.check-el
+		margin-bottom: 10px
+
+
+//.range
+.range-wrap
+	+below(640px)
+		width: 80%
+		margin-left auto
+		margin-right auto
+	margin-bottom: 50px
+	max-width 500px
+.irs-slider
+	background: $mark
+	round()
+	border 1px solid darken($mark,10)
+.irs-line-left
+	background: $mark
+.irs-line-right
+	background: $mark
+	border-radius 0px 5px 5px 0
+.irs-line-mid
+	background: $mark
+.irs-bar-edge
+	background: $mark
+	border-radius  5px 0 0 5px
+.irs-bar
+	background: $mark
+.irs-min, .irs-max
+	display: none
+.irs-from, .irs-to, .irs-single
+	background: white
+	color black
+	@extend .type--main
+	top 45px
+
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before
+	display: none
+
+.irs--flat .irs-bar
+	background: $mark
+
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single
+	background: $mark
+
+.irs--flat .irs-handle > i:first-child
+	background: $mark!important
+
+// .range===end
+
+.order-title
+	font-family "Truth CYR"
+	@extend .type--lg
+	font-weight 700
+	letter-spacing 0.6px
+	text-transform uppercase
+	margin-bottom: 20px

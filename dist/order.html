@@ -47,17 +47,8 @@
                                 <use xlink:href="#search"></use>
                             </svg>
                         </div>
-                        <!--toggle class .login--false .login--true-->
-                        <div class="login login--true">
-                            <div class="login-drop-toggle login-enter">
-                                <div class="login-enter-mobile">
-                                    <svg class="icon">
-                                        <use xlink:href="#user-round"></use>
-                                    </svg>
-                                </div>
-                                <span class="login-enter-mobile-text">Вход в личный кабинет</span>
-                            </div>
-                            <a class="login-auth" href="#">
+                        <div class="login">
+                            <div class="login-auth">
                                 <div class="login-auth__icon">
                                     <svg class="icon">
                                         <use xlink:href="#user"></use>
@@ -65,7 +56,7 @@
                                     <div class="login-auth__bonus">+140 Б</div>
                                 </div>
                                 <div class="login-auth__name">Константин</div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,26 +78,12 @@
                         </div>
                     </div>
                     <div class="header-search-panel">
-                        <form class="search-location header-search-panel__el" action="">
-                            <div class="search-location-wrap">
-                                <input class="input input-search" type="text" placeholder="Найти ближайшую пиццерию" />
-                                <div class="search-location-icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#location"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="search-aim header-search-panel__el" action="">
-                            <div class="search-aim-wrap">
-                                <div class="search-aim-icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#aim"></use>
-                                    </svg>
-                                </div>
-                                <input class="input input-search" type="text" placeholder="Найти ближайшую пиццерию" />
-                            </div>
-                        </form>
+                        <div class="search-location-val">Самовывоз, Хорошево, ул. Константинопольская, д. 34</div>
+                        <div class="search-location-icon">
+                            <svg class="icon">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -179,120 +156,92 @@
         </div>
         <div class="slide-menu">
             <div class="slide-menu-wrap">
-                <!--Подменю главное-->
-                <div class="slide-menu__list slide-menu__list--active slide-menu__list--up" data-menu="main">
-                    <div class="slide-el slide-el--sub" data-menu="menu">
-                        <span>Меню</span>
+                <div class="slide-menu-head">
+                    <div class="slide-location">Санкт-Петербург</div>
+                    <div class="slide-menu-close">
                         <svg class="icon">
-                            <use xlink:href="#arrow-right"></use>
+                            <use xlink:href="#close-fat"></use>
                         </svg>
-                    </div>
-                    <div class="slide-el slide-el--sub" data-menu="town">
-                        <span>Ваш город</span>
-                        <svg class="icon">
-                            <use xlink:href="#arrow-right"></use>
-                        </svg>
-                    </div>
-                    <a class="slide-el" href="#">Доставка</a>
-                    <a class="slide-el" href="#">Акции</a>
-                    <a class="slide-el" href="#">Отзывы</a>
-                    <a class="slide-el" href="#">Кафе</a>
-                    <a class="slide-el" href="#">Вакансии</a>
-                    <a class="slide-el" href="#">Контакты</a>
-                    <!--toggle class .login--false .login--true-->
-                    <div class="slide-menu-contact">
-                        <div class="login login--false">
-                            <div class="login-enter">
-                                <svg class="icon">
-                                    <use xlink:href="#profile"></use>
-                                </svg>
-                                <span class="login-enter-mobile-text">Вход в кабинет</span>
-                            </div>
-                            <a class="login-auth" href="#">
-                                <div class="login-auth__icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#profile"></use>
-                                    </svg>
-                                    <div class="login-auth__icon-check">
-                                        <svg class="icon">
-                                            <use xlink:href="#checked"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="login-auth__name">Константин</div>
-                                <div class="login-auth__bonus">+140 Б</div>
-                            </a>
-                        </div>
-                        <form class="header-search" action="">
-                            <div class="header-search-wrap">
-                                <div class="header-search-icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#serch"></use>
-                                    </svg>
-                                    <input class="input input-search" type="text" placeholder="Активный поиск" />
-                                </div>
-                            </div>
-                        </form>
-                        <a class="slide-menu-phone" href="tel:8 (843) 233 44 33">8 (843) 233 44 33</a>
-                        <div class="soc-row">
-                            <a class="soc-row__el" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="#soc-instagram"></use>
-                                </svg>
-                            </a>
-                            <a class="soc-row__el" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="#soc-vk"></use>
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
-                <!--Подменю список блюд-->
-                <div class="slide-menu__list slide-menu__list--down" data-menu="menu">
-                    <div class="slide-el slide-el--sub" data-menu="main">
-                        <span>Меню</span>
-                        <svg class="icon">
-                            <use xlink:href="#arrow-left"></use>
-                        </svg>
-                    </div>
-                    <div class="slide-el slide-el--sub tag__el--sky" data-menu="roll">
-                        <div class="tag__el-icon">
+                <div class="slide-contact">
+                    <a class="slide-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+                    <div class="slide-time">сегодня 10 - 24</div>
+                    <a class="slide-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a>
+                </div>
+                <div class="slide-nav">
+                    <a class="slide-nav__el" href="#">О нас</a>
+                    <a class="slide-nav__el" href="#">Отзывы</a>
+                    <a class="slide-nav__el" href="#">Акции</a>
+                    <a class="slide-nav__el" href="#">Франчайзинг</a>
+                    <form class="slide-search" action="#">
+                        <div class="slide-search__action">
                             <svg class="icon">
-                                <use xlink:href="#roll"></use>
+                                <use xlink:href="#search"></use>
                             </svg>
-                            <div class="tag__el-text">роллы</div>
                         </div>
-                        <svg class="icon">
-                            <use xlink:href="#arrow-right"></use>
-                        </svg>
+                        <input class="input" type="text" placeholder="Поиск" />
+                        <div class="slide-search__clear">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                    </form>
+                    <div class="slide-auth">
+                        <div class="login-auth">
+                            <div class="login-auth__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <div class="login-auth__bonus">+140 Б</div>
+                            </div>
+                            <div class="login-auth__name">Константин</div>
+                        </div>
                     </div>
-                </div>
-                <!--Подменю список роллы-->
-                <div class="slide-menu__list slide-menu__list--down" data-menu="roll">
-                    <div class="slide-el slide-el--sub" data-menu="menu">
-                        <span>Виды роллов</span>
-                        <svg class="icon">
-                            <use xlink:href="#arrow-left"></use>
-                        </svg>
+                    <div class="slide-info">
+                        <div class="header-slogan">
+                            <div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении</div>
+                        </div>
+                        <div class="header-search-panel">
+                            <div class="search-location-icon">
+                                <svg class="icon">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                            </div>
+                            <div class="search-location-val">Самовывоз, Хорошево, ул. Константинопольская, д. 34</div>
+                        </div>
                     </div>
-                    <a class="slide-el" href="#">жаренные роллы</a>
-                    <a class="slide-el" href="#">основные роллы</a>
-                    <a class="slide-el" href="#">острые роллы</a>
-                    <a class="slide-el" href="#">классические роллы</a>
-                </div>
-                <!--Подменю города-->
-                <div class="slide-menu__list slide-menu__list--down" data-menu="town">
-                    <div class="slide-el slide-el--sub" data-menu="main">
-                        <span>Выберите свой город</span>
-                        <svg class="icon">
-                            <use xlink:href="#arrow-left"></use>
-                        </svg>
+                    <div class="slide-link">
+                        <a class="slide-link__el" href="#">Публичная оферта</a>
+                        <a class="slide-link__el" href="#">Политика конфиденциальности</a>
                     </div>
-                    <div class="slide-el">Москва</div>
-                    <div class="slide-el slide-el--active">Санкт-Петербург</div>
-                    <div class="slide-el">Казань</div>
-                    <div class="slide-el">Чебоксары</div>
+                    <div class="soc-row">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-vk"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-fb"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-inst"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-twtr"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-youtube"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -750,6 +699,91 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="user-loc">
+                            <div class="user-loc__title">Ваш адрес доставки:</div>
+                            <div class="user-loc__val">ул. высоковольтная, д. 35</div>
+                            <div class="user-loc__msg">Заполните поля ниже, чтобы мы могли доставить к вам заказ</div>
+                        </div>
+                        <form action="#">
+                            <div class="input-cont input-cont--two">
+                                <div class="input-row input-row--error">
+                                    <input class="input" type="text" placeholder="Ваше имя" />
+                                    <div class="error-msg">Введённые данные не должны содержать цифры</div>
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Ваш Телефон" />
+                                </div>
+                            </div>
+                            <div class="order-container">
+                                <!--Убрать если выбран самовывоз-->
+                                <div class="order-cont__el" data-tab="deliver">
+                                    <div class="input-cont input-cont--four">
+                                        <div class="input-row">
+                                            <input class="input" type="text" placeholder="Дом" />
+                                        </div>
+                                        <div class="input-row">
+                                            <input class="input" type="text" placeholder="Квартира" />
+                                        </div>
+                                        <div class="input-row">
+                                            <input class="input" type="text" placeholder="Подъезд" />
+                                        </div>
+                                        <div class="input-row">
+                                            <input class="input" type="text" placeholder="Этаж" />
+                                        </div>
+                                    </div>
+                                    <div class="input-cont input-cont--two">
+                                        <div class="input-row">
+                                            <div class="input-row__title">Время доставки</div>
+                                            <input class="input getdate" type="text" placeholder="Выберите время" data-timepicker="true" />
+                                        </div>
+                                    </div>
+                                    <div class="input-cont input-cont--two">
+                                        <div class="input-row">
+                                            <div class="order-title">Оплата</div>
+                                            <div class="radio-list">
+                                                <div class="check-el">
+                                                    <label class="style-label style-label--radio">
+                                                        <input class="sytle-input" type="radio" name="pay" checked="check" />
+                                                        <div class="sytle-input-element">
+                                                            <div class="icon-radio"></div>
+                                                        </div>
+                                                        <div class="sytle-input-text">Наличными</div>
+                                                    </label>
+                                                </div>
+                                                <div class="check-el">
+                                                    <label class="style-label style-label--radio">
+                                                        <input class="sytle-input" type="radio" name="pay" />
+                                                        <div class="sytle-input-element">
+                                                            <div class="icon-radio"></div>
+                                                        </div>
+                                                        <div class="sytle-input-text">Картой курьеру</div>
+                                                    </label>
+                                                </div>
+                                                <div class="check-el">
+                                                    <label class="style-label style-label--radio">
+                                                        <input class="sytle-input" type="radio" name="pay" />
+                                                        <div class="sytle-input-element">
+                                                            <div class="icon-radio"></div>
+                                                        </div>
+                                                        <div class="sytle-input-text">Картой онлайн</div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-title">У вас 128 баллов</div>
+                            <div class="range-wrap">
+                                <input class="range" type="range" data-min="0" data-max="100" />
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <div class="input-row__title">Комментарий к заказу</div>
+                                    <textarea class="input" placeholder="Комментарий" name="textarea" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="panel">
                         <div class="panel-wrap">

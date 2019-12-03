@@ -61,6 +61,49 @@ include block_html/_include.pug
 										a(href="#").item__title Морс смород 0,5л
 									.item__footer
 										+incr("0")
+					.user-loc
+						.user-loc__title Ваш адрес доставки:
+						.user-loc__val ул. высоковольтная, д. 35
+						.user-loc__msg Заполните поля ниже, чтобы мы могли доставить к вам заказ
+					form(action="#")
+						.input-cont.input-cont--two
+							.input-row.input-row--error
+								input(type="text" placeholder="Ваше имя" class="input")
+								.error-msg Введённые данные не должны содержать цифры
+							.input-row
+								input(type="text" placeholder="Ваш Телефон" class="input")
+
+						.order-container
+							//Убрать если выбран самовывоз
+							.order-cont__el(data-tab="deliver")
+								.input-cont.input-cont--four
+									.input-row
+										input(type="text" placeholder="Дом" class="input")
+									.input-row
+										input(type="text" placeholder="Квартира" class="input")
+									.input-row
+										input(type="text" placeholder="Подъезд" class="input")
+									.input-row
+										input(type="text" placeholder="Этаж" class="input")
+								.input-cont.input-cont--two
+									.input-row
+										.input-row__title Время доставки
+										input(type="text" placeholder="Выберите время" class="input getdate" data-timepicker="true")
+								.input-cont.input-cont--two
+									.input-row
+										.order-title Оплата
+										.radio-list
+											+radio("Наличными","pay","check")
+											+radio("Картой курьеру","pay")
+											+radio("Картой онлайн","pay")
+
+						.order-title У вас 128 баллов
+						.range-wrap
+							input(type="range" class="range" data-min="0" data-max="100")
+						.input-cont
+							.input-row
+								.input-row__title Комментарий к заказу
+								textarea(class="input" placeholder="Комментарий" name="textarea", cols="30", rows="10")
 				.panel
 					.panel-wrap
 						.panel-head Ваш заказ

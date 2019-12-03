@@ -56,6 +56,7 @@ $(document).ready(function () {
 		});
 		$(window).scrollTop(modalState.scrollPos);
 		$('.modal').removeClass('modal__show');
+		$('.slide-menu').removeClass('slide-menu--open');
 		modalState.isModalShow = false;
 	};
 
@@ -94,10 +95,14 @@ $(document).ready(function () {
 	});
 
 	$('.head-toggle').click(function (event) {
+		$('.slide-menu').addClass('slide-menu--open');
+		openModal();
 		event.stopPropagation();
-		$(this).toggleClass('head-toggle--open');
-		$('.slide-menu').toggleClass('slide-menu--open');
-		//$('body').toggleClass('body-fix')
+	});
+
+	$('.slide-menu-close').click(function(){
+		$('.slide-menu').removeClass('slide-menu--open');
+		closeModal();
 	});
 
 	$('.slide-menu').on("click", function (event) {
@@ -354,7 +359,7 @@ $(document).ready(function () {
 	});
 	//order-tabs===end
 
-	// bug adressbar
+	// bug adressbar !!! NOTE
 	var vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', "${vh}px");
 
@@ -363,4 +368,59 @@ $(document).ready(function () {
 		document.documentElement.style.setProperty('--vh', "${vh}px");
 	});
 	// bug adressbar === end
+
+	//datepicker
+	function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        var fitsLeft = (rect.left >= 0 && rect.left <= $(window).width());
+        var fitsTop = (rect.top >= 0 && rect.top <= $(window).height());
+        var fitsRight = (rect.right >= 0 && rect.right <= $(window).width());
+        var fitsBottom = (rect.bottom >= 0 && rect.bottom <= $(window).height());
+        return {
+            top: fitsTop,
+            left: fitsLeft,
+            right: fitsRight,
+            bottom: fitsBottom,
+            all: (fitsLeft && fitsTop && fitsRight && fitsBottom)
+        };
+    }
+
+	var dp = $('.getdate').datepicker({
+		minDate: new Date(),
+		autoClose: true,
+		onHide: function(inst){
+        inst.update('position', 'right center'); // Update the position to the default again
+    },
+    onShow: function(inst, animationComplete){
+        // Just before showing the datepicker
+        if(!animationComplete){
+            var iFits = false;
+            // Loop through a few possible position and see which one fits
+            $.each(['right center', 'right bottom', 'right top', 'top center', 'bottom center'], function (i, pos) {
+                if (!iFits) {
+                    inst.update('position', pos);
+                    var fits = isElementInViewport(inst.$datepicker[0]);
+                    if (fits.all) {
+                        iFits = true;
+                    }
+                }
+            });
+        }
+    }
+	}).data('datepicker');
+
+	//При использовании в модальном окне чтобы при скроле оставалось в той же позиции
+	$('.modal-wrap').on('scroll', function () {
+		dp.update();
+	});
+	//datepicker===end
+
+	// range row
+	if($(".range").length>0){
+		$(".range").ionRangeSlider({
+			postfix: " баллов",
+			prefix: "Списать "
+		});
+	}
+	// range row === end
 });

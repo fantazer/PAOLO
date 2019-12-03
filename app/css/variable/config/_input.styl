@@ -104,21 +104,28 @@
 		display block
 .error-msg
 	color $red
-	margin: 10px 0
+	margin: 10px 0 0 0
 	display none
 
 .input-cont
 	display: grid
-	grid-gap 20px
+	grid-column-gap 20px
 .input-cont--two
 	grid-template-columns: 1fr 1fr
 	+below(640px)
 		grid-template-columns: 1fr
+		grid-gap 0
 .input-cont--three
 	grid-template-columns: 1fr 1fr 1fr
 	+below(640px)
 		grid-template-columns: 1fr
 
+.input-cont--four
+	+below(1024px)
+		grid-template-columns: 1fr 1fr
+	+below(480px)
+		grid-template-columns: 1fr
+	grid-template-columns: 1fr 1fr 1fr 1fr
 .input-row__title
 	font-weight: 700
 
@@ -228,3 +235,20 @@
 
 
 //form
+
+// datepicker
+.datepicker
+	z-index 9999
+
+.datepicker--day-name
+	color $mark
+
+.datepicker--cell.-current-
+	color black
+	font-weight: 700
+
+.datepicker--cell.-selected-
+	background: $mark!important
+	font-weight: 700!important
+	color black
+// datepicker === end

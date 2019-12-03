@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "jquery-nice-select": "^1.1.0",
-    "page-scroll-to-id": "^1.6.3"
+    "page-scroll-to-id": "^1.6.3",
+    "nouislider": "^14.0.3",
+    "ion.rangeSlider": "ionrangeslider#^2.3.0"
   }
 }
