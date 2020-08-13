@@ -1,848 +1,719 @@
 <!DOCTYPE html>
 <html>
-<!--create by ANATOLY KUZNETSOV-->
-<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+	<!--create by ANATOLY KUZNETSOV-->
+	<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="format-detection" content="telephone=no" />
-    <!--colors-tabs-->
-    <meta name="theme-color" content="#000" />
-    <meta name="msapplication-navbutton-color" content="#000" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
-    <!--SEO-->
-    <title>Document</title>
-    <meta name="description" itemprop="description" content="" />
-    <!--build:css css/vendor.css-->
-    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
-    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
-    <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
-    <link rel="stylesheet" href="bower/air-datepicker/dist/css/datepicker.css" />
-    <link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.css" />
-    <link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" />
-    <!--endbuild-->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style-edit.css" />
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<!--build:css css/vendor.css-->
+		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+		<link rel="stylesheet" href="bower/air-datepicker/dist/css/datepicker.css" />
+		<link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.css" />
+		<link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" />
+		<!--endbuild-->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+	</head>
 
-<body>
-    <div class="page">
-        <!--block header-->
-        <div class="head">
-            <div class="head-top-wrap">
-                <div class="main-cont">
-                    <div class="head-top">
-                        <div class="head-location">Санкт-Петербург</div>
-                        <div class="head-contact">
-                            <a class="head-contact__phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
-                            <div class="head-contact__time">сегодня 10 - 24</div>
-                        </div>
-                        <div class="head-top-nav">
-                            <div class="head-top-search-wrap">
-                                <form class="head-top-search" action="#">
-                                    <input class="input" type="text" placeholder="Введите ваш запрос" />
-                                </form>
-                            </div>
-                            <a class="head-top-nav__el" href="#">О нас</a>
-                            <a class="head-top-nav__el" href="#">Отзывы</a>
-                            <a class="head-top-nav__el" href="#">Акции</a>
-                            <a class="head-top-nav__el" href="#">Франчайзинг</a>
-                        </div>
-                        <div class="head-search">
-                            <svg class="icon">
-                                <use xlink:href="#search"></use>
-                            </svg>
-                        </div>
-                        <div class="login">
-                            <div class="login-auth">
-                                <div class="login-auth__icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#user"></use>
-                                    </svg>
-                                    <div class="login-auth__bonus">+140 Б</div>
-                                </div>
-                                <div class="login-auth__name">Константин</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-cont">
-                <div class="head-info">
-                    <a class="logo" href="#">
-                        <img src="img/logo.svg" alt="" />
-                    </a>
-                    <div class="header-slogan">
-                        <div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении
-                            <a class="header-slogan__icon tooltip" href="#">
-                                <svg class="icon">
-                                    <use xlink:href="#question-circle"></use>
-                                </svg>
-                                <div class="top">
-                                    <i></i>Закажите еду зараннее и заберите её в удобном для вас заведении</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="header-search-panel">
-                        <div class="search-location-val">Самовывоз, Хорошево, ул. Константинопольская, д. 34</div>
-                        <div class="search-location-icon">
-                            <svg class="icon">
-                                <use xlink:href="#location"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="head-main-wrap">
-            <div class="main-cont">
-                <div class="head-main">
-                    <a class="logo-tablet" href="#">
-                        <img src="img/logo-face.svg" alt="" />
-                    </a>
-                    <a class="logo-mobile" href="#">
-                        <img src="img/logo.svg" alt="" />
-                    </a>
-                    <div class="head-nav">
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a>
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#roll" rel="m_PageScroll2id">Роллы</a>
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a>
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#soup" rel="m_PageScroll2id">Супы</a>
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#salad" rel="m_PageScroll2id">Салаты</a>
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#pasta" rel="m_PageScroll2id">Паста</a>
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
-                        <div class="head-nav__el-wrap"></div>
-                        <a class="head-nav__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
-                    </div>
-                    <div class="head-toggle">
-                        <svg class="icon icon-open">
-                            <use xlink:href="#menu"></use>
-                        </svg>
-                        <svg class="icon icon-close">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </div>
-                    <a class="cart cart--full" href="#">
-                        <div class="cart-icon">
-                            <svg class="icon">
-                                <use xlink:href="#cart"></use>
-                            </svg>
-                            <div class="cart-icon__val">1250 р</div>
-                        </div>
-                        <div class="cart-info">
-                            <div class="cart-condition">1250 р</div>
-                            <div class="cart-size">2 товара</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!--мобильное меню-->
-        <div class="slide-cat">
-            <div class="mobile-cat">
-                <a class="mobile-cat__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
-                <a class="mobile-cat__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a>
-                <a class="mobile-cat__el" href="#roll" rel="m_PageScroll2id">Роллы</a>
-                <a class="mobile-cat__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a>
-                <a class="mobile-cat__el--sm mobile-cat__el" href="#soup" rel="m_PageScroll2id">Супы</a>
-                <a class="mobile-cat__el--sm mobile-cat__el" href="#salad" rel="m_PageScroll2id">Салаты</a>
-                <a class="mobile-cat__el--sm mobile-cat__el" href="#pasta" rel="m_PageScroll2id">Паста</a>
-                <a class="mobile-cat__el--sm mobile-cat__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
-                <a class="mobile-cat__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
-            </div>
-        </div>
-        <div class="slide-menu">
-            <div class="slide-menu-wrap">
-                <div class="slide-menu-head">
-                    <div class="slide-location">Санкт-Петербург</div>
-                    <div class="slide-menu-close">
-                        <svg class="icon">
-                            <use xlink:href="#close-fat"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="slide-contact">
-                    <a class="slide-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
-                    <div class="slide-time">сегодня 10 - 24</div>
-                    <a class="slide-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a>
-                </div>
-                <div class="slide-nav">
-                    <a class="slide-nav__el" href="#">О нас</a>
-                    <a class="slide-nav__el" href="#">Отзывы</a>
-                    <a class="slide-nav__el" href="#">Акции</a>
-                    <a class="slide-nav__el" href="#">Франчайзинг</a>
-                    <form class="slide-search" action="#">
-                        <div class="slide-search__action">
-                            <svg class="icon">
-                                <use xlink:href="#search"></use>
-                            </svg>
-                        </div>
-                        <input class="input" type="text" placeholder="Поиск" />
-                        <div class="slide-search__clear">
-                            <svg class="icon">
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </div>
-                    </form>
-                    <div class="slide-auth">
-                        <div class="login-auth">
-                            <div class="login-auth__icon">
-                                <svg class="icon">
-                                    <use xlink:href="#user"></use>
-                                </svg>
-                                <div class="login-auth__bonus">+140 Б</div>
-                            </div>
-                            <div class="login-auth__name">Константин</div>
-                        </div>
-                    </div>
-                    <div class="slide-info">
-                        <div class="header-slogan">
-                            <div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении</div>
-                        </div>
-                        <div class="header-search-panel">
-                            <div class="search-location-icon">
-                                <svg class="icon">
-                                    <use xlink:href="#location"></use>
-                                </svg>
-                            </div>
-                            <div class="search-location-val">Самовывоз, Хорошево, ул. Константинопольская, д. 34</div>
-                        </div>
-                    </div>
-                    <div class="slide-link">
-                        <a class="slide-link__el" href="#">Публичная оферта</a>
-                        <a class="slide-link__el" href="#">Политика конфиденциальности</a>
-                    </div>
-                    <div class="soc-row">
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-vk"></use>
-                            </svg>
-                        </a>
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-fb"></use>
-                            </svg>
-                        </a>
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-inst"></use>
-                            </svg>
-                        </a>
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-twtr"></use>
-                            </svg>
-                        </a>
-                        <a class="soc-row__el" href="#">
-                            <svg class="icon">
-                                <use xlink:href="#soc-youtube"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--block header end-->
-        <div class="content">
-            <div class="wrap-cont">
-                <div class="title-row">
-                    <div class="title">Личный кабинет</div>
-                    <div class="lk-out">
-                        <div class="lk-out__icon">
-                            <svg class="icon">
-                                <use xlink:href="#exit"></use>
-                            </svg>
-                        </div>
-                        <div class="lk-out__text">Выйти</div>
-                    </div>
-                </div>
-                <div class="lk">
-                    <div class="lk-toolbar">
-                        <a class="lk-toolbar__el" href="#">Профиль и адреса</a>
-                        <a class="lk-toolbar__el lk-toolbar__el--active" href="#">История заказов</a>
-                        <a class="lk-toolbar__el" href="#">
-                            <div class="lk-toolbar__el-text">Бонусы</div>
-                            <div class="bonus-val">240Б</div>
-                        </a>
-                    </div>
-                    <div class="lk-content">
-                        <h1 class="title title--sm">История заказов</h1>
-                        <div class="history">
-                            <div class="history-card">
-                                <div class="history-card__wrap">
-                                    <div class="history-card__info">
-                                        <div class="history-card__date">28 Сентября, 2017</div>
-                                        <div class="history-card__numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-card__list">
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
-                                            <div class="history-card__list-el-val">+2</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-card__price">
-                                        <div class="history-card__price_val">5430 ₽</div>
-                                    </div>
-                                </div>
-                                <div class="history-info">
-                                    <div class="history-info__head">
-                                        <div class="history-info__head-date">28 Апреля 2017</div>
-                                        <div class="history-info__head-state">Доставлен</div>
-                                        <div class="history-info__head-numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info-footer">
-                                        <div class="history-info-get">
-                                            <span>Повторить заказ</span>
-                                            <svg class="icon">
-                                                <use xlink:href="#repeat"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="history-info-total">
-                                            <div class="history-info-total__text">Сумма:</div>
-                                        </div>
-                                        <div class="history-info-total__val">1 184 ₽</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="history-card">
-                                <div class="history-card__wrap">
-                                    <div class="history-card__info">
-                                        <div class="history-card__date">28 Сентября, 2017</div>
-                                        <div class="history-card__numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-card__list">
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
-                                            <div class="history-card__list-el-val">+2</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-card__price">
-                                        <div class="history-card__price_val">5430 ₽</div>
-                                    </div>
-                                </div>
-                                <div class="history-info">
-                                    <div class="history-info__head">
-                                        <div class="history-info__head-date">28 Апреля 2017</div>
-                                        <div class="history-info__head-state">Доставлен</div>
-                                        <div class="history-info__head-numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info-footer">
-                                        <div class="history-info-get">
-                                            <span>Повторить заказ</span>
-                                            <svg class="icon">
-                                                <use xlink:href="#repeat"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="history-info-total">
-                                            <div class="history-info-total__text">Сумма:</div>
-                                        </div>
-                                        <div class="history-info-total__val">1 184 ₽</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="history-card">
-                                <div class="history-card__wrap">
-                                    <div class="history-card__info">
-                                        <div class="history-card__date">28 Сентября, 2017</div>
-                                        <div class="history-card__numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-card__list">
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
-                                            <div class="history-card__list-el-val">+2</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-card__price">
-                                        <div class="history-card__price_val">5430 ₽</div>
-                                    </div>
-                                </div>
-                                <div class="history-info">
-                                    <div class="history-info__head">
-                                        <div class="history-info__head-date">28 Апреля 2017</div>
-                                        <div class="history-info__head-state">Доставлен</div>
-                                        <div class="history-info__head-numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info-footer">
-                                        <div class="history-info-get">
-                                            <span>Повторить заказ</span>
-                                            <svg class="icon">
-                                                <use xlink:href="#repeat"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="history-info-total">
-                                            <div class="history-info-total__text">Сумма:</div>
-                                        </div>
-                                        <div class="history-info-total__val">1 184 ₽</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="history-card">
-                                <div class="history-card__wrap">
-                                    <div class="history-card__info">
-                                        <div class="history-card__date">28 Сентября, 2017</div>
-                                        <div class="history-card__numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-card__list">
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
-                                            <div class="history-card__list-el-val">+2</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-card__price">
-                                        <div class="history-card__price_val">5430 ₽</div>
-                                    </div>
-                                </div>
-                                <div class="history-info">
-                                    <div class="history-info__head">
-                                        <div class="history-info__head-date">28 Апреля 2017</div>
-                                        <div class="history-info__head-state">Доставлен</div>
-                                        <div class="history-info__head-numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info-footer">
-                                        <div class="history-info-get">
-                                            <span>Повторить заказ</span>
-                                            <svg class="icon">
-                                                <use xlink:href="#repeat"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="history-info-total">
-                                            <div class="history-info-total__text">Сумма:</div>
-                                        </div>
-                                        <div class="history-info-total__val">1 184 ₽</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="history-card">
-                                <div class="history-card__wrap">
-                                    <div class="history-card__info">
-                                        <div class="history-card__date">28 Сентября, 2017</div>
-                                        <div class="history-card__numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-card__list">
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
-                                            <div class="history-card__list-el-val">x2</div>
-                                        </a>
-                                        <div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
-                                            <div class="history-card__list-el-val">+2</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-card__price">
-                                        <div class="history-card__price_val">5430 ₽</div>
-                                    </div>
-                                </div>
-                                <div class="history-info">
-                                    <div class="history-info__head">
-                                        <div class="history-info__head-date">28 Апреля 2017</div>
-                                        <div class="history-info__head-state">Доставлен</div>
-                                        <div class="history-info__head-numb">№ 43576</div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info__list">
-                                        <div class="history-info__el">
-                                            <a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
-                                            <div class="history-info__el-about">
-                                                <div class="history-info__el-title">Гавайская с курицей</div>
-                                                <div class="history-info__el-text">Традиционное, 35 см</div>
-                                            </div>
-                                            <div class="history-info__el-count">x2</div>
-                                            <div class="history-info__el-price">680 ₽</div>
-                                        </div>
-                                    </div>
-                                    <div class="history-info-footer">
-                                        <div class="history-info-get">
-                                            <span>Повторить заказ</span>
-                                            <svg class="icon">
-                                                <use xlink:href="#repeat"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="history-info-total">
-                                            <div class="history-info-total__text">Сумма:</div>
-                                        </div>
-                                        <div class="history-info-total__val">1 184 ₽</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order-empty order-empty--hide">
-                                <div class="order-empty-icon">
-                                    <img src="img/basket-color.svg" alt="" />
-                                </div>
-                                <div class="order-empty-title">Ваша история пуста =(</div>
-                                <div class="order-empty-text">Сделайте заказ</div>
-                                <div class="btn--sm btn--mark">Посмотреть меню</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-cont">
-                <div class="description__cont text">
-                    <div class="description__text">
-                        <p>SEO-текст. Это как старый друг, проверенный годами, ведь на рынке они очень давно. Кроме того, они были одними из первых, у кого появилась служба доставки в столице еще в 2001 году. Теперь это одна из самых больших сетей пиццерий
-                            в Киеве и Чернигове — у них целых 13 ресторанов. Кроме того, у заведения очень демократичные цены и много начинки.</p>
-                        <p>Пиццу здесь готовят из отборный продуктов, что явно не может не радовать. И, несмотря на то, что тесто готовят по традиционному неаполитанскому рецепту, у них есть интересная фишка. Это, так званое, сочетание классики и авангарда
-                            — к примеру, есть пиццы с морепродуктами, с корнишонами, каперсами и с экзотическими продуктами. В День рождение в ресторанах Mamamia вам вернут 100% от счета на бонусный счет.</p>
-                    </div>
-                    <div class="description__text--hidden description__text--hidden">
-                        <p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу.. горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
-                        <p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле
-                            понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
-                    </div>
-                    <div class="description__more">
-                        <span class="description__more--true">Показать еще</span>
-                        <span class="description__more--false">Скрыть</span>
-                        <svg class="icon">
-                            <use xlink:href="#arrow-down"></use>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--block footer-->
-        <div class="footer-panel">
-            <div class="footer-panel-btn">
-                <svg class="icon">
-                    <use xlink:href="#close"></use>
-                </svg>
-                <span>Меню</span>
-                <svg class="icon">
-                    <use xlink:href="#close"></use>
-                </svg>
-            </div>
-            <div class="cart">
-                <div class="cart-icon">
-                    <svg class="icon">
-                        <use xlink:href="#cart"></use>
-                    </svg>
-                    <div class="cart-icon__val">1250 р</div>
-                </div>
-                <div class="cart-info">
-                    <div class="cart-condition">1250 р</div>
-                    <div class="cart-size">2 товара</div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-wrap">
-            <div class="main-cont">
-                <div class="footer">
-                    <a class="footer-logo" href="/">
-                        <img src="img/logo-sqrt.svg" alt="" />
-                    </a>
-                    <div class="footer-contact">
-                        <a class="footer-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
-                        <a class="footer-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a>
-                    </div>
-                    <div class="footer-link">
-                        <a class="footer-link__el" href="#">Публичная оферта</a>
-                        <a class="footer-link__el" href="#">Политика конфиденциальности</a>
-                    </div>
-                    <div class="footer-share">
-                        <div class="footer-soc">
-                            <div class="soc-row">
-                                <a class="soc-row__el" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="#soc-vk"></use>
-                                    </svg>
-                                </a>
-                                <a class="soc-row__el" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="#soc-fb"></use>
-                                    </svg>
-                                </a>
-                                <a class="soc-row__el" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="#soc-inst"></use>
-                                    </svg>
-                                </a>
-                                <a class="soc-row__el" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="#soc-twtr"></use>
-                                    </svg>
-                                </a>
-                                <a class="soc-row__el" href="#">
-                                    <svg class="icon">
-                                        <use xlink:href="#soc-youtube"></use>
-                                    </svg>
-                                </a>
-                            </div>
-                            <a class="create" href="#">Разработка сайта: JQ Digital</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--block footer end-->
-    </div>
-    <!--build:js js/combined.js-->
-    <script src="bower/jquery/dist/jquery.js"></script>
-    <script src="bower/slick-carousel/slick/slick.js"></script>
-    <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
-    <script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
-    <script src="bower/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
-    <script src="bower/air-datepicker/dist/js/datepicker.js"></script>
-    <script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
-    <!-- endbuild-->
-    <script src="js/add-on.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/script-edit.js"></script>
-</body>
+	<body>
+		<div class="page">
+			<!--block header-->
+			<div class="head">
+				<div class="head-top-wrap">
+					<div class="main-cont">
+						<div class="head-top">
+							<div class="head-location">Санкт-Петербург</div>
+							<div class="head-contact"><a class="head-contact__phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+								<div class="head-contact__time">сегодня 10 - 24</div>
+							</div>
+							<div class="head-top-nav">
+								<div class="head-top-search-wrap">
+									<form class="head-top-search" action="#">
+										<input class="input" type="text" placeholder="Введите ваш запрос" />
+									</form>
+								</div><a class="head-top-nav__el" href="#">О нас</a><a class="head-top-nav__el" href="#">Отзывы</a><a class="head-top-nav__el" href="#">Акции</a><a class="head-top-nav__el" href="#">Франчайзинг</a>
+							</div>
+							<div class="head-search">
+								<svg class="icon">
+									<use xlink:href="#search"></use>
+								</svg>
+							</div>
+							<div class="login">
+								<div class="login-auth">
+									<div class="login-auth__icon">
+										<svg class="icon">
+											<use xlink:href="#user"></use>
+										</svg>
+										<div class="login-auth__bonus">+140 Б</div>
+									</div>
+									<div class="login-auth__name">Константин</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-cont">
+					<div class="head-info"><a class="logo" href="#"><img src="img/logo.svg" alt="" /></a>
+						<div class="header-slogan">
+							<div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении<a class="header-slogan__icon tooltip" href="#">
+									<svg class="icon">
+										<use xlink:href="#question-circle"></use>
+									</svg>
+									<div class="top"><i></i>Закажите еду зараннее и заберите её в удобном для вас заведении</div>
+								</a></div>
+						</div>
+						<div class="header-search-panel">
+							<div class="search-location-val">Самовывоз, Хорошево, ул. Константинопольская, д. 34</div>
+							<div class="search-location-icon">
+								<svg class="icon">
+									<use xlink:href="#location"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head-main-wrap">
+				<div class="main-cont">
+					<div class="head-main"><a class="logo-tablet" href="#"><img src="img/logo-face.svg" alt="" /></a><a class="logo-mobile" href="#"><img src="img/logo.svg" alt="" /></a>
+						<div class="head-nav">
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#roll" rel="m_PageScroll2id">Роллы</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#soup" rel="m_PageScroll2id">Супы</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#salad" rel="m_PageScroll2id">Салаты</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#pasta" rel="m_PageScroll2id">Паста</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+						</div>
+						<div class="head-toggle">
+							<svg class="icon icon-open">
+								<use xlink:href="#menu"></use>
+							</svg>
+							<svg class="icon icon-close">
+								<use xlink:href="#close"></use>
+							</svg>
+						</div><a class="cart cart--full" href="#">
+							<div class="cart-icon">
+								<svg class="icon">
+									<use xlink:href="#cart"></use>
+								</svg>
+								<div class="cart-icon__val">1250 р</div>
+							</div>
+							<div class="cart-info">
+								<div class="cart-condition">1250 р</div>
+								<div class="cart-size">2 товара</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--мобильное меню-->
+			<div class="slide-cat">
+				<div class="mobile-cat"><a class="mobile-cat__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a><a class="mobile-cat__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a><a class="mobile-cat__el" href="#roll" rel="m_PageScroll2id">Роллы</a><a class="mobile-cat__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a><a class="mobile-cat__el--sm mobile-cat__el" href="#soup" rel="m_PageScroll2id">Супы</a><a class="mobile-cat__el--sm mobile-cat__el" href="#salad" rel="m_PageScroll2id">Салаты</a><a class="mobile-cat__el--sm mobile-cat__el" href="#pasta" rel="m_PageScroll2id">Паста</a><a class="mobile-cat__el--sm mobile-cat__el" href="#drinks" rel="m_PageScroll2id">Напитки</a><a class="mobile-cat__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+				</div>
+			</div>
+			<div class="slide-menu">
+				<div class="slide-menu-wrap">
+					<div class="slide-menu-head">
+						<div class="slide-location">Санкт-Петербург</div>
+						<div class="slide-menu-close">
+							<svg class="icon">
+								<use xlink:href="#close-fat"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="slide-contact"><a class="slide-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+						<div class="slide-time">сегодня 10 - 24</div><a class="slide-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a>
+					</div>
+					<div class="slide-nav"><a class="slide-nav__el" href="#">О нас</a><a class="slide-nav__el" href="#">Отзывы</a><a class="slide-nav__el" href="#">Акции</a><a class="slide-nav__el" href="#">Франчайзинг</a>
+						<form class="slide-search" action="#">
+							<div class="slide-search__action">
+								<svg class="icon">
+									<use xlink:href="#search"></use>
+								</svg>
+							</div>
+							<input class="input" type="text" placeholder="Поиск" />
+							<div class="slide-search__clear">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+						</form>
+						<div class="slide-auth">
+							<div class="login-auth">
+								<div class="login-auth__icon">
+									<svg class="icon">
+										<use xlink:href="#user"></use>
+									</svg>
+									<div class="login-auth__bonus">+140 Б</div>
+								</div>
+								<div class="login-auth__name">Константин</div>
+							</div>
+						</div>
+						<div class="slide-info">
+							<div class="header-slogan">
+								<div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении</div>
+							</div>
+							<div class="header-search-panel">
+								<div class="search-location-icon">
+									<svg class="icon">
+										<use xlink:href="#location"></use>
+									</svg>
+								</div>
+								<div class="search-location-val">Самовывоз, Хорошево, ул. Константинопольская, д. 34</div>
+							</div>
+						</div>
+						<div class="slide-link"><a class="slide-link__el" href="#">Публичная оферта</a><a class="slide-link__el" href="#">Политика конфиденциальности</a></div>
+						<div class="soc-row"><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-vk"></use>
+								</svg></a><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-fb"></use>
+								</svg></a><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-inst"></use>
+								</svg></a><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-twtr"></use>
+								</svg></a><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-youtube"></use>
+								</svg></a></div>
+					</div>
+				</div>
+			</div>
+			<!--block header end-->
+			<div class="content">
+				<div class="wrap-cont">
+					<div class="title-row">
+						<div class="title">Личный кабинет</div>
+						<div class="lk-out">
+							<div class="lk-out__icon">
+								<svg class="icon">
+									<use xlink:href="#exit"></use>
+								</svg>
+							</div>
+							<div class="lk-out__text">Выйти</div>
+						</div>
+					</div>
+					<div class="lk">
+						<div class="lk-toolbar"><a class="lk-toolbar__el" href="#">Профиль и адреса</a><a class="lk-toolbar__el lk-toolbar__el--active" href="#">История заказов</a><a class="lk-toolbar__el" href="#">
+								<div class="lk-toolbar__el-text">Бонусы</div>
+								<div class="bonus-val">240Б</div>
+							</a></div>
+						<div class="lk-content">
+							<h1 class="title title--sm">История заказов</h1>
+							<div class="history">
+								<div class="history-card">
+									<div class="history-card__wrap">
+										<div class="history-card__info">
+											<div class="history-card__date">28 Сентября, 2017</div>
+											<div class="history-card__numb">№ 43576</div>
+										</div>
+										<div class="history-card__list"><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a>
+											<div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
+												<div class="history-card__list-el-val">+2</div>
+											</div>
+										</div>
+										<div class="history-card__price">
+											<div class="history-card__price_val">5430 ₽</div>
+										</div>
+									</div>
+									<div class="history-info">
+										<div class="history-info__head">
+											<div class="history-info__head-date">28 Апреля 2017</div>
+											<div class="history-info__head-state">Доставлен</div>
+											<div class="history-info__head-numb">№ 43576</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info-footer">
+											<div class="history-info-get"><span>Повторить заказ</span>
+												<svg class="icon">
+													<use xlink:href="#repeat"></use>
+												</svg>
+											</div>
+											<div class="history-info-total">
+												<div class="history-info-total__text">Сумма:</div>
+											</div>
+											<div class="history-info-total__val">1 184 ₽</div>
+										</div>
+									</div>
+								</div>
+								<div class="history-card">
+									<div class="history-card__wrap">
+										<div class="history-card__info">
+											<div class="history-card__date">28 Сентября, 2017</div>
+											<div class="history-card__numb">№ 43576</div>
+										</div>
+										<div class="history-card__list"><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a>
+											<div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
+												<div class="history-card__list-el-val">+2</div>
+											</div>
+										</div>
+										<div class="history-card__price">
+											<div class="history-card__price_val">5430 ₽</div>
+										</div>
+									</div>
+									<div class="history-info">
+										<div class="history-info__head">
+											<div class="history-info__head-date">28 Апреля 2017</div>
+											<div class="history-info__head-state">Доставлен</div>
+											<div class="history-info__head-numb">№ 43576</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info-footer">
+											<div class="history-info-get"><span>Повторить заказ</span>
+												<svg class="icon">
+													<use xlink:href="#repeat"></use>
+												</svg>
+											</div>
+											<div class="history-info-total">
+												<div class="history-info-total__text">Сумма:</div>
+											</div>
+											<div class="history-info-total__val">1 184 ₽</div>
+										</div>
+									</div>
+								</div>
+								<div class="history-card">
+									<div class="history-card__wrap">
+										<div class="history-card__info">
+											<div class="history-card__date">28 Сентября, 2017</div>
+											<div class="history-card__numb">№ 43576</div>
+										</div>
+										<div class="history-card__list"><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a>
+											<div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
+												<div class="history-card__list-el-val">+2</div>
+											</div>
+										</div>
+										<div class="history-card__price">
+											<div class="history-card__price_val">5430 ₽</div>
+										</div>
+									</div>
+									<div class="history-info">
+										<div class="history-info__head">
+											<div class="history-info__head-date">28 Апреля 2017</div>
+											<div class="history-info__head-state">Доставлен</div>
+											<div class="history-info__head-numb">№ 43576</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info-footer">
+											<div class="history-info-get"><span>Повторить заказ</span>
+												<svg class="icon">
+													<use xlink:href="#repeat"></use>
+												</svg>
+											</div>
+											<div class="history-info-total">
+												<div class="history-info-total__text">Сумма:</div>
+											</div>
+											<div class="history-info-total__val">1 184 ₽</div>
+										</div>
+									</div>
+								</div>
+								<div class="history-card">
+									<div class="history-card__wrap">
+										<div class="history-card__info">
+											<div class="history-card__date">28 Сентября, 2017</div>
+											<div class="history-card__numb">№ 43576</div>
+										</div>
+										<div class="history-card__list"><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a>
+											<div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
+												<div class="history-card__list-el-val">+2</div>
+											</div>
+										</div>
+										<div class="history-card__price">
+											<div class="history-card__price_val">5430 ₽</div>
+										</div>
+									</div>
+									<div class="history-info">
+										<div class="history-info__head">
+											<div class="history-info__head-date">28 Апреля 2017</div>
+											<div class="history-info__head-state">Доставлен</div>
+											<div class="history-info__head-numb">№ 43576</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info-footer">
+											<div class="history-info-get"><span>Повторить заказ</span>
+												<svg class="icon">
+													<use xlink:href="#repeat"></use>
+												</svg>
+											</div>
+											<div class="history-info-total">
+												<div class="history-info-total__text">Сумма:</div>
+											</div>
+											<div class="history-info-total__val">1 184 ₽</div>
+										</div>
+									</div>
+								</div>
+								<div class="history-card">
+									<div class="history-card__wrap">
+										<div class="history-card__info">
+											<div class="history-card__date">28 Сентября, 2017</div>
+											<div class="history-card__numb">№ 43576</div>
+										</div>
+										<div class="history-card__list"><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a><a class="history-card__list-el" href="#" style="background-image:url('img/pizza-1.jpg')">
+												<div class="history-card__list-el-val">x2</div>
+											</a>
+											<div class="history-card__list-el history-card__list-el--last" style="background-image:url('img/card.jpg')">
+												<div class="history-card__list-el-val">+2</div>
+											</div>
+										</div>
+										<div class="history-card__price">
+											<div class="history-card__price_val">5430 ₽</div>
+										</div>
+									</div>
+									<div class="history-info">
+										<div class="history-info__head">
+											<div class="history-info__head-date">28 Апреля 2017</div>
+											<div class="history-info__head-state">Доставлен</div>
+											<div class="history-info__head-numb">№ 43576</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info__list">
+											<div class="history-info__el"><a class="history-info__el-img" href="#" style="background-image:url('img/pizza-1.jpg')"></a>
+												<div class="history-info__el-about">
+													<div class="history-info__el-title">Гавайская с курицей</div>
+													<div class="history-info__el-text">Традиционное, 35 см</div>
+												</div>
+												<div class="history-info__el-count">x2</div>
+												<div class="history-info__el-price">680 ₽</div>
+											</div>
+										</div>
+										<div class="history-info-footer">
+											<div class="history-info-get"><span>Повторить заказ</span>
+												<svg class="icon">
+													<use xlink:href="#repeat"></use>
+												</svg>
+											</div>
+											<div class="history-info-total">
+												<div class="history-info-total__text">Сумма:</div>
+											</div>
+											<div class="history-info-total__val">1 184 ₽</div>
+										</div>
+									</div>
+								</div>
+								<div class="order-empty order-empty--hide">
+									<div class="order-empty-icon"><img src="img/basket-color.svg" alt="" /></div>
+									<div class="order-empty-title">Ваша история пуста =(</div>
+									<div class="order-empty-text">Сделайте заказ</div>
+									<div class="btn--sm btn--mark">Посмотреть меню</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-cont">
+					<div class="description__cont text">
+						<div class="description__text">
+							<p>SEO-текст. Это как старый друг, проверенный годами, ведь на рынке они очень давно. Кроме того, они были одними из первых, у кого появилась служба доставки в столице еще в 2001 году. Теперь это одна из самых больших сетей пиццерий в Киеве и Чернигове — у них целых 13 ресторанов. Кроме того, у заведения очень демократичные цены и много начинки.</p>
+							<p>Пиццу здесь готовят из отборный продуктов, что явно не может не радовать. И, несмотря на то, что тесто готовят по традиционному неаполитанскому рецепту, у них есть интересная фишка. Это, так званое, сочетание классики и авангарда — к примеру, есть пиццы с морепродуктами, с корнишонами, каперсами и с экзотическими продуктами. В День рождение в ресторанах Mamamia вам вернут 100% от счета на бонусный счет.</p>
+						</div>
+						<div class="description__text--hidden description__text--hidden">
+							<p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу.. горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
+							<p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
+						</div>
+						<div class="description__more"><span class="description__more--true">Показать еще</span><span class="description__more--false">Скрыть</span>
+							<svg class="icon">
+								<use xlink:href="#arrow-down"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block footer-->
+			<div class="footer-panel">
+				<div class="footer-panel-btn">
+					<svg class="icon">
+						<use xlink:href="#close"></use>
+					</svg><span>Меню</span>
+					<svg class="icon">
+						<use xlink:href="#close"></use>
+					</svg>
+				</div>
+				<div class="cart">
+					<div class="cart-icon">
+						<svg class="icon">
+							<use xlink:href="#cart"></use>
+						</svg>
+						<div class="cart-icon__val">1250 р</div>
+					</div>
+					<div class="cart-info">
+						<div class="cart-condition">1250 р</div>
+						<div class="cart-size">2 товара</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-wrap">
+				<div class="main-cont">
+					<div class="footer"><a class="footer-logo" href="/"><img src="img/logo-sqrt.svg" alt="" /></a>
+						<div class="footer-contact"><a class="footer-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a><a class="footer-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a></div>
+						<div class="footer-link"><a class="footer-link__el" href="#">Публичная оферта</a><a class="footer-link__el" href="#">Политика конфиденциальности</a></div>
+						<div class="footer-share">
+							<div class="footer-soc">
+								<div class="soc-row"><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg></a><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-fb"></use>
+										</svg></a><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-inst"></use>
+										</svg></a><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-twtr"></use>
+										</svg></a><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-youtube"></use>
+										</svg></a></div><a class="create" href="#">Разработка сайта: JQ Digital</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block footer end-->
+		</div>
+		<!--build:js js/combined.js-->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<script src="bower/slick-carousel/slick/slick.js"></script>
+		<script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+		<script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+		<script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
+		<script src="bower/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+		<script src="bower/air-datepicker/dist/js/datepicker.js"></script>
+		<script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
+		<!-- endbuild-->
+		<script src="js/add-on.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
 
 </html>

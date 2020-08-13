@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+	<!--create by ANATOLY KUZNETSOV-->
+	<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<!--colors-tabs-->
+		<meta name="theme-color" content="#000" />
+		<meta name="msapplication-navbutton-color" content="#000" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+		<!--SEO-->
+		<title>Document</title>
+		<meta name="description" itemprop="description" content="" />
+		<!--build:css css/vendor.css-->
+		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+		<link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+		<link rel="stylesheet" href="bower/air-datepicker/dist/css/datepicker.css" />
+		<link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.css" />
+		<link rel="stylesheet" href="bower/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" />
+		<!--endbuild-->
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-edit.css" />
+	</head>
+
+	<body>
+		<div class="page">
+			<!--block header-->
+			<div class="head">
+				<div class="head-top-wrap">
+					<div class="main-cont">
+						<div class="head-top">
+							<div class="head-location">Санкт-Петербург</div>
+							<div class="head-contact"><a class="head-contact__phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+								<div class="head-contact__time">сегодня 10 - 24</div>
+							</div>
+							<div class="head-top-nav">
+								<div class="head-top-search-wrap">
+									<form class="head-top-search" action="#">
+										<input class="input" type="text" placeholder="Введите ваш запрос" />
+									</form>
+								</div><a class="head-top-nav__el" href="#">О нас</a><a class="head-top-nav__el" href="#">Отзывы</a><a class="head-top-nav__el" href="#">Акции</a><a class="head-top-nav__el" href="#">Франчайзинг</a>
+							</div>
+							<div class="head-search">
+								<svg class="icon">
+									<use xlink:href="#search"></use>
+								</svg>
+							</div>
+							<div class="login">
+								<div class="login-auth">
+									<div class="login-auth__icon">
+										<svg class="icon">
+											<use xlink:href="#user"></use>
+										</svg>
+										<div class="login-auth__bonus">+140 Б</div>
+									</div>
+									<div class="login-auth__name">Константин</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main-cont">
+					<div class="head-info"><a class="logo" href="#"><img src="img/logo.svg" alt="" /></a>
+						<div class="header-slogan">
+							<div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении<a class="header-slogan__icon tooltip" href="#">
+									<svg class="icon">
+										<use xlink:href="#question-circle"></use>
+									</svg>
+									<div class="top"><i></i>Закажите еду зараннее и заберите её в удобном для вас заведении</div>
+								</a></div>
+						</div>
+						<div class="header-search-panel">
+							<div class="search-location-val">Самовывоз, Хорошево, ул. Константинопольская, д. 34</div>
+							<div class="search-location-icon">
+								<svg class="icon">
+									<use xlink:href="#location"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head-main-wrap">
+				<div class="main-cont">
+					<div class="head-main"><a class="logo-tablet" href="#"><img src="img/logo-face.svg" alt="" /></a><a class="logo-mobile" href="#"><img src="img/logo.svg" alt="" /></a>
+						<div class="head-nav">
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#roll" rel="m_PageScroll2id">Роллы</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#soup" rel="m_PageScroll2id">Супы</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#salad" rel="m_PageScroll2id">Салаты</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#pasta" rel="m_PageScroll2id">Паста</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#drinks" rel="m_PageScroll2id">Напитки</a>
+							<div class="head-nav__el-wrap"></div><a class="head-nav__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+						</div>
+						<div class="head-toggle">
+							<svg class="icon icon-open">
+								<use xlink:href="#menu"></use>
+							</svg>
+							<svg class="icon icon-close">
+								<use xlink:href="#close"></use>
+							</svg>
+						</div><a class="cart cart--full" href="#">
+							<div class="cart-icon">
+								<svg class="icon">
+									<use xlink:href="#cart"></use>
+								</svg>
+								<div class="cart-icon__val">1250 р</div>
+							</div>
+							<div class="cart-info">
+								<div class="cart-condition">1250 р</div>
+								<div class="cart-size">2 товара</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--мобильное меню-->
+			<div class="slide-cat">
+				<div class="mobile-cat"><a class="mobile-cat__el" href="#clasic" rel="m_PageScroll2id">Пицца: классика</a><a class="mobile-cat__el" href="#favorite" rel="m_PageScroll2id">Пицца: избранное</a><a class="mobile-cat__el" href="#roll" rel="m_PageScroll2id">Роллы</a><a class="mobile-cat__el" href="#fokacha" rel="m_PageScroll2id">Фокачча</a><a class="mobile-cat__el--sm mobile-cat__el" href="#soup" rel="m_PageScroll2id">Супы</a><a class="mobile-cat__el--sm mobile-cat__el" href="#salad" rel="m_PageScroll2id">Салаты</a><a class="mobile-cat__el--sm mobile-cat__el" href="#pasta" rel="m_PageScroll2id">Паста</a><a class="mobile-cat__el--sm mobile-cat__el" href="#drinks" rel="m_PageScroll2id">Напитки</a><a class="mobile-cat__el" href="#toys" rel="m_PageScroll2id">Игрушки из дерева: Paolo WOOD WORK</a>
+				</div>
+			</div>
+			<div class="slide-menu">
+				<div class="slide-menu-wrap">
+					<div class="slide-menu-head">
+						<div class="slide-location">Санкт-Петербург</div>
+						<div class="slide-menu-close">
+							<svg class="icon">
+								<use xlink:href="#close-fat"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="slide-contact"><a class="slide-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a>
+						<div class="slide-time">сегодня 10 - 24</div><a class="slide-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a>
+					</div>
+					<div class="slide-nav"><a class="slide-nav__el" href="#">О нас</a><a class="slide-nav__el" href="#">Отзывы</a><a class="slide-nav__el" href="#">Акции</a><a class="slide-nav__el" href="#">Франчайзинг</a>
+						<form class="slide-search" action="#">
+							<div class="slide-search__action">
+								<svg class="icon">
+									<use xlink:href="#search"></use>
+								</svg>
+							</div>
+							<input class="input" type="text" placeholder="Поиск" />
+							<div class="slide-search__clear">
+								<svg class="icon">
+									<use xlink:href="#close"></use>
+								</svg>
+							</div>
+						</form>
+						<div class="slide-auth">
+							<div class="login-auth">
+								<div class="login-auth__icon">
+									<svg class="icon">
+										<use xlink:href="#user"></use>
+									</svg>
+									<div class="login-auth__bonus">+140 Б</div>
+								</div>
+								<div class="login-auth__name">Константин</div>
+							</div>
+						</div>
+						<div class="slide-info">
+							<div class="header-slogan">
+								<div class="header-slogan__text">Закажите еду зараннее и заберите её в удобном для вас заведении</div>
+							</div>
+							<div class="header-search-panel">
+								<div class="search-location-icon">
+									<svg class="icon">
+										<use xlink:href="#location"></use>
+									</svg>
+								</div>
+								<div class="search-location-val">Самовывоз, Хорошево, ул. Константинопольская, д. 34</div>
+							</div>
+						</div>
+						<div class="slide-link"><a class="slide-link__el" href="#">Публичная оферта</a><a class="slide-link__el" href="#">Политика конфиденциальности</a></div>
+						<div class="soc-row"><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-vk"></use>
+								</svg></a><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-fb"></use>
+								</svg></a><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-inst"></use>
+								</svg></a><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-twtr"></use>
+								</svg></a><a class="soc-row__el" href="#">
+								<svg class="icon">
+									<use xlink:href="#soc-youtube"></use>
+								</svg></a></div>
+					</div>
+				</div>
+			</div>
+			<!--block header end-->
+			<div class="content">
+				<div class="wrap-cont">
+					<div class="title title--mid">Доставка и оплата</div>
+					<div class="title title--xs title--mid type--mark">В выбранной вами зоне доставки "Видное" действуют условия:</div>
+					<div class="deliver-type">
+						<div class="deliver-type__el"><img src="img/condition-min.svg" alt="" />
+							<div class="deliver-type__text">Минимальная сумма <br> заказа <span class="type--red">299 рублей</span></div>
+						</div>
+						<div class="deliver-type__el"><img src="img/condition-delivery.svg" alt="" />
+							<div class="deliver-type__text">Стоимость доставки <br> <span class="type--red">100 рублей</span></div>
+						</div>
+						<div class="deliver-type__el"><img src="img/condition-free.svg" alt="" />
+							<div class="deliver-type__text">Бесплатная доставка <br> <span class="type--red">от 500 рублей</span></div>
+						</div>
+						<div class="deliver-type__el"><img src="img/condition-time.svg" alt="" />
+							<div class="deliver-type__text">Среднее время доставки <br> <span class="type--red">30-40 минут</span></div>
+						</div>
+					</div>
+					<div class="btn-row-mid">
+						<div class="btn--sm btn--light">Сменить город и зону доставки</div>
+					</div>
+					<div class="map">
+						<div class="map__el">
+							<!--put map her-->
+						</div>
+					</div>
+					<div class="title title--xs title--mid type--mark">Также вы можете заказать через сайты или приложения Яндекс Еды и Деливери Клаба</div>
+					<div class="partner">
+						<div class="partner__el"><a href="#"><img src="img/yandex.svg" alt="" /></a><a href="#"><img src="img/app-google.svg" alt="" /></a><a href="#"><img src="img/app-apple.svg" alt="" /></a></div>
+						<div class="partner__el"><a href="#"><img src="img/deliverclub.svg" alt="" /></a><a href="#"><img src="img/app-google.svg" alt="" /></a><a href="#"><img src="img/app-apple.svg" alt="" /></a></div>
+					</div>
+					<div class="deliver-desr">
+						<div class="deliver-desr__row">
+							<div class="deliver-desr__title">Как заказать через Яндекс.Еда или Delivery Club?</div>
+							<div class="deliver-desr__text">Установите Яндекс.Еда ⁄ Delivery Club на телефон, выберите «Pizza Paolo» / «Пицца Паоло» и заказывайте! Или перейдите на сайт Доставщика и закажите с сайта.</div>
+						</div>
+						<div class="deliver-desr__row">
+							<div class="deliver-desr__title">Как узнать, входит ли нужный адрес в зону покрытия доставки Яндекс.Еда или Delivery Club?</div>
+							<div class="deliver-desr__text">Установите приложение введите адрес. Посетите сайт и введите адрес.</div>
+						</div>
+						<div class="deliver-desr__row">
+							<div class="deliver-desr__title">Если нужный адрес попадает в зону покрытия Доставщиков, но «Пицца Паоло» среди предложенных ресторанов не найдена?</div>
+							<div class="deliver-desr__text">Возможно, именно эта пиццерия «Пицца Паоло» пока не подключена к Яндекс.Еда ⁄ Delivery Club или находится в процессе подключения. Позвоните нам на «Горячую линию», назовите адрес пиццерии и оставьте претензию.</div>
+						</div>
+						<div class="deliver-desr__row">
+							<div class="deliver-desr__title">Среднее время доставки:</div>
+							<div class="deliver-desr__text">30 — 40 мин.</div>
+						</div>
+						<div class="deliver-desr__row">
+							<div class="deliver-desr__title">Бонусные карты:</div>
+							<div class="deliver-desr__text">не действуют</div>
+						</div>
+						<div class="deliver-desr__row">
+							<div class="deliver-desr__title">Цена:</div>
+							<div class="deliver-desr__text">как в пиццерии, из которой вам привезут пиццу</div>
+						</div>
+					</div>
+					<div class="title title--xs title--mid type--mark">Оплата</div>
+					<div class="text">
+						<p>Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Услугу банковской картой Visa или Mastercard. После подтверждения выбранного Товара либо услуги откроется защищенное окно с платежной страницей процессингового центра CloudPayments, где Вам необходимо ввести данные Вашей банковской карты. Для дополнительной аутентификации держателя карты используется протокол 3-D Secure. Если Ваш Банк-эмитент поддерживает данную технологию, Вы будете перенаправлены на его сервер для прохождения дополнительной идентификации. Информацию о правилах и методах дополнительной идентификации уточняйте в Банке, выдавшем Вам банковскую карту.</p>
+						<p>Услуга онлайн-оплаты осуществляется в соответствии с правилами Международных платежных систем Visa и MasterCard на принципах соблюдения конфиденциальности и безопасности совершения платежа, для этого используются самые актуальные методы проверки, шифрования и передачи данных по закрытым каналам связи. Ввод данных банковской карты осуществляется в защищенном окне на платежной странице CloudPayments.</p>
+						<p>В поля на платежной странице требуется ввести номер карты, имя владельца карты, срок действия карты, трёхзначный код безопасности (CVV2 для VISA или CVC2 для MasterCard). Все необходимые данные отображены на поверхности банковской карты.</p>
+						<p>CVV2/ CVC2 — это трёхзначный код безопасности, находящийся на оборотной стороне карты.</p>
+						<p>Далее в том же окне откроется страница Вашего банка-эмитента для ввода 3-D Secure кода. В случае, если у вас не настроен статичный 3-D Secure, он будет отправлен на ваш номер телефона посредством SMS. Если 3-D Secure код к Вам не пришел, то следует обратится в ваш банк-эмитент.</p>
+						<p>3-D Secure — это самая современная технология обеспечения безопасности платежей по картам в сети интернет.Позволяет однозначно идентифицировать подлинность держателя карты, осуществляющего операцию, и максимально снизить риск мошеннических операций по карте.</p>
+						<h3>Гарантии безопасности</h3>
+						<p>Процессинговый центр CloudPayments защищает и обрабатывает данные Вашей банковской карты по стандарту безопасности PCI DSS 3.0. Передача информации в платежный шлюз происходит с применением технологии шифрования SSL. Дальнейшая передача информации происходит по закрытым банковским сетям, имеющим наивысший уровень надежности. CloudPayments не передает данные Вашей карты нам и иным третьим лицам. Для дополнительной аутентификации держателя карты используется протокол 3-D Secure.</p>
+						<p>В случае, если у Вас есть вопросы по совершенному платежу, Вы можете обратиться в службу поддержки клиентов платежного сервиса по электронной почте support@cloudpayments.kz.</p>
+						<h3>Безопасность онлайн-платежей</h3>
+						<p>Предоставляемая Вами персональная информация (имя, адрес, телефон, e-mail, номер кредитной карты) является конфиденциальной и не подлежит разглашению. Данные Вашей кредитной карты передаются только в зашифрованном виде и не сохраняются на нашем Web-сервере.</p>
+						<p>Мы рекомендуем вам проверить, что ваш браузер достаточно безопасен для проведения платежей онлайн, на специальной странице.</p>
+						<p>Безопасность обработки Интернет-платежей гарантирует ТОО «CloudPayments Kazakhstan». Все операции с платежными картами происходят в соответствии с требованиями VISA International, MasterCard и других платежных систем. При передаче информации используются специализированные технологии безопасности карточных онлайн-платежей, обработка данных ведется на безопасном высокотехнологичном сервере процессинговой компании.</p>
+						<p>Оплата платежными картами безопасна, потому что:</p>
+						<p>Система авторизации гарантирует покупателю, что платежные реквизиты его платежной карты (номер, срок действия, CVV2/CVC2) не попадут в руки мошенников, так как эти данные не хранятся на сервере авторизации и не могут быть похищены.</p>
+						<p>Покупатель вводит свои платежные данные непосредственно в системе авторизации CloudPayments, а не на сайте интернет-магазина, следовательно, платежные реквизиты карточки покупателя не будут доступны третьим лицам.</p>
+						<h3>Возврат денежных средств</h3>
+						<p>При проведении онлайн-оплаты посредством платежных карт не допускается возврат наличными денежными средствами. Порядок возврата регулируется правилами международных платежных систем:</p>
+						<p>Потребитель вправе отказаться от товара в любое время до его передачи, после передачи товара отказ необходимо оформить в течение 14 дней;</p>
+						<p>Возврат товара надлежащего качества возможен в случае, если сохранены его товарный вид, потребительские свойства, а также документ, подтверждающий факт и условия покупки указанного товара;</p>
+						<p>Потребитель не вправе отказаться от товара надлежащего качества, имеющего индивидуально-определенные свойства, если указанный товар может быть использован исключительно приобретающим его человеком;</p>
+						<p>При отказе от товара со стороны потребителя продавец должен вернуть ему денежную сумму, уплаченную потребителем, не позднее чем через десять дней со дня предъявления потребителем соответствующего требования.</p>
+						<p>Для возврата денежных средств на банковскую карту необходимо заполнить «Заявление о возврате денежных средств», которое высылается по требованию компанией на электронный адрес, и отправить его вместе с приложением копии документа, удостоверяющего личность, по адресу feedback@basilic.kz.</p>
+						<p>Возврат денежных средств будет осуществлен на банковскую карту в течение ___ рабочего дня со дня получения «Заявление о возврате денежных средств» Компанией.</p>
+						<p>Для возврата денежных средств по операциям, проведенным с ошибками, необходимо обратиться с письменным заявлением и приложением копии документа, удостоверяющего личность, и чеков/квитанций, подтверждающих ошибочное списание. Данное заявление необходимо направить по адресу feedback@basilic.kz.</p>
+						<p>Сумма возврата будет равняться сумме покупки. Срок рассмотрения Заявления и возврата денежных средств начинает исчисляться с момента получения Компанией Заявления и рассчитывается в рабочих днях без учета праздников/выходных дней.</p>
+						<p>Случаи отказа в совершении платежа:</p>
+						<ul>
+							<li>банковская карта не предназначена для совершения платежей через интернет, о чем можно узнать, обратившись в Ваш Банк-эмитент;</li>
+							<li>недостаточно средств для оплаты на банковской карте. Подробнее о наличии средств на платежной карте Вы можете узнать, обратившись в банк, выпустивший банковскую карту;</li>
+							<li>данные банковской карты введены неверно;</li>
+							<li>истек срок действия банковской карты. Срок действия карты, как правило, указан на лицевой стороне карты (это месяц и год, до которого действительна карта). Подробнее о сроке действия карты Вы можете узнать, обратившись в банк-эмитент.</li>
+							<li>По вопросам оплаты с помощью банковской карты и иным вопросам, связанным с работой сайта, Вы можете обратиться по следующим телефонам: +7 705 806 06 06</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main-cont">
+					<div class="description__cont text">
+						<div class="description__text">
+							<p>SEO-текст. Это как старый друг, проверенный годами, ведь на рынке они очень давно. Кроме того, они были одними из первых, у кого появилась служба доставки в столице еще в 2001 году. Теперь это одна из самых больших сетей пиццерий в Киеве и Чернигове — у них целых 13 ресторанов. Кроме того, у заведения очень демократичные цены и много начинки.</p>
+							<p>Пиццу здесь готовят из отборный продуктов, что явно не может не радовать. И, несмотря на то, что тесто готовят по традиционному неаполитанскому рецепту, у них есть интересная фишка. Это, так званое, сочетание классики и авангарда — к примеру, есть пиццы с морепродуктами, с корнишонами, каперсами и с экзотическими продуктами. В День рождение в ресторанах Mamamia вам вернут 100% от счета на бонусный счет.</p>
+						</div>
+						<div class="description__text--hidden description__text--hidden">
+							<p>Помимо блюд японской кухни мы с радостью приготовим для вас экзотические воки с разными начинками, ароматную пиццу.. горячие и холодные супы, свежие и сытные салаты, нежные десерты.</p>
+							<p>Чтобы заказать суши и другие кушанья, зайдите в соответствующий раздел нашего меню. Каждый товар сопровождается фотографией, указанием состава ингредиентов, веса порции и стоимости. Кликните по плашке «Добавить в корзину» возле понравившихся суши. Скорректируйте количество порций и введите контактные данные. Наш менеджер свяжется с вами для подтверждения покупки.</p>
+						</div>
+						<div class="description__more"><span class="description__more--true">Показать еще</span><span class="description__more--false">Скрыть</span>
+							<svg class="icon">
+								<use xlink:href="#arrow-down"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block footer-->
+			<div class="footer-panel">
+				<div class="footer-panel-btn">
+					<svg class="icon">
+						<use xlink:href="#close"></use>
+					</svg><span>Меню</span>
+					<svg class="icon">
+						<use xlink:href="#close"></use>
+					</svg>
+				</div>
+				<div class="cart">
+					<div class="cart-icon">
+						<svg class="icon">
+							<use xlink:href="#cart"></use>
+						</svg>
+						<div class="cart-icon__val">1250 р</div>
+					</div>
+					<div class="cart-info">
+						<div class="cart-condition">1250 р</div>
+						<div class="cart-size">2 товара</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-wrap">
+				<div class="main-cont">
+					<div class="footer"><a class="footer-logo" href="/"><img src="img/logo-sqrt.svg" alt="" /></a>
+						<div class="footer-contact"><a class="footer-phone" href="tel:8 4212 45-77-77">8 4212 45-77-77</a><a class="footer-mail" href="mailto:pizza_paolo@gmail.com">pizza_paolo@gmail.com</a></div>
+						<div class="footer-link"><a class="footer-link__el" href="#">Публичная оферта</a><a class="footer-link__el" href="#">Политика конфиденциальности</a></div>
+						<div class="footer-share">
+							<div class="footer-soc">
+								<div class="soc-row"><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg></a><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-fb"></use>
+										</svg></a><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-inst"></use>
+										</svg></a><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-twtr"></use>
+										</svg></a><a class="soc-row__el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-youtube"></use>
+										</svg></a></div><a class="create" href="#">Разработка сайта: JQ Digital</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--block footer end-->
+		</div>
+		<!--build:js js/combined.js-->
+		<script src="bower/jquery/dist/jquery.js"></script>
+		<script src="bower/slick-carousel/slick/slick.js"></script>
+		<script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+		<script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+		<script src="bower/sticky-kit/jquery.sticky-kit.js"></script>
+		<script src="bower/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+		<script src="bower/air-datepicker/dist/js/datepicker.js"></script>
+		<script src="bower/ion.rangeSlider/js/ion.rangeSlider.js"></script>
+		<!-- endbuild-->
+		<script src="js/add-on.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/script-edit.js"></script>
+	</body>
+
+</html>

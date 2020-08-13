@@ -42,8 +42,7 @@ var pugInheritance = require('gulp-pug-inheritance');
 var changed = require('gulp-changed');
 var pug = require('gulp-pug');
 var favicons = require("gulp-favicons");
-var emitty = require('emitty').setup('app/html', 'pug');
-var prettify = require('gulp-html-prettify');
+
 
 // ########## make img ###############
 
@@ -99,7 +98,6 @@ gulp.task('svg', function () {
 						run: function ($) {
 								$('[fill]').removeAttr('fill'); //remove if need color icon
 								$('[style]').removeAttr('style');
-								$('[opacity]').removeAttr('opacity');
 								$('style').remove();
 						},
 						parserOptions: {xmlMode: true }
@@ -231,22 +229,13 @@ gulp.task('min:js',function(){
 // ########## make css end ###############
 
 // ########## make html ###############
-gulp.task('watch', () => {
-	// Shows that run "watch" mode
-	global.watch = true;
-	gulp.watch('app/html/**/*.pug', gulp.series('pug'))
-		.on('all', (event, filepath) => {
-			global.emittyChangedFile = filepath;
-		});
-});
-
 
 gulp.task('pug', function() {
-		gulp.src(['app/html/*.pug','app/module/**/*.pug',])
-				//.pipe(changed('app/', {extension: '.html'}))
+		gulp.src(['app/html/*.pug','app/module/**/*.pug'])
+		//gulp.src(['app/html/team-single.pug'])
+		//.pipe(changed('app/', {extension: '.html'}))
 				//.pipe(cache('pug'))
-				//.pipe(pugInheritance({basedir: 'app/html/',skip:'node_modules/'}))
-				.pipe(gulpif(global.watch, emitty.stream(global.emittyChangedFile)))
+				.pipe(pugInheritance({basedir: 'app/html/',skip:'node_modules/'}))
 				.pipe(progeny({
 						regexp: /^\s*@import\s*(?:\(\w+\)\s*)?['"]([^'"]+)['"]/
 				}))
@@ -448,7 +437,7 @@ gulp.task('build',function(){
 				'copy:css',
 				'min:css',
 				'min:js',
-				'img',
+				//'img',
 				'svg',
 				'make'
 				//'zip'

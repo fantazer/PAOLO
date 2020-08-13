@@ -357,13 +357,15 @@ h4,
 }
 .type--mdx,
 h3,
-.btn--sm {
+.btn--sm,
+.title.title--xs {
   font-size: 18px;
 }
 @media only screen and (max-width: 768px) {
   .type--mdx,
   h3,
-  .btn--sm {
+  .btn--sm,
+  .title.title--xs {
     font-size: 16px;
   }
 }
@@ -472,6 +474,9 @@ h1,
 }
 .type--mark {
   color: #0f8839;
+}
+.type--red {
+  color: #e30613;
 }
 a {
   color: #111;
@@ -4319,6 +4324,9 @@ basket__el-info {
 .title.title--sm {
   text-transform: none;
 }
+.title.title--xs {
+  text-transform: none;
+}
 .title--mid {
   text-align: center;
 }
@@ -6559,6 +6567,171 @@ background-size: cover,
   letter-spacing: 0.6px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+.map {
+  width: 100%;
+  position: relative;
+  padding: 20% 10%;
+  min-height: 400px;
+  margin: 30px 0;
+}
+.map__el {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #aaa;
+}
+.deliver-type {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 50px 0;
+}
+@media only screen and (max-width: 768px) {
+  .deliver-type {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .deliver-type {
+    grid-template-columns: 1fr;
+  }
+}
+.deliver-type__el {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+@media only screen and (max-width: 640px) {
+  .deliver-type__el {
+    -webkit-flex-flow: row;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.deliver-type__el img {
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 640px) {
+  .deliver-type__el img {
+    width: 35%;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+.deliver-type__text {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.4;
+}
+@media only screen and (max-width: 640px) {
+  .deliver-type__text {
+    text-align: left;
+  }
+}
+.partner {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 30px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .partner {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin: 30px auto;
+  }
+}
+.partner__el {
+  padding: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.07);
+          box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 640px) {
+  .partner__el {
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+.partner__el img {
+  margin: 5px;
+}
+@media only screen and (max-width: 640px) {
+  .partner__el img {
+    max-width: 120px;
+  }
+}
+.deliver-desr {
+  margin-bottom: 50px;
+}
+.deliver-desr__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 640px) {
+  .deliver-desr__row {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+.deliver-desr__title {
+  font-weight: 700;
+  width: 35%;
+}
+@media only screen and (max-width: 640px) {
+  .deliver-desr__title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.deliver-desr__text {
+  width: 60%;
+}
+@media only screen and (max-width: 640px) {
+  .deliver-desr__text {
+    width: 100%;
+  }
 }
 @-webkit-keyframes slideInDown {
   from {

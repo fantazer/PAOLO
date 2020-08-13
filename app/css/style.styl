@@ -1831,6 +1831,9 @@ basket__el-info
 .title.title--sm
 	@extend .type--lg
 	text-transform: none
+.title.title--xs
+	@extend .type--mdx
+	text-transform: none
 
 .title--mid
 	text-align center
@@ -3127,3 +3130,86 @@ basket__el-info
 	letter-spacing 0.6px
 	text-transform uppercase
 	margin-bottom: 20px
+
+.map
+	width  100%
+	position relative
+	padding: 20% 10%
+	min-height 400px
+	margin: 30px 0
+.map__el
+	position absolute
+	width: 100%
+	height: 100%
+	top 0
+	left 0
+	background: $gray
+
+.deliver-type
+	+below(768px)
+		grid-template-columns: 1fr 1fr
+		grid-gap 20px
+	+below(640px)
+		grid-template-columns: 1fr
+	display: grid
+	grid-gap 10px
+	grid-template-columns: repeat(4, 1fr)
+	margin: 50px 0
+.deliver-type__el
+	+below(640px)
+		flex-flow row
+		justify-content: flex-start
+	flex(mid)
+	fl()
+	img
+		+below(640px)
+			width: 35%
+			margin-right: 20px
+			margin-bottom: 0
+		margin-bottom: 10px
+.deliver-type__text
+	+below(640px)
+		text-align left
+	text-align center
+	font-weight: 700
+	line-height: 1.4
+
+.partner
+	+below(1024px)
+		grid-template-columns: 1fr
+		max-width 640px
+		margin: 30px auto
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(2, 1fr)
+	margin: 30px 0
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+.partner__el
+	+below(640px)
+		fl()
+	padding: 10px
+	box-shadow 0 0 10px rgba(0, 0, 0, 0.07)
+	background-color #ffffff
+	flex(between)
+	img
+		+below(640px)
+			max-width 120px
+		margin: 5px
+.deliver-desr
+	margin-bottom: 50px
+.deliver-desr__row
+	+below(640px)
+		fw()
+	f()
+	justify-content space-between
+	margin-bottom: 20px
+.deliver-desr__title
+	+below(640px)
+		width: 100%
+		margin-bottom: 10px
+	font-weight: 700
+	width: 35%
+.deliver-desr__text
+	+below(640px)
+		width: 100%
+	width: 60%
